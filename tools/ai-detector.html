@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Detector & Humanizer – Free AI Writing Checker | ToolNest</title>
+<meta name="description" content="Review AI-like writing signals and rewrite paragraphs more naturally while preserving their meaning with ToolNest AI Detector & Humanizer.">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://toolnest.thanos252007.workers.dev/tools/ai-detector.html">
+<link rel="stylesheet" href="/assets/style.css"><meta property="og:type" content="website"><meta property="og:site_name" content="ToolNest">
+<meta property="og:title" content="AI Detector & Humanizer | ToolNest"><meta property="og:description" content="Review AI-like writing signals and rewrite paragraphs more naturally while preserving meaning.">
+<meta property="og:url" content="https://toolnest.thanos252007.workers.dev/tools/ai-detector.html"><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI Detector & Humanizer","url":"https://toolnest.thanos252007.workers.dev/tools/ai-detector.html","description":"AI writing-style assessment and meaning-preserving rewriting assistant.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH86KPZW58"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WH86KPZW58');</script>
+</head><body><header><div class="wrap"><nav><a class="brand" href="/"><b>✦</b>ToolNest</a><div class="links"><a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a></div></nav></div></header>
+<main><section class="wrap toolhead"><span class="pill">AI-powered writing assistant</span><h1>AI Detector <span>& Humanizer</span></h1><p class="lead">Review writing-style signals, then make a paragraph clearer and more natural without intentionally changing its meaning.</p><p><a href="/">← Back to all tools</a></p></section>
+<section class="wrap panel">
+<div class="field"><label for="aiInput">Paste your paragraph</label><textarea id="aiInput" maxlength="12000" placeholder="Paste at least 80 characters of text here…" style="min-height:220px"></textarea><p class="small" id="charCount">0 / 12,000 characters</p></div>
+<div class="actions"><button id="analyzeBtn" type="button">Analyze writing</button><button class="secondary" id="rewriteBtn" type="button">Rewrite naturally</button><button class="secondary" id="clearBtn" type="button">Clear</button></div>
+<p class="small" id="status" role="status" aria-live="polite">Your text is sent to Google Gemini only when you choose Analyze or Rewrite. Avoid confidential information.</p>
+<div id="analysis" hidden><h2>Writing-style assessment</h2><div class="result" id="scoreResult"></div><h3>Signals observed</h3><div class="result" id="signals"></div><p class="small">This is an AI-generated style estimate, not a verified AI percentage or proof of authorship. Detectors can be wrong for both human and AI-written text.</p></div>
+<div id="rewrite" hidden><h2>Rewritten paragraph</h2><div class="result" id="rewriteResult"></div><div class="actions"><button class="secondary" id="copyRewrite" type="button">Copy rewritten text</button></div><p class="small">Review the rewrite carefully to ensure it preserves your intended meaning and facts.</p></div>
+</section>
+<article class="content"><h2>How it works</h2><ol><li>Paste a paragraph of at least 80 characters.</li><li>Choose Analyze writing for a cautious style assessment, or Rewrite naturally to improve clarity and flow.</li><li>Review the feedback or copy the rewritten paragraph.</li></ol><h2>Important limitations</h2><p>No AI detector can reliably determine the exact percentage of AI-written text. A low or high score is not proof of who wrote something. Rewriting also cannot guarantee a 0% result on other detectors. Use this tool to improve clarity, not to misrepresent authorship.</p><p>Submitted text is processed by Google Gemini. On its free tier, Google may use submitted content to improve its products. Read our <a href="/privacy.html">Privacy Policy</a> and do not submit sensitive information.</p></article></main>
+<footer class="footer"><div class="wrap footerinner"><span>© 2026 ToolNest. Useful tools for everyday tasks.</span><span><a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy Policy</a></span></div></footer>
+<script>
+(() => {
+ const input=document.getElementById('aiInput'), status=document.getElementById('status');
+ const analyze=document.getElementById('analyzeBtn'), rewrite=document.getElementById('rewriteBtn');
+ const count=document.getElementById('charCount');
+ input.addEventListener('input',()=>count.textContent=input.value.length.toLocaleString()+' / 12,000 characters');
+ async function run(action){
+  const text=input.value.trim();
+  if(text.length<80){status.textContent='Please enter at least 80 characters.';return;}
+  analyze.disabled=rewrite.disabled=true;status.textContent=action==='analyze'?'Analyzing writing style…':'Rewriting your paragraph…';
+  document.getElementById('analysis').hidden=true;document.getElementById('rewrite').hidden=true;
+  try{
+   const response=await fetch('/api/ai-tool',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,text})});
+   const data=await response.json();
+   if(!response.ok)throw new Error(data.error||'The request could not be completed.');
+   if(action==='analyze'){
+    document.getElementById('scoreResult').textContent='Estimated AI-like writing signals: '+data.score+'/100\nAssessment: '+data.assessment;
+    document.getElementById('signals').textContent=(data.signals||[]).map(x=>'• '+x).join('\n')||'No specific signals returned.';
+    document.getElementById('analysis').hidden=false;
+   }else{
+    document.getElementById('rewriteResult').textContent=data.rewrittenText||'No rewrite was returned.';
+    document.getElementById('rewrite').hidden=false;
+   }
+   status.textContent='Done. Review the result carefully; this tool cannot guarantee detector outcomes or perfect meaning preservation.';
+  }catch(error){status.textContent=error.message;}
+  finally{analyze.disabled=rewrite.disabled=false;}
+ }
+ analyze.addEventListener('click',()=>run('analyze'));rewrite.addEventListener('click',()=>run('rewrite'));
+ document.getElementById('clearBtn').addEventListener('click',()=>{input.value='';count.textContent='0 / 12,000 characters';status.textContent='Text cleared.';document.getElementById('analysis').hidden=true;document.getElementById('rewrite').hidden=true;});
+ document.getElementById('copyRewrite').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('rewriteResult').textContent);status.textContent='Rewritten text copied.';}catch{status.textContent='Copy is unavailable; select the rewritten text manually.';}});
+})();
+</script></body></html>
