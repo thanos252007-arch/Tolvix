@@ -1,53 +1,106 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Detector & Humanizer – Free AI Writing Checker | ToolNest</title>
-<meta name="description" content="Review AI-like writing signals and rewrite paragraphs more naturally while preserving their meaning with ToolNest AI Detector & Humanizer.">
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Detector & Humanizer – Free Private Writing Tool | ToolNest</title>
+<meta name="description" content="Check AI-like writing patterns and improve clarity with a free, browser-based writing tool. Your text stays on your device.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://toolnest.thanos252007.workers.dev/tools/ai-detector.html">
-<link rel="stylesheet" href="/assets/style.css"><meta property="og:type" content="website"><meta property="og:site_name" content="ToolNest">
-<meta property="og:title" content="AI Detector & Humanizer | ToolNest"><meta property="og:description" content="Review AI-like writing signals and rewrite paragraphs more naturally while preserving meaning.">
-<meta property="og:url" content="https://toolnest.thanos252007.workers.dev/tools/ai-detector.html"><meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI Detector & Humanizer","url":"https://toolnest.thanos252007.workers.dev/tools/ai-detector.html","description":"AI writing-style assessment and meaning-preserving rewriting assistant.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website"><meta property="og:site_name" content="ToolNest"><meta property="og:title" content="AI Detector & Humanizer | ToolNest"><meta property="og:description" content="A free, private, browser-based writing-style checker and clarity improver."><meta property="og:url" content="https://toolnest.thanos252007.workers.dev/tools/ai-detector.html"><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI Detector & Humanizer","url":"https://toolnest.thanos252007.workers.dev/tools/ai-detector.html","description":"Browser-based writing-style signals and clarity editing. Text stays on the user's device.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH86KPZW58"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WH86KPZW58');</script>
-</head><body><header><div class="wrap"><nav><a class="brand" href="/"><b>✦</b>ToolNest</a><div class="links"><a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a></div></nav></div></header>
-<main><section class="wrap toolhead"><span class="pill">AI-powered writing assistant</span><h1>AI Detector <span>& Humanizer</span></h1><p class="lead">Review writing-style signals, then make a paragraph clearer and more natural without intentionally changing its meaning.</p><p><a href="/">← Back to all tools</a></p></section>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="/"><b>✦</b>ToolNest</a><div class="links"><a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a></div></nav></div></header>
+<main>
+<section class="wrap toolhead"><span class="pill">Free · No API key · Runs in your browser</span><h1>AI Detector <span>& Humanizer</span></h1><p class="lead">Check for writing patterns sometimes associated with AI-generated text, then make wording clearer with a lightweight local editor.</p><p><a href="/">← Back to all tools</a></p></section>
 <section class="wrap panel">
 <div class="field"><label for="aiInput">Paste your paragraph</label><textarea id="aiInput" maxlength="12000" placeholder="Paste at least 80 characters of text here…" style="min-height:220px"></textarea><p class="small" id="charCount">0 / 12,000 characters</p></div>
-<div class="actions"><button id="analyzeBtn" type="button">Analyze writing</button><button class="secondary" id="rewriteBtn" type="button">Rewrite naturally</button><button class="secondary" id="clearBtn" type="button">Clear</button></div>
-<p class="small" id="status" role="status" aria-live="polite">Your text is sent to Google Gemini only when you choose Analyze or Rewrite. Avoid confidential information.</p>
-<div id="analysis" hidden><h2>Writing-style assessment</h2><div class="result" id="scoreResult"></div><h3>Signals observed</h3><div class="result" id="signals"></div><p class="small">This is an AI-generated style estimate, not a verified AI percentage or proof of authorship. Detectors can be wrong for both human and AI-written text.</p></div>
-<div id="rewrite" hidden><h2>Rewritten paragraph</h2><div class="result" id="rewriteResult"></div><div class="actions"><button class="secondary" id="copyRewrite" type="button">Copy rewritten text</button></div><p class="small">Review the rewrite carefully to ensure it preserves your intended meaning and facts.</p></div>
+<div class="actions"><button id="analyzeBtn" type="button">Analyze writing</button><button class="secondary" id="rewriteBtn" type="button">Improve clarity</button><button class="secondary" id="clearBtn" type="button">Clear</button></div>
+<p class="small" id="status" role="status" aria-live="polite">Privacy: all analysis and editing happen locally in this browser. Your text is not sent to an AI service.</p>
+<div id="analysis" hidden><h2>Writing-style signals</h2><div class="result" id="scoreResult"></div><h3>Patterns noticed</h3><div class="result" id="signals"></div><p class="small">This is a simple heuristic indicator, not an AI probability or verified detector. Human and AI writing can share these patterns.</p></div>
+<div id="rewrite" hidden><h2>Clarity-improved version</h2><div class="result" id="rewriteResult" style="white-space:pre-wrap"></div><div class="actions"><button class="secondary" id="copyRewrite" type="button">Copy improved text</button></div><p class="small" id="rewriteNotes">Only conservative wording and formatting suggestions are applied. Check the result for your intended meaning.</p></div>
 </section>
-<article class="content"><h2>How it works</h2><ol><li>Paste a paragraph of at least 80 characters.</li><li>Choose Analyze writing for a cautious style assessment, or Rewrite naturally to improve clarity and flow.</li><li>Review the feedback or copy the rewritten paragraph.</li></ol><h2>Important limitations</h2><p>No AI detector can reliably determine the exact percentage of AI-written text. A low or high score is not proof of who wrote something. Rewriting also cannot guarantee a 0% result on other detectors. Use this tool to improve clarity, not to misrepresent authorship.</p><p>Submitted text is processed by Google Gemini. On its free tier, Google may use submitted content to improve its products. Read our <a href="/privacy.html">Privacy Policy</a> and do not submit sensitive information.</p></article></main>
+<article class="content"><h2>How it works</h2><ol><li>Paste at least 80 characters.</li><li>Choose Analyze writing to inspect a few style patterns, or Improve clarity to apply conservative wording edits.</li><li>Review the results before using them.</li></ol><h2>Important limitations</h2><p>No reliable tool can determine the exact percentage of AI-written text from a paragraph. This free version uses simple, transparent text-pattern heuristics; it does not use a machine-learning model and cannot establish authorship. Its score must not be treated as proof.</p><p>The clarity improver uses a small set of rule-based edits. It is not an AI paraphraser, may make few or no changes, and cannot guarantee that meaning or nuance is perfectly preserved. It does not promise to bypass AI detectors or produce a “0% AI” result.</p><p><strong>Privacy:</strong> text analysis and editing run in your browser. The text you paste is not sent to ToolNest or an AI API. Basic website analytics may still collect normal site-usage data.</p></article>
+</main>
 <footer class="footer"><div class="wrap footerinner"><span>© 2026 ToolNest. Useful tools for everyday tasks.</span><span><a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy Policy</a></span></div></footer>
 <script>
 (() => {
- const input=document.getElementById('aiInput'), status=document.getElementById('status');
- const analyze=document.getElementById('analyzeBtn'), rewrite=document.getElementById('rewriteBtn');
+ const input=document.getElementById('aiInput'),status=document.getElementById('status');
+ const analyze=document.getElementById('analyzeBtn'),rewrite=document.getElementById('rewriteBtn');
  const count=document.getElementById('charCount');
- input.addEventListener('input',()=>count.textContent=input.value.length.toLocaleString()+' / 12,000 characters');
- async function run(action){
-  const text=input.value.trim();
-  if(text.length<80){status.textContent='Please enter at least 80 characters.';return;}
-  analyze.disabled=rewrite.disabled=true;status.textContent=action==='analyze'?'Analyzing writing style…':'Rewriting your paragraph…';
-  document.getElementById('analysis').hidden=true;document.getElementById('rewrite').hidden=true;
-  try{
-   const response=await fetch('/api/ai-tool',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,text})});
-   const data=await response.json();
-   if(!response.ok)throw new Error(data.error||'The request could not be completed.');
-   if(action==='analyze'){
-    document.getElementById('scoreResult').textContent='Estimated AI-like writing signals: '+data.score+'/100\nAssessment: '+data.assessment;
-    document.getElementById('signals').textContent=(data.signals||[]).map(x=>'• '+x).join('\n')||'No specific signals returned.';
-    document.getElementById('analysis').hidden=false;
-   }else{
-    document.getElementById('rewriteResult').textContent=data.rewrittenText||'No rewrite was returned.';
-    document.getElementById('rewrite').hidden=false;
-   }
-   status.textContent='Done. Review the result carefully; this tool cannot guarantee detector outcomes or perfect meaning preservation.';
-  }catch(error){status.textContent=error.message;}
-  finally{analyze.disabled=rewrite.disabled=false;}
+ const analysis=document.getElementById('analysis'),rewritePanel=document.getElementById('rewrite');
+ const stopWords=new Set(('the a an and or but if then of to in on for with at by from as is are was were be been being this that these those it its we they he she you your our their i me my not can could would should will may might have has had do does did than so very just also into about over under after before between during because while when where who what which'.split(' ')));
+ const patterns=[
+  [/\bin today's world\b/gi,'today'],
+  [/\bit is important to note that\b/gi,''],
+  [/\bit is worth mentioning that\b/gi,''],
+  [/\bdue to the fact that\b/gi,'because'],
+  [/\bin order to\b/gi,'to'],
+  [/\ba wide range of\b/gi,'many'],
+  [/\bplays a crucial role in\b/gi,'is important for'],
+  [/\bfurthermore,?\s*/gi,'Also, '],
+  [/\bmoreover,?\s*/gi,'Also, '],
+  [/\badditionally,?\s*/gi,'Also, '],
+  [/\butilize\b/gi,'use'],
+  [/\bdemonstrate\b/gi,'show'],
+  [/\bapproximately\b/gi,'about'],
+  [/\bin conclusion,?\s*/gi,'Overall, ']
+ ];
+ function sentencesOf(s){return (s.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[]).map(x=>x.trim()).filter(Boolean);}
+ function analyzeText(s){
+  const words=(s.toLowerCase().match(/[a-z0-9']+/g)||[]);
+  const sentences=sentencesOf(s);
+  const signals=[];let score=0;
+  if(sentences.length>=3){
+   const lens=sentences.map(x=>(x.match(/[a-z0-9']+/gi)||[]).length);
+   const avg=lens.reduce((a,b)=>a+b,0)/lens.length;
+   const variance=lens.reduce((a,b)=>a+(b-avg)**2,0)/lens.length;
+   const cv=Math.sqrt(variance)/Math.max(avg,1);
+   if(cv<0.32){score+=22;signals.push('Sentence lengths are fairly uniform across this sample.');}
+   else signals.push('Sentence lengths show some variation.');
+  }else signals.push('The sample has too few sentences for sentence-pattern comparison.');
+  const vocab=new Set(words);
+  const lexical=words.length?vocab.size/words.length:0;
+  if(words.length>=40&&lexical<0.48){score+=15;signals.push('Vocabulary repeats relatively often in this sample.');}
+  else if(words.length>=40)signals.push('There is some variety in the words used.');
+  const transition=/\b(furthermore|moreover|additionally|consequently|therefore|in conclusion|overall|in today's world|it is important to note)\b/gi;
+  const trans=(s.match(transition)||[]).length;
+  if(trans>=2){score+=Math.min(25,trans*8);signals.push('Several formal transition phrases appear.');}
+  const generic=/\b(plays a crucial role|a wide range of|it is worth mentioning|it is important to note|in today's world|delve into|multifaceted)\b/gi;
+  const gen=(s.match(generic)||[]).length;
+  if(gen){score+=Math.min(20,gen*8);signals.push('Some broad or formulaic phrases appear.');}
+  const repeated=words.length>=30&&lexical<0.58;
+  if(repeated&&trans===0&&gen===0)signals.push('Some wording may be repetitive, though this is common in short or topic-specific writing.');
+  score=Math.min(100,score);
+  const level=score<25?'Few of the checked patterns were found':score<55?'Some of the checked patterns were found':'Several of the checked patterns were found';
+  return {score,level,signals};
  }
- analyze.addEventListener('click',()=>run('analyze'));rewrite.addEventListener('click',()=>run('rewrite'));
- document.getElementById('clearBtn').addEventListener('click',()=>{input.value='';count.textContent='0 / 12,000 characters';status.textContent='Text cleared.';document.getElementById('analysis').hidden=true;document.getElementById('rewrite').hidden=true;});
- document.getElementById('copyRewrite').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('rewriteResult').textContent);status.textContent='Rewritten text copied.';}catch{status.textContent='Copy is unavailable; select the rewritten text manually.';}});
+ function improve(s){
+  let out=s;let changes=0;
+  for(const [re,rep] of patterns){out=out.replace(re,()=>{changes++;return rep;});}
+  out=out.replace(/[ \t]{2,}/g,' ').replace(/\s+([,.;!?])/g,'$1').replace(/([.!?])([A-Za-z])/g,'$1 $2');
+  out=out.replace(/\n{3,}/g,'\n\n').trim();
+  return {text:out,changes};
+ }
+ input.addEventListener('input',()=>count.textContent=input.value.length.toLocaleString()+' / 12,000 characters');
+ function validate(){const s=input.value.trim();if(s.length<80){status.textContent='Please enter at least 80 characters.';return null;}return s;}
+ analyze.addEventListener('click',()=>{
+  const s=validate();if(!s)return;
+  const r=analyzeText(s);
+  document.getElementById('scoreResult').textContent='Style-signal score: '+r.score+'/100\n'+r.level+'. This is not an AI-written percentage.';
+  document.getElementById('signals').textContent=r.signals.map(x=>'• '+x).join('\n');
+  analysis.hidden=false;rewritePanel.hidden=true;status.textContent='Analysis complete. All processing stayed in your browser.';
+ });
+ rewrite.addEventListener('click',()=>{
+  const s=validate();if(!s)return;
+  const r=improve(s);
+  document.getElementById('rewriteResult').textContent=r.text;
+  document.getElementById('rewriteNotes').textContent=r.changes+' wording rule(s) applied. '+(r.changes?'Review every edit for meaning and tone.':'No matching phrases needed changing; spacing and punctuation were checked.');
+  rewritePanel.hidden=false;analysis.hidden=true;status.textContent='Clarity edit complete. Your text stayed in this browser.';
+ });
+ document.getElementById('clearBtn').addEventListener('click',()=>{input.value='';count.textContent='0 / 12,000 characters';status.textContent='Text cleared.';analysis.hidden=true;rewritePanel.hidden=true;});
+ document.getElementById('copyRewrite').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('rewriteResult').textContent);status.textContent='Improved text copied.';}catch{status.textContent='Copy is unavailable; select the result manually.';}});
 })();
-</script></body></html>
+</script>
+</body></html>
