@@ -87,14 +87,14 @@ This is an internal preparation checklist, not a statement of Google's official 
 
 | # | Requirement | Latest known condition | Status |
 |---|---|---|---|
-| 1 | Website live and accessible | User confirmed Cloudflare deployed the latest GitHub changes; live route-by-route checks remain. | 🟡 Deployment confirmed; live page checks pending |
+| 1 | Website live and accessible | User checked the live homepage and all four key information/legal pages and confirmed everything is working properly. | ✅ User-verified live pages |
 | 2 | 10–15 useful original articles/pages | Five priority tool pages have expanded content. Total qualifying pages/articles has not been audited. | 🟡 In progress |
-| 3 | All tools working properly | Tools were previously reported as working; a fresh full-site test is outstanding. | 🟡 Test all tools |
-| 4 | About Us | Expanded About page committed; live deployment still needs checking. | 🟡 Code updated; verify live |
-| 5 | Contact Us | Contact page explains GitHub Issues as the support/feedback channel; live deployment still needs checking. | 🟡 Code updated; verify live |
-| 6 | Privacy Policy | Privacy page reviewed and updated for analytics, local processing and QR third-party disclosure; live deployment still needs checking. | 🟡 Code updated; verify live |
-| 7 | Terms of Use | New `terms.html` page created and linked from homepage and shared page navigation/footer; live deployment still needs checking. | 🟡 Code added; verify live |
-| 8 | Navigation and internal links | Homepage footer and About/Contact/Privacy/Terms navigation/footer include the legal/support links; full-site audit remains. | 🟡 In progress |
+| 3 | All tools working properly | User confirms the website is working properly; a separate exhaustive test of every tool and edge case is still recommended. | 🟡 General check passed; exhaustive tool audit pending |
+| 4 | About Us | Expanded About page checked on the live website by the user. | ✅ User-verified live |
+| 5 | Contact Us | Contact page checked on the live website by the user. | ✅ User-verified live |
+| 6 | Privacy Policy | Privacy page checked on the live website by the user. | ✅ User-verified live |
+| 7 | Terms of Use | Terms page checked on the live website by the user. | ✅ User-verified live |
+| 8 | Navigation and internal links | User confirmed the key pages are working; a complete audit of every tool-page link remains. | 🟡 Key navigation checked; full audit pending |
 | 9 | Mobile experience | Responsive CSS and viewport settings were confirmed; complete manual mobile testing remains. | 🟡 Test |
 | 10 | Genuine traffic and analytics | A previous project check reported 10 Analytics users (5 India and 5 US). This is an earlier snapshot, not a live/current count and not necessarily organic traffic. | 🟡 Monitor |
 
