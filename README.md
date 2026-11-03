@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 4 November 2026  
+> **Project log last updated:** 5 November 2026  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -90,11 +90,11 @@ This is an internal preparation checklist, not a statement of Google's official 
 | 1 | Website live and accessible | Tolvix is deployed on Cloudflare Workers. Latest deployment of every recent change still needs confirmation. | 🟡 Verify latest deployment |
 | 2 | 10–15 useful original articles/pages | Five priority tool pages have expanded content. Total qualifying pages/articles has not been audited. | 🟡 In progress |
 | 3 | All tools working properly | Tools were previously reported as working; a fresh full-site test is outstanding. | 🟡 Test all tools |
-| 4 | About Us | Presence/content not verified in the latest review. | ⚪ Verify |
-| 5 | Contact Us | Presence/content not verified in the latest review. | ⚪ Verify |
-| 6 | Privacy Policy | Presence/content not verified in the latest review. | ⚪ Verify |
-| 7 | Terms of Use | Presence/content not verified in the latest review. | ⚪ Verify |
-| 8 | Navigation and internal links | Related links were added to priority pages; full-site navigation audit remains. | 🟡 In progress |
+| 4 | About Us | Expanded About page committed; live deployment still needs checking. | 🟡 Code updated; verify live |
+| 5 | Contact Us | Contact page explains GitHub Issues as the support/feedback channel; live deployment still needs checking. | 🟡 Code updated; verify live |
+| 6 | Privacy Policy | Privacy page reviewed and updated for analytics, local processing and QR third-party disclosure; live deployment still needs checking. | 🟡 Code updated; verify live |
+| 7 | Terms of Use | New `terms.html` page created and linked from homepage and shared page navigation/footer; live deployment still needs checking. | 🟡 Code added; verify live |
+| 8 | Navigation and internal links | Homepage footer and About/Contact/Privacy/Terms navigation/footer include the legal/support links; full-site audit remains. | 🟡 In progress |
 | 9 | Mobile experience | Responsive CSS and viewport settings were confirmed; complete manual mobile testing remains. | 🟡 Test |
 | 10 | Genuine traffic and analytics | A previous project check reported 10 Analytics users (5 India and 5 US). This is an earlier snapshot, not a live/current count and not necessarily organic traffic. | 🟡 Monitor |
 
@@ -129,21 +129,21 @@ Milestones:
 
 ---
 
-## 5. Next actions
+## 5. Day 1 work log — 5 November 2026\n\nCompleted in GitHub on `main`:\n\n- Expanded the About page with the site's purpose, approach, improvement process and feedback route.\n- Clarified the Contact page and kept GitHub Issues as the published contact/support route. No email address was invented.\n- Reviewed and updated the Privacy Policy to describe local tool processing, the external QR provider, Analytics, hosting and the AI text utility accurately.\n- Created `terms.html` with terms covering acceptable use, tool accuracy, no professional advice, third-party services, availability, intellectual property and liability.\n- Added Terms of Use links to the homepage footer and the About, Contact, Privacy and Terms navigation/footer.\n- Preserved Google Analytics Measurement ID `G-WH86KPZW58`.\n\n**Not yet verified:** the live site could not be fetched from the current checking environment because DNS resolution failed. GitHub commits confirm source changes only; they do not prove Cloudflare deployment. The homepage, pages and links must be checked in a normal browser after deployment. A complete desktop/mobile and tool-functionality test is also still pending.\n\n## 6. Next actions
 
 - [ ] Confirm the latest GitHub changes have deployed on Cloudflare Workers.
-- [ ] Open and review all four important policy/information pages: About, Contact, Privacy Policy and Terms of Use.
+- [x] Review/update About, Contact and Privacy Policy source files; create Terms of Use page and add links in homepage/footer/navigation.\n- [ ] Verify all four pages on the live Cloudflare website after deployment.
 - [ ] Audit the website and count useful original content pages towards the 10–15 target.
 - [ ] Test every tool with valid and invalid inputs on desktop.
 - [ ] Test the site on a mobile device and fix layout or usability issues.
-- [ ] Check navigation, footer links and internal links across the whole site.
+- [ ] Complete a full navigation, footer-link and internal-link audit across all tool pages.
 - [ ] Review Google Analytics traffic sources and current user counts.
 - [ ] Review Google Search Console indexing, impressions and clicks.
 - [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
-## 6. Important project details to preserve
+## 7. Important project details to preserve
 
 - Keep the brand name **Tolvix** consistently across the site.
 - Keep the current Cloudflare Workers hostname unless a deliberate migration is planned.
@@ -155,7 +155,7 @@ Milestones:
 - Do not use fake traffic, spam backlinks, copied articles or misleading claims.
 - Do not claim a page is indexed, deployed, tested or AdSense-approved without checking.
 
-## 7. README maintenance rule
+## 8. README maintenance rule
 
 **Update this README after every meaningful Tolvix change.**
 
@@ -169,4 +169,4 @@ For each update:
 
 ---
 
-*This document records the project information and progress confirmed in the project conversation up to 4 November 2026. Items explicitly marked “verify” or “not verified” must be checked before being treated as complete.*
+*This document records the project information and progress confirmed in the project conversation up to 5 November 2026. Items explicitly marked “verify” or “not verified” must be checked before being treated as complete.*
