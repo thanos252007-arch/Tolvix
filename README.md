@@ -87,7 +87,7 @@ This is an internal preparation checklist, not a statement of Google's official 
 
 | # | Requirement | Latest known condition | Status |
 |---|---|---|---|
-| 1 | Website live and accessible | Tolvix is deployed on Cloudflare Workers. Latest deployment of every recent change still needs confirmation. | 🟡 Verify latest deployment |
+| 1 | Website live and accessible | User confirmed Cloudflare deployed the latest GitHub changes; live route-by-route checks remain. | 🟡 Deployment confirmed; live page checks pending |
 | 2 | 10–15 useful original articles/pages | Five priority tool pages have expanded content. Total qualifying pages/articles has not been audited. | 🟡 In progress |
 | 3 | All tools working properly | Tools were previously reported as working; a fresh full-site test is outstanding. | 🟡 Test all tools |
 | 4 | About Us | Expanded About page committed; live deployment still needs checking. | 🟡 Code updated; verify live |
@@ -129,9 +129,9 @@ Milestones:
 
 ---
 
-## 5. Day 1 work log — 5 November 2026\n\nCompleted in GitHub on `main`:\n\n- Expanded the About page with the site's purpose, approach, improvement process and feedback route.\n- Clarified the Contact page and kept GitHub Issues as the published contact/support route. No email address was invented.\n- Reviewed and updated the Privacy Policy to describe local tool processing, the external QR provider, Analytics, hosting and the AI text utility accurately.\n- Created `terms.html` with terms covering acceptable use, tool accuracy, no professional advice, third-party services, availability, intellectual property and liability.\n- Added Terms of Use links to the homepage footer and the About, Contact, Privacy and Terms navigation/footer.\n- Added `/terms.html` to `sitemap.xml`.\n- Preserved Google Analytics Measurement ID `G-WH86KPZW58`.\n\n**Not yet verified:** the live site could not be fetched from the current checking environment because DNS resolution failed. GitHub commits confirm source changes only; they do not prove Cloudflare deployment. The homepage, pages and links must be checked in a normal browser after deployment. A complete desktop/mobile and tool-functionality test is also still pending.\n\n## 6. Next actions
+## 5. Day 1 work log — 5 November 2026\n\nCompleted in GitHub on `main`:\n\n- Expanded the About page with the site's purpose, approach, improvement process and feedback route.\n- Clarified the Contact page and kept GitHub Issues as the published contact/support route. No email address was invented.\n- Reviewed and updated the Privacy Policy to describe local tool processing, the external QR provider, Analytics, hosting and the AI text utility accurately.\n- Created `terms.html` with terms covering acceptable use, tool accuracy, no professional advice, third-party services, availability, intellectual property and liability.\n- Added Terms of Use links to the homepage footer and the About, Contact, Privacy and Terms navigation/footer.\n- Added `/terms.html` to `sitemap.xml`.\n- Preserved Google Analytics Measurement ID `G-WH86KPZW58`.\n\n**Deployment update (user-confirmed, 5 November 2026):** the user confirmed that Cloudflare has deployed the latest GitHub changes. The deployment status is therefore marked as confirmed based on the user's dashboard check. The live homepage and individual pages still need a browser check from a normal network to verify that each route loads and displays correctly. A complete desktop/mobile and tool-functionality test is also still pending.\n\n## 6. Next actions
 
-- [ ] Confirm the latest GitHub changes have deployed on Cloudflare Workers.
+- [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
 - [x] Review/update About, Contact and Privacy Policy source files; create Terms of Use page and add links in homepage/footer/navigation.\n- [ ] Verify all four pages on the live Cloudflare website after deployment.
 - [ ] Audit the website and count useful original content pages towards the 10–15 target.
 - [ ] Test every tool with valid and invalid inputs on desktop.
