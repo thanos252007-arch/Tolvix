@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 5 November 2026 (Day 2 code audit)  
+> **Project log last updated:** 4 November 2026 (homepage PageSpeed Insights results added)  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -220,6 +220,33 @@ Attempted to open the deployed homepage and representative tool pages through th
 
 These are explicitly left open rather than marked as passed. After Cloudflare deploys the new commits, complete a browser-based crawl and Lighthouse run on desktop and mobile before treating this audit as finished.
 
+## PageSpeed Insights results — 4 November 2026
+
+The user shared Google PageSpeed Insights reports for the Tolvix homepage (`https://tolvix.thanos252007.workers.dev/`) captured on 4 November 2026 at 3:09:42 PM. These are Lighthouse lab results from the supplied screenshots.
+
+| Metric | Mobile | Desktop |
+|---|---:|---:|
+| Performance | **97** | **100** |
+| Accessibility | **100** | **100** |
+| Best Practices | **100** | **100** |
+| SEO | **100** | **100** |
+| First Contentful Paint (FCP) | 0.8 s | 0.2 s |
+| Largest Contentful Paint (LCP) | 0.8 s | 0.2 s |
+| Total Blocking Time (TBT) | 90 ms | 20 ms |
+| Cumulative Layout Shift (CLS) | 0 | 0 |
+| Speed Index | 4.1 s | 0.3 s |
+
+**Interpretation:**
+- The supplied reports show excellent Lighthouse scores. Desktop scored 100 in all four categories; mobile scored 97 for Performance and 100 in the other three.
+- The mobile Performance score is already strong. The Speed Index (4.1 s) is the most noticeable metric to investigate next; the report also flags render-blocking resources and reduced unused JavaScript (estimated savings shown by Lighthouse as approximately 150 ms and 74 KiB respectively in the mobile report).
+- CLS is 0 in both reports, and lab LCP/FCP are very fast in these test runs.
+- PageSpeed's “Discover what your real users are experiencing” section displays **No Data**. Therefore, these screenshots do **not** establish field Core Web Vitals or real-user experience. The timings above are Lighthouse lab measurements, not CrUX field data.
+- The screenshots are for the homepage only. They do not certify every tool page, internal link, browser console, or device layout.
+
+**Status:** PageSpeed/Lighthouse homepage audit is now measured from user-supplied screenshots. A separate live internal-link crawl and browser console/network inspection remain unverified. Re-run PageSpeed after any material performance changes and collect field data as real-user traffic becomes available.
+
+---
+
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
@@ -234,7 +261,7 @@ These are explicitly left open rather than marked as passed. After Cloudflare de
 - [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run a live browser crawl of every internal link after deployment (not accessible from this session).
 - [ ] Review Google Analytics traffic sources and current user counts.
 - [ ] Review Google Search Console indexing, impressions and clicks.
-- [ ] Run Lighthouse/PageSpeed and inspect Core Web Vitals on representative pages.\n- [ ] Check browser console/network errors and all image/asset responses in a real browser.\n- [ ] Complete keyboard and screen-reader accessibility checks.\n- [ ] Complete the final AdSense readiness review before applying.
+- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [ ] Check browser console/network errors and all image/asset responses in a real browser.\n- [ ] Complete keyboard and screen-reader accessibility checks.\n- [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
