@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 4 November 2026 (Day 2 user-confirmed testing update)  
+> **Project log last updated:** 4 November 2026 (new Image to Base64 tool added)  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -292,6 +292,17 @@ Commits:
 - [ ] Inspect Search Console indexing, impressions and clicks.
 - [ ] Inspect Analytics traffic, top pages, acquisition sources and establish a measured baseline.
 
+
+### Additional tool added — 4 November 2026
+
+- Added `tools/image-to-base64.html`, a browser-based Image to Base64 converter.
+- Supports image files up to 5 MB, generates a Base64 data URL, and provides copy and text-download actions.
+- Uses the browser FileReader API; selected image contents are not uploaded to a Tolvix or third-party conversion endpoint. Google Analytics remains active for site measurement.
+- Includes input validation, accessible status feedback, usage instructions, privacy/size-limit notes, FAQs, related-tool links, canonical metadata and WebApplication structured data.
+- Added the tool to the homepage (now 25 tools) and to `sitemap.xml`.
+- GitHub page commit: `bd1e1661b14ec202ead6f6c89d1545b3f78c79fb`.
+- Live Cloudflare deployment and real-browser behavior still need confirmation; source changes alone do not prove deployment.
+
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
@@ -306,8 +317,8 @@ Commits:
 - [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run an automated live crawl of every internal link after deployment (user reports the site is working; automated exhaustive crawl remains unverified).
 - [ ] Review Google Analytics traffic sources and current user counts (account report access not available in this session).
 - [ ] Review Google Search Console indexing, impressions and clicks (account report access not available in this session).
-- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Verify the two new guide pages are deployed and inspect their live rendering.
-- [ ] Complete the final AdSense readiness review before applying.
+- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Verify the two new guide pages and the Image to Base64 tool are deployed and inspect their live rendering.
+- [ ] Test the Image to Base64 converter in a real browser with valid, non-image, oversized and empty-file cases.\n- [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
