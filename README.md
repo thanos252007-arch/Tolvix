@@ -445,3 +445,5 @@ UI audit and design guidance adapted from [unslop](https://github.com/heydamir/u
 - Added restrained hover lift, border highlights, subtle surface sheen, improved preview rows and responsive spacing. Reduced-motion preferences remain respected.
 - Preserved all existing tool routes/cards, guides, Analytics ID, Search Console verification, SEO metadata and existing search behavior.
 - Source changes committed to `main`; live Cloudflare deployment, real-browser checks and fresh PageSpeed scores remain to be confirmed after deployment.
+
+- Wording check: the homepage highlight says “Local processing on supported tools” rather than implying every tool is fully local; the QR generator and CDN-loaded libraries retain their specific privacy disclosures.
