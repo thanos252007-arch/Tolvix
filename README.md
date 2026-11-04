@@ -447,3 +447,19 @@ UI audit and design guidance adapted from [unslop](https://github.com/heydamir/u
 - Source changes committed to `main`; live Cloudflare deployment, real-browser checks and fresh PageSpeed scores remain to be confirmed after deployment.
 
 - Wording check: the homepage highlight says “Local processing on supported tools” rather than implying every tool is fully local; the QR generator and CDN-loaded libraries retain their specific privacy disclosures.
+
+
+## Ten SEO guides and tool audit — 4 November 2026
+
+Eight new practical guides were added, bringing the editorial library to 10: image compression, image resizing, JPG vs PNG vs WebP, PDF merging, PDF splitting, PDF-to-image conversion, image-to-PDF conversion and PDF page numbering. The original JSON formatting and GST guides remain. All ten guides are linked from the homepage and listed in sitemap.xml.
+
+### Source audit
+- 43 tool HTML pages found in the repository.
+- All 43 homepage tool links resolve to files present in the repository.
+- All 43 tool URLs appear in sitemap.xml.
+- All 10 guide pages appear in both the homepage guide section and sitemap.xml.
+- Both shared JavaScript files (assets/tools.js and assets/advanced-tools.js) passed JavaScript syntax compilation.
+- Shared CSS was extended to align tool panels, file pickers, disabled states, code blocks, related links and mobile panel spacing with the glossy black/white/blue theme.
+
+### Remaining verification
+This is a source-level audit, not a complete live-browser test. Real interactions, file uploads/downloads, PDF/CDN loading, console/network errors, mobile behavior and Cloudflare deployment after these commits still need live verification. Re-test the previously reported JPG decode and PDF library loading issues before marking them fixed. Search Console indexing and GA4 metrics still require the user's Google dashboards.
