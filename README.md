@@ -423,3 +423,14 @@ The shared Tolvix interface was redesigned using the audit and design principles
 
 ### Attribution
 UI audit and design guidance adapted from [unslop](https://github.com/heydamir/unslop) by Damir Sokolovsky, licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+
+
+### Glossy black theme — 4 November 2026
+
+- Updated the shared site palette to a deep black/charcoal background with white primary text and readable grey secondary text.
+- Added subtle neutral surface sheen and restrained inset highlights to panels/cards, plus dark inputs and raised surfaces.
+- Retained the cobalt-blue accent for links, focus indicators and primary actions.
+- Preserved responsive breakpoints, reduced-motion support, tool markup and existing functionality.
+- Source commit: `155dbf817d8c3f9cd6b09c7b07c02970e8e8e955`.
+- Source checks: dark color scheme, black backgrounds, white primary text, dark cards/inputs, blue accent, responsive and focus styles present.
+- **Live deployment and browser appearance still need confirmation after Cloudflare deploys.**
