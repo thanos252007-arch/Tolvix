@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 5 November 2026  
+> **Project log last updated:** 5 November 2026 (Day 2 code audit)  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -129,12 +129,36 @@ Milestones:
 
 ---
 
-## 5. Day 1 work log — 5 November 2026\n\nCompleted in GitHub on `main`:\n\n- Expanded the About page with the site's purpose, approach, improvement process and feedback route.\n- Clarified the Contact page and kept GitHub Issues as the published contact/support route. No email address was invented.\n- Reviewed and updated the Privacy Policy to describe local tool processing, the external QR provider, Analytics, hosting and the AI text utility accurately.\n- Created `terms.html` with terms covering acceptable use, tool accuracy, no professional advice, third-party services, availability, intellectual property and liability.\n- Added Terms of Use links to the homepage footer and the About, Contact, Privacy and Terms navigation/footer.\n- Added `/terms.html` to `sitemap.xml`.\n- Preserved Google Analytics Measurement ID `G-WH86KPZW58`.\n\n**Deployment update (user-confirmed, 5 November 2026):** the user confirmed that Cloudflare has deployed the latest GitHub changes. The deployment status is therefore marked as confirmed based on the user's dashboard check. The live homepage and individual pages still need a browser check from a normal network to verify that each route loads and displays correctly. A complete desktop/mobile and tool-functionality test is also still pending.\n\n## 6. Next actions
+## 5. Day 1 work log — 5 November 2026\n\nCompleted in GitHub on `main`:\n\n- Expanded the About page with the site's purpose, approach, improvement process and feedback route.\n- Clarified the Contact page and kept GitHub Issues as the published contact/support route. No email address was invented.\n- Reviewed and updated the Privacy Policy to describe local tool processing, the external QR provider, Analytics, hosting and the AI text utility accurately.\n- Created `terms.html` with terms covering acceptable use, tool accuracy, no professional advice, third-party services, availability, intellectual property and liability.\n- Added Terms of Use links to the homepage footer and the About, Contact, Privacy and Terms navigation/footer.\n- Added `/terms.html` to `sitemap.xml`.\n- Preserved Google Analytics Measurement ID `G-WH86KPZW58`.\n\n**Deployment update (user-confirmed, 5 November 2026):** the user confirmed that Cloudflare has deployed the latest GitHub changes. The deployment status is therefore marked as confirmed based on the user's dashboard check. The live homepage and individual pages still need a browser check from a normal network to verify that each route loads and displays correctly. A complete desktop/mobile and tool-functionality test is also still pending.\n\n## Day 2 work log — tool functionality smoke test and source audit
+
+A code-level test was run against the current `assets/tools.js` from `main` using a simulated DOM. This exercises the shared tool dispatcher without claiming a real browser session.
+
+**Completed checks:**
+- Ran normal-input smoke tests for 22 shared tool handlers: Word Counter, Case Converter, Duplicate Remover, Extra Spaces, Find & Replace, Line Sorter, Text Reverser, Slug Generator, JSON Formatter, Discount Calculator, Percentage Calculator, Age Calculator, GST Calculator, BMI Calculator, URL Encoder, Base64 handler, CSV to JSON, JSON to CSV, EMI Calculator, Tip Calculator, Password Generator and Word Frequency.
+- Confirmed expected sample outputs for most handlers, including word counts, text transformations, JSON formatting, GST, BMI, EMI, CSV conversion and word frequency.
+- Reviewed the separate AI Detector & Humanizer inline script and its minimum-input, analyze, rewrite and clear handlers at source level.
+- Reviewed the QR Generator input validation, image URL construction and download flow at source level.
+- Confirmed that the shared tool pages load `/assets/tools.js` and use `data-run` handlers; AI Detector uses its own inline script.
+- Identified that most standard tool pages do not provide a dedicated Reset/Clear button; AI Detector does.
+
+**Important limitations and issues found:**
+- This was a source/dispatcher smoke test, not a real browser automation run. The live Worker could not be fetched from the test environment, so actual deployed JavaScript console errors, browser rendering, QR third-party availability and QR image download were not independently verified.
+- The browser-only Base64 and secure-password paths need a real-browser check because the isolated test runtime does not provide the same browser APIs.
+- Input validation needs improvement: empty values can be treated as zero in some calculators (notably Discount and GST; also review Percentage and Tip). These should be fixed and retested before marking the full tool audit complete.
+- QR generation depends on the external `api.qrserver.com` service. The request and download must be verified in a normal browser.
+- AI Detector was source-reviewed, not functionally executed end-to-end.
+
+**Day 2 status:** initial code-level smoke tests and source audit completed; bug fixes, negative-input tests, real-browser testing, QR/API verification and full desktop/mobile testing remain open. No tool code was changed during this audit.
+
+## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
 - [x] Review/update About, Contact and Privacy Policy source files; create Terms of Use page and add links in homepage/footer/navigation.\n- [ ] Verify all four pages on the live Cloudflare website after deployment.
 - [ ] Audit the website and count useful original content pages towards the 10–15 target.
-- [ ] Test every tool with valid and invalid inputs on desktop.
+- [ ] Fix calculator validation for empty/invalid values (Discount, GST, Percentage and Tip), then rerun positive and negative tests.
+- [ ] Test every tool with valid and invalid inputs in a real browser, including Base64 and secure password generation.
+- [ ] Verify QR generation and PNG download against the external QR service in a real browser.
+- [ ] Test AI Detector analysis, clarity editing and Clear button in a real browser.
 - [ ] Test the site on a mobile device and fix layout or usability issues.
 - [ ] Complete a full navigation, footer-link and internal-link audit across all tool pages.
 - [ ] Review Google Analytics traffic sources and current user counts.
