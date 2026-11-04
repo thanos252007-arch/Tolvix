@@ -199,6 +199,27 @@ A repository/source audit was performed against the current `main` branch. This 
 
 These checks require a real browser session against the deployed Worker. Do not record them as passed based only on source inspection.
 
+## Navigation fixes — 5 November 2026
+
+Updated all 24 tool pages in `/tools/` on `main`.
+
+- Added a consistent Terms of Use link to each tool page's header navigation and footer.
+- Added contextual related-tool links to each tool page, using existing tool URLs.
+- Kept existing tool functionality, page content, analytics ID and privacy links intact.
+- Re-fetched a sample of updated pages (Age, AI Detector, Base64, BMI, Text Case Converter and CSV to JSON) and confirmed Terms links appear in both header and footer and each page includes its related-tools section.
+- The edits are committed individually to `main`; Cloudflare deployment is not independently confirmed.
+
+### Live browser / Lighthouse / mobile audit status
+
+Attempted to open the deployed homepage and representative tool pages through the available web access, but the Cloudflare Worker returned an inaccessible/internal-error response to this environment. No browser automation, Lighthouse or PageSpeed tool is connected in this session. Therefore:
+
+- Live HTTP status and every deployed internal link: **not verified**.
+- Browser console and network errors: **not verified**.
+- Lighthouse performance/accessibility/SEO scores and Core Web Vitals: **not measured**.
+- Real mobile viewport/device behavior: **not tested**.
+
+These are explicitly left open rather than marked as passed. After Cloudflare deploys the new commits, complete a browser-based crawl and Lighthouse run on desktop and mobile before treating this audit as finished.
+
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
@@ -210,7 +231,7 @@ These checks require a real browser session against the deployed Worker. Do not 
 - [ ] Verify QR generation and PNG download against the external QR service in a real browser.
 - [ ] Test AI Detector analysis, clarity editing, URL/email preservation, Copy and Clear buttons in a real browser.
 - [ ] Test the site on a mobile device and fix layout or usability issues.
-- [ ] Add consistent Terms of Use navigation/footer links to all tool pages.\n- [ ] Add relevant contextual related-tool links to tool pages that currently lack them.\n- [ ] Run a live browser crawl of every internal link after deployment.
+- [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run a live browser crawl of every internal link after deployment (not accessible from this session).
 - [ ] Review Google Analytics traffic sources and current user counts.
 - [ ] Review Google Search Console indexing, impressions and clicks.
 - [ ] Run Lighthouse/PageSpeed and inspect Core Web Vitals on representative pages.\n- [ ] Check browser console/network errors and all image/asset responses in a real browser.\n- [ ] Complete keyboard and screen-reader accessibility checks.\n- [ ] Complete the final AdSense readiness review before applying.
