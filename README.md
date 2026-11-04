@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 4 November 2026 (homepage PageSpeed Insights results added)  
+> **Project log last updated:** 4 November 2026 (Day 2 user-confirmed testing update)  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -243,7 +243,7 @@ The user shared Google PageSpeed Insights reports for the Tolvix homepage (`http
 - PageSpeed's “Discover what your real users are experiencing” section displays **No Data**. Therefore, these screenshots do **not** establish field Core Web Vitals or real-user experience. The timings above are Lighthouse lab measurements, not CrUX field data.
 - The screenshots are for the homepage only. They do not certify every tool page, internal link, browser console, or device layout.
 
-**Status:** PageSpeed/Lighthouse homepage audit is now measured from user-supplied screenshots. A separate live internal-link crawl and browser console/network inspection remain unverified. Re-run PageSpeed after any material performance changes and collect field data as real-user traffic becomes available.
+**Status:** PageSpeed/Lighthouse homepage audit is measured from user-supplied screenshots. On 4 November 2026, the user confirmed that live functionality testing, mobile/browser testing and performance review/improvements are all working properly. This is recorded as user-confirmed, not independently reproduced in this environment. No risky performance changes were made because the existing scores are already strong. A separate automated live internal-link crawl and field Core Web Vitals data remain unverified. Re-run PageSpeed after any material performance changes and collect field data as real-user traffic becomes available.
 
 ---
 
@@ -253,15 +253,15 @@ The user shared Google PageSpeed Insights reports for the Tolvix homepage (`http
 - [x] Review/update About, Contact and Privacy Policy source files; create Terms of Use page and add links in homepage/footer/navigation.\n- [ ] Verify all four pages on the live Cloudflare website after deployment.
 - [ ] Audit the website and count useful original content pages towards the 10–15 target.
 - [x] Add calculator validation for empty/invalid values (Discount, GST, Percentage and Tip); source re-fetched and changes confirmed.
-- [ ] Verify the four updated calculators on the live Cloudflare site in a normal browser; automated URL access was unavailable during this check.
-- [ ] Test every tool with valid and invalid inputs in a real browser, including Base64 and secure password generation.
-- [ ] Verify QR generation and PNG download against the external QR service in a real browser.
-- [ ] Test AI Detector analysis, clarity editing, URL/email preservation, Copy and Clear buttons in a real browser.
-- [ ] Test the site on a mobile device and fix layout or usability issues.
-- [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run a live browser crawl of every internal link after deployment (not accessible from this session).
+- [x] User confirmed live calculator functionality is working properly (4 November 2026); not independently reproduced in this environment.
+- [x] User confirmed live functionality testing of the tools is working properly (4 November 2026); retain the code-level test record above as separate evidence.
+- [x] User confirmed live tool functionality is working properly, including the website's tools (4 November 2026); QR third-party request/download not independently inspected here.
+- [x] User confirmed live functionality testing is working properly (4 November 2026); AI Detector browser behavior not independently inspected here.
+- [x] User confirmed mobile/browser testing is working properly (4 November 2026); not independently reproduced on a physical device here.
+- [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run an automated live crawl of every internal link after deployment (user reports the site is working; automated exhaustive crawl remains unverified).
 - [ ] Review Google Analytics traffic sources and current user counts.
 - [ ] Review Google Search Console indexing, impressions and clicks.
-- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [ ] Check browser console/network errors and all image/asset responses in a real browser.\n- [ ] Complete keyboard and screen-reader accessibility checks.\n- [ ] Complete the final AdSense readiness review before applying.
+- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
