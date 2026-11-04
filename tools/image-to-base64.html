@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image to Base64 Converter Online – Free & Private | Tolvix</title>
+<meta name="description" content="Convert an image to a Base64 data URL in your browser. Preview the result, copy it or download it as a text file. Free and private.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://tolvix.thanos252007.workers.dev/tools/image-to-base64.html">
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tolvix">
+<meta property="og:title" content="Image to Base64 Converter Online – Tolvix">
+<meta property="og:description" content="Convert image files into Base64 data URLs locally in your browser.">
+<meta property="og:url" content="https://tolvix.thanos252007.workers.dev/tools/image-to-base64.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Image to Base64 Converter","url":"https://tolvix.thanos252007.workers.dev/tools/image-to-base64.html","description":"Convert image files into Base64 data URLs locally in your browser.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH86KPZW58"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WH86KPZW58');</script>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="/" aria-label="Tolvix home"><img src="/assets/tolvix-mark.svg" alt=""><span>Tolvix</span></a><div class="links"><a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div></nav></div></header>
+<main>
+<section class="wrap toolhead"><span class="pill">Developer tool</span><h1>Image to Base64 Converter</h1><p class="lead">Turn an image into a Base64 data URL for use in HTML, CSS or development projects.</p><p><a href="/">← Back to all tools</a></p></section>
+<section class="wrap panel">
+<div class="field"><label for="imageFile">Choose an image (maximum 5 MB)</label><input id="imageFile" type="file" accept="image/*" aria-describedby="fileHelp"><p class="small" id="fileHelp">Supported formats depend on your browser. The image is processed locally and is not uploaded.</p></div>
+<div class="actions"><button type="button" id="convertBtn">Convert to Base64</button><button type="button" class="secondary" id="clearBtn">Clear</button></div>
+<p id="status" class="small" role="status" aria-live="polite">Choose an image to get started.</p>
+<div class="field"><label for="base64Output">Base64 data URL</label><textarea id="base64Output" rows="8" readonly placeholder="Your Base64 data URL will appear here…"></textarea></div>
+<div class="actions"><button type="button" id="copyBtn" class="secondary" disabled>Copy result</button><button type="button" id="downloadBtn" class="secondary" disabled>Download .txt</button></div>
+<p class="small">A Base64 data URL can be much larger than the original image. Avoid embedding large images in production pages when a normal image file is more efficient.</p>
+</section>
+<article class="content">
+<h2>How to convert an image to Base64</h2>
+<ol><li>Choose an image file from your device.</li><li>Click <strong>Convert to Base64</strong>.</li><li>Copy the generated data URL or download it as a text file.</li><li>Paste it into a project that accepts a data URL, such as an HTML <code>src</code> attribute or a CSS <code>url()</code>.</li></ol>
+<h2>What is a Base64 image data URL?</h2>
+<p>A data URL stores the image's encoded data together with its media type. It can be useful for small icons, prototypes and self-contained examples. Base64 is an encoding format, not encryption, so it does not make an image secret.</p>
+<h2>Privacy and file limits</h2>
+<p>This converter uses your browser's FileReader API. The selected image is not sent to a Tolvix server or a third-party conversion service. Files larger than 5 MB and non-image files are rejected to keep the tool manageable. Do not assume that encoding a file protects confidential content.</p>
+<h2>Frequently asked questions</h2>
+<h3>Does this upload my image?</h3><p>No. The conversion happens locally in your browser. The website still loads its normal analytics script for site measurement.</p>
+<h3>Why is the Base64 result bigger than my image?</h3><p>Base64 represents binary data using text characters, so the encoded output is typically around one-third larger than the original binary file, before any additional markup.</p>
+<h3>Can I convert any file?</h3><p>No. This tool accepts image files only and has a 5 MB size limit.</p>
+<section class="related-tools"><h2>Related tools</h2><p><a href="/tools/base64.html">Text Base64 Encoder &amp; Decoder</a> · <a href="/tools/qr.html">QR Code Generator</a> · <a href="/tools/url-encoder.html">URL Encoder &amp; Decoder</a></p></section>
+<p>Read our <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Use</a>.</p>
+</article>
+</main>
+<footer class="footer"><div class="wrap footerinner"><span>© 2026 Tolvix. Useful tools for everyday tasks.</span><span><a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms</a></span></div></footer>
+<script>
+(() => {
+ const fileInput=document.getElementById('imageFile');
+ const output=document.getElementById('base64Output');
+ const status=document.getElementById('status');
+ const convert=document.getElementById('convertBtn');
+ const copy=document.getElementById('copyBtn');
+ const download=document.getElementById('downloadBtn');
+ const clear=document.getElementById('clearBtn');
+ const maxBytes=5*1024*1024;
+ let result='';
+ function setResult(value){result=value;output.value=value;copy.disabled=!value;download.disabled=!value;}
+ convert.addEventListener('click',()=>{
+  const file=fileInput.files && fileInput.files[0];
+  setResult('');
+  if(!file){status.textContent='Please choose an image file first.';return;}
+  if(!file.type.startsWith('image/')){status.textContent='That file is not recognized as an image. Choose an image file.';return;}
+  if(file.size>maxBytes){status.textContent='File is larger than 5 MB. Choose a smaller image.';return;}
+  const reader=new FileReader();
+  status.textContent='Converting image…';
+  reader.onload=()=>{if(typeof reader.result!=='string'){status.textContent='Could not read this image. Try another file.';return;}setResult(reader.result);status.textContent='Conversion complete. '+file.name+' ('+(file.size/1024).toFixed(1)+' KB).';};
+  reader.onerror=()=>{status.textContent='Could not read this file. Please try again.';};
+  reader.readAsDataURL(file);
+ });
+ copy.addEventListener('click',async()=>{
+  if(!result)return;
+  try{await navigator.clipboard.writeText(result);status.textContent='Base64 data URL copied.';}
+  catch(e){output.focus();output.select();status.textContent='Clipboard access is unavailable. Select the text and copy it manually.';}
+ });
+ download.addEventListener('click',()=>{
+  if(!result)return;
+  const blob=new Blob([result],{type:'text/plain;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='tolvix-image-base64.txt';document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+  status.textContent='Text file download started.';
+ });
+ clear.addEventListener('click',()=>{fileInput.value='';setResult('');status.textContent='Cleared. Choose another image to get started.';});
+})();
+</script>
+</body>
+</html>
