@@ -148,14 +148,14 @@ A code-level test was run against the current `assets/tools.js` from `main` usin
 - QR generation depends on the external `api.qrserver.com` service. The request and download must be verified in a normal browser.
 - AI Detector was source-reviewed, not functionally executed end-to-end.
 
-**Day 2 status:** initial code-level smoke tests and source audit completed; bug fixes, negative-input tests, real-browser testing, QR/API verification and full desktop/mobile testing remain open. No tool code was changed during this audit.
+**Day 2 update:** fixed input validation in Discount, Percentage, GST and Tip calculators. The updated shared script was fetched again from `main` and all four revised handlers were confirmed present. Validation now rejects blank/non-numeric values, invalid negative amounts/rates, out-of-range percentages, zero denominators where division is required, and non-integer or less-than-one split counts. A fresh browser runtime test is still required to confirm the deployed behavior.
 
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
 - [x] Review/update About, Contact and Privacy Policy source files; create Terms of Use page and add links in homepage/footer/navigation.\n- [ ] Verify all four pages on the live Cloudflare website after deployment.
 - [ ] Audit the website and count useful original content pages towards the 10–15 target.
-- [ ] Fix calculator validation for empty/invalid values (Discount, GST, Percentage and Tip), then rerun positive and negative tests.
+- [x] Add calculator validation for empty/invalid values (Discount, GST, Percentage and Tip); source re-fetched and changes confirmed.
 - [ ] Test every tool with valid and invalid inputs in a real browser, including Base64 and secure password generation.
 - [ ] Verify QR generation and PNG download against the external QR service in a real browser.
 - [ ] Test AI Detector analysis, clarity editing and Clear button in a real browser.
