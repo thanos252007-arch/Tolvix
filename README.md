@@ -332,6 +332,8 @@ Added 18 new tool pages and one shared browser-processing script:
 - [ ] Review Google Analytics traffic sources and current user counts (account report access not available in this session).
 - [ ] Review Google Search Console indexing, impressions and clicks (account report access not available in this session).
 - [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Verify the two new guide pages, Image to Base64 and all 18 new tools are deployed and inspect their live rendering.
+- [ ] Retest image tools with standard JPG/PNG files after the image-decoding feedback fix.
+- [ ] Retest PDF tools after the pdf-lib/PDF.js CDN fallback fix; inspect browser console/network errors if loading still fails.
 - [ ] Test the Image to Base64 converter and all 18 new tools in a real browser with valid, invalid and edge-case files.\n- [ ] Complete the final AdSense readiness review before applying.
 
 ---
@@ -363,3 +365,17 @@ For each update:
 ---
 
 *This document records the project information and progress confirmed in the project conversation up to 5 November 2026. Items explicitly marked “verify” or “not verified” must be checked before being treated as complete.*
+
+
+### New image/PDF error fixes — 4 November 2026
+
+The user reported two reproducible problem categories in the new tools: image tools displayed **“Invalid image”**, and PDF tools displayed a **library error**.
+
+- Updated the shared image loader to return a more useful decoding error, revoke temporary object URLs on both success and failure, and verify that the browser decoded non-zero image dimensions.
+- Image tools and Image to PDF now accept common image MIME types or known image file extensions (PNG, JPG/JPEG, WebP, GIF, BMP and SVG). Unsupported formats such as HEIC/HEIF receive a clear browser-compatibility message rather than the generic “Invalid image” message.
+- Added automatic PDF library fallback: if pdf-lib is unavailable from jsDelivr, the script tries the same pinned version from unpkg. PDF.js page rendering similarly has a fallback CDN and matching worker URL.
+- PDF tools now check/load the required library before processing; metadata loading also goes through the shared loader.
+- Shared JavaScript was re-fetched from `main` after the change and passed a JavaScript syntax parse check.
+- Fix commit: `9f9e17eb3ea71c0fb40ae283b34274fab4187d33`.
+
+**Important testing status:** this is a source-level resilience fix. It does not prove either CDN is reachable on the user's device or that the new tools work end-to-end in the live browser. After Cloudflare deploys the commit, retest one standard JPG/PNG image and one small PDF. If the PDF library still fails, inspect the browser console/network request for both CDN hosts; if an image still fails, test a standard JPG or PNG rather than HEIC/HEIF.
