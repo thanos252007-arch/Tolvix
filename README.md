@@ -379,3 +379,15 @@ The user reported two reproducible problem categories in the new tools: image to
 - Fix commit: `9f9e17eb3ea71c0fb40ae283b34274fab4187d33`.
 
 **Important testing status:** this is a source-level resilience fix. It does not prove either CDN is reachable on the user's device or that the new tools work end-to-end in the live browser. After Cloudflare deploys the commit, retest one standard JPG/PNG image and one small PDF. If the PDF library still fails, inspect the browser console/network request for both CDN hosts; if an image still fails, test a standard JPG or PNG rather than HEIC/HEIF.
+
+
+### JPG decoding follow-up — 4 November 2026
+
+The user confirmed the failing upload is a JPG, so the earlier possibility of an unsupported HEIC/HEIF file did not explain this case.
+
+- Updated the shared image loader to retry decoding through a FileReader data URL if the browser fails to decode the object URL.
+- Added a more actionable error message asking the user to re-save the JPG as a fresh JPG/PNG if both decode paths fail.
+- Shared JavaScript syntax check passed after the change.
+- Commit: `4537c5c46d43d0bd550a495a9637beb84183c779`.
+
+**Status:** source-level fallback added; live browser result still pending. If a standard JPG continues to fail, capture its file extension, file size and browser console error to determine whether the file itself or the browser environment is responsible.
