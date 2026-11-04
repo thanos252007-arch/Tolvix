@@ -164,6 +164,41 @@ Reviewed `tools/ai-detector.html` and its inline JavaScript on `main`.
 
 **Testing status:** this is a source-level review and targeted code fix. The analysis/rewrite flows, clipboard behavior and URL preservation still require a real-browser test on the deployed Cloudflare page. The tool must not be marketed as a reliable AI detector or as a way to bypass AI detectors; its current heuristic score cannot establish authorship.
 
+## Website navigation, performance and accessibility audit — 5 November 2026
+
+A repository/source audit was performed against the current `main` branch. This is a static inspection of the HTML, CSS and JavaScript—not a live browser crawl.
+
+### Navigation and internal links
+
+- Checked the homepage's 24 tool-card destinations against the repository file tree: all 24 target HTML files exist.
+- Checked the primary Home, About, Contact and Privacy navigation targets: corresponding files exist.
+- Checked the internal related-tool links found on the expanded Word Counter, JSON Formatter, GST Calculator and EMI Calculator pages: their target tool files exist.
+- **Issue found:** tool-page header/footer navigation is inconsistent with the legal-page navigation. Most tool pages omit a Terms of Use link in their header and footer, even though the homepage and legal pages link to Terms. This is a consistency gap, not a missing target page.
+- **Issue found:** most of the 24 tool pages have no contextual related-tool links. Related links are currently concentrated on a small number of expanded pages.
+- No missing homepage tool-card target or broken related-tool target was found in the files inspected. This does not prove every URL works on the deployed Worker.
+
+### Performance and technical source checks
+
+- Shared stylesheet: `assets/style.css` is approximately 4.8 KB.
+- Shared tool logic: `assets/tools.js` is approximately 9.8 KB.
+- Logo: `assets/tolvix-mark.svg` is approximately 1.2 KB.
+- No large local raster-image library was found in the repository tree. The QR image is generated from the external QR service at runtime.
+- Most standard tool pages load the shared `assets/tools.js`; AI Detector uses its own inline script.
+- Google Analytics is loaded on the homepage and content/tool pages. It is an external script and may affect page loading; it is retained to preserve measurement ID `G-WH86KPZW58`.
+- CSS includes responsive breakpoints at 800px and 560px, and visible keyboard focus styling for the homepage search input.
+- The inspected source uses labels for form inputs on standard tools, and several pages use live status/result regions. A complete WCAG audit has not been performed.
+
+### Not verified in this environment
+
+- Live page load timings, Core Web Vitals or Lighthouse scores.
+- Real browser console errors, network failures or missing deployed assets.
+- Whether every navigation link works after Cloudflare deployment.
+- Actual image transfer sizes after compression/response headers.
+- Keyboard-only navigation and screen-reader behavior across all pages.
+- Mobile rendering on physical devices.
+
+These checks require a real browser session against the deployed Worker. Do not record them as passed based only on source inspection.
+
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
@@ -175,10 +210,10 @@ Reviewed `tools/ai-detector.html` and its inline JavaScript on `main`.
 - [ ] Verify QR generation and PNG download against the external QR service in a real browser.
 - [ ] Test AI Detector analysis, clarity editing, URL/email preservation, Copy and Clear buttons in a real browser.
 - [ ] Test the site on a mobile device and fix layout or usability issues.
-- [ ] Complete a full navigation, footer-link and internal-link audit across all tool pages.
+- [ ] Add consistent Terms of Use navigation/footer links to all tool pages.\n- [ ] Add relevant contextual related-tool links to tool pages that currently lack them.\n- [ ] Run a live browser crawl of every internal link after deployment.
 - [ ] Review Google Analytics traffic sources and current user counts.
 - [ ] Review Google Search Console indexing, impressions and clicks.
-- [ ] Complete the final AdSense readiness review before applying.
+- [ ] Run Lighthouse/PageSpeed and inspect Core Web Vitals on representative pages.\n- [ ] Check browser console/network errors and all image/asset responses in a real browser.\n- [ ] Complete keyboard and screen-reader accessibility checks.\n- [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
