@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 4 November 2026 (new Image to Base64 tool added)  
+> **Project log last updated:** 4 November 2026 (18 additional tools reviewed and safeguards improved)  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -27,7 +27,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 
 - Built a dark purple/blue visual design for the tools website.
 - Added tool discovery through categories, navigation and search.
-- The site has been reported as containing approximately 24 tools.
+- The original core site contained 24 tools; Image to Base64 and 18 additional tools were subsequently added, bringing the homepage inventory to 43 tool cards.
 - Tool categories include text utilities, calculators, developer utilities and productivity tools.
 - The homepage links to the available tools.
 
@@ -314,8 +314,8 @@ Added 18 new tool pages and one shared browser-processing script:
 - Shared implementation: `assets/advanced-tools.js`; PDF operations use pdf-lib from jsDelivr and PDF rendering uses PDF.js from cdnjs.
 - Added all 18 cards to the homepage and all 18 URLs to `sitemap.xml`; homepage tool count is now 43.
 - Image processing is local in the browser. PDF document processing is local after the PDF libraries load. Large images are limited to 25 MB in the shared image workflow.
-- Minifiers are intentionally conservative; JavaScript whitespace reduction preserves quoted strings, comments and line breaks rather than attempting unsafe aggressive compression.
-- **Validation status:** GitHub source files were committed. Full real-browser functional testing, PDF edge-case testing, CDN availability checks and Cloudflare live deployment confirmation remain pending. Do not treat these as fully browser-verified until tested on the live site.
+- CSS and HTML minifiers use conservative whitespace reduction; HTML raw-text blocks (script, style, pre and textarea) are preserved. JavaScript minification uses Terser in the browser. Review all minified output before production use.
+- **Validation status:** GitHub source files were committed. Full real-browser functional testing, PDF edge-case testing, CDN availability checks and Cloudflare live deployment confirmation remain pending. Additional source safeguards were added on 4 November: PDF.js worker URL is explicitly configured; PDF inputs are capped at 50 MB and PDF-to-image at 100 pages; image outputs are capped at 25 megapixels and JPEG conversions use a white background unless a PNG-to-JPG background is selected. HTML minification now preserves script/style/pre/textarea contents. Do not treat these as fully browser-verified until tested on the live site.
 
 ## 6. Next actions
 
