@@ -391,3 +391,35 @@ The user confirmed the failing upload is a JPG, so the earlier possibility of an
 - Commit: `4537c5c46d43d0bd550a495a9637beb84183c779`.
 
 **Status:** source-level fallback added; live browser result still pending. If a standard JPG continues to fail, capture its file extension, file size and browser console error to determine whether the file itself or the browser environment is responsible.
+
+
+## Unslop-inspired UI redesign — 4 November 2026
+
+The shared Tolvix interface was redesigned using the audit and design principles from [unslop by Damir Sokolovsky](https://github.com/heydamir/unslop), licensed under CC BY 4.0. Attribution is retained here and in the shared stylesheet.
+
+### Direction
+- **Product:** Free browser-based tools for everyday text, image, PDF, calculation and developer tasks.
+- **Character:** Precise, practical, calm.
+- **World:** A digital workbench — quiet ink, paper-like surfaces and clear tool labels.
+- **Moments:** A functional quick-access panel linking to four real Tolvix tools; the tool directory remains the main catalogue.
+- **Signature:** A small cobalt index marker used to orient users through tool categories.
+
+### Changes committed
+- Replaced the purple/blue gradient and glow-heavy global styling with a light ink-and-paper neutral system and one cobalt accent.
+- Reworked the homepage hero into an asymmetric layout with clear actions, tool search and real quick links to Word Counter, Image Compressor, Merge PDF and JSON Formatter.
+- Simplified navigation and added direct anchors to the tool directory and guides.
+- Updated shared styling for all tool pages and guides: typography, spacing, surfaces, inputs, buttons, results, focus states, responsive layouts and reduced-motion preferences.
+- Flattened the existing Tolvix mark to one solid brand color while preserving its shape.
+- Kept all existing tool cards, page content, analytics, metadata, URLs and core functionality unchanged.
+
+### Source verification
+- Confirmed homepage still lists all 43 tools.
+- Confirmed all four quick links point to existing tool routes.
+- Confirmed search input and Tools/Guides anchors remain present.
+- Confirmed the shared stylesheet uses the new neutral palette, has responsive breakpoints and visible keyboard focus styles, and no longer uses hue gradients or radial color washes.
+- Confirmed the logo SVG no longer contains gradient definitions.
+
+**Status:** GitHub source updates are committed. Live Cloudflare rendering, real-device visual checks and a fresh PageSpeed run are still pending; no live-browser test is claimed here.
+
+### Attribution
+UI audit and design guidance adapted from [unslop](https://github.com/heydamir/unslop) by Damir Sokolovsky, licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
