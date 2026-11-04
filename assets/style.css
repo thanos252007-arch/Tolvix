@@ -201,3 +201,24 @@ button:active{transform:scale(.98)}
  .hero:before{display:none}
  .primary-action:hover,.secondary-action:hover,.preview-link:hover,.grid>.card:hover{transform:none}
 }
+
+/* Shared finishing layer for consistent tool-page controls and content */
+.panel{
+  background:linear-gradient(155deg,rgba(255,255,255,.035),transparent 42%),var(--surface);
+  box-shadow:0 14px 34px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.035);
+}
+.toolhead .pill{padding:6px 11px;border:1px solid rgba(121,167,255,.22);border-radius:999px;background:rgba(121,167,255,.075)}
+.field input[type="file"]{min-height:48px;padding:8px;background:#0c0e11;color:var(--muted)}
+.field input[type="file"]::file-selector-button{margin-right:12px;padding:8px 12px;border:1px solid var(--line-strong);border-radius:7px;background:var(--surface-raised);color:var(--text);font:inherit;cursor:pointer}
+.field input[type="file"]::file-selector-button:hover{border-color:var(--accent);background:#252b35}
+.field input:disabled,.field textarea:disabled,.field select:disabled,button:disabled{opacity:.58;cursor:not-allowed}
+.result:empty{display:none}
+pre{max-width:100%;overflow:auto;padding:16px;border:1px solid var(--line);border-radius:10px;background:#0b0d10;color:#e5eaf2;line-height:1.55}
+code{overflow-wrap:anywhere}
+.related-tools{border-top-color:var(--line-strong)}
+.related-tools a{display:inline-block;margin:4px 10px 4px 0}
+@media(max-width:680px){
+  .panel{padding:18px}
+  .toolhead{padding-top:38px}
+  .actions button,.actions .btn{min-height:42px}
+}
