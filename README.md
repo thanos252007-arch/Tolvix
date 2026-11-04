@@ -150,6 +150,20 @@ A code-level test was run against the current `assets/tools.js` from `main` usin
 
 **Day 2 update:** fixed input validation in Discount, Percentage, GST and Tip calculators. The updated shared script was fetched again from `main` and all four revised handlers were confirmed present. A deterministic JavaScript smoke test with a simulated DOM passed **17/17 cases**: valid calculations plus blank, negative, out-of-range, zero-denominator and fractional-person inputs. This verifies handler logic in an isolated runtime, not in a real browser. Attempts to open the four live Cloudflare tool URLs from the test environment were unsuccessful, so deployment and browser rendering remain unverified here. The user previously confirmed the site deployment; still perform a real-browser check of the four calculators.
 
+### AI Detector & Humanizer review — 5 November 2026
+
+Reviewed `tools/ai-detector.html` and its inline JavaScript on `main`.
+
+- Confirmed the page enforces an 80-character minimum and 12,000-character maximum.
+- Confirmed analysis checks sentence-length variation, vocabulary repetition and selected formulaic phrases; the displayed score is explicitly described as a heuristic style-signal score, **not** an AI probability or proof of authorship.
+- Confirmed the clarity editor applies local phrase substitutions and whitespace cleanup; the page warns users to review edits for meaning.
+- Confirmed results are inserted with `textContent`, and the page states that pasted text is processed locally rather than sent to an AI API. Google Analytics remains present for ordinary site usage measurement.
+- Reviewed the Clear and Copy handlers. Clipboard copying depends on browser clipboard permissions/secure-context support.
+- Found and fixed a text-integrity issue: the humanizer previously inserted a space after punctuation immediately followed by a letter, which could corrupt URLs and email addresses (for example, `example.com`). Removed that broad punctuation-spacing rule while retaining whitespace cleanup.
+- Fix commit: `68b8d81964ab5489959c19119d70b7c2146448ca`.
+
+**Testing status:** this is a source-level review and targeted code fix. The analysis/rewrite flows, clipboard behavior and URL preservation still require a real-browser test on the deployed Cloudflare page. The tool must not be marketed as a reliable AI detector or as a way to bypass AI detectors; its current heuristic score cannot establish authorship.
+
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
@@ -159,7 +173,7 @@ A code-level test was run against the current `assets/tools.js` from `main` usin
 - [ ] Verify the four updated calculators on the live Cloudflare site in a normal browser; automated URL access was unavailable during this check.
 - [ ] Test every tool with valid and invalid inputs in a real browser, including Base64 and secure password generation.
 - [ ] Verify QR generation and PNG download against the external QR service in a real browser.
-- [ ] Test AI Detector analysis, clarity editing and Clear button in a real browser.
+- [ ] Test AI Detector analysis, clarity editing, URL/email preservation, Copy and Clear buttons in a real browser.
 - [ ] Test the site on a mobile device and fix layout or usability issues.
 - [ ] Complete a full navigation, footer-link and internal-link audit across all tool pages.
 - [ ] Review Google Analytics traffic sources and current user counts.
