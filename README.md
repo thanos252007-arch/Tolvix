@@ -247,11 +247,56 @@ The user shared Google PageSpeed Insights reports for the Tolvix homepage (`http
 
 ---
 
+## Day 3 work log — content audit, guides and search visibility — 4 November 2026
+
+### Repository content audit
+
+Audited the repository tree and inspected all 24 tool-page HTML files for explanatory content, instructions, examples and FAQs.
+
+- Repository contains **24 tool pages**, plus homepage, About, Contact, Privacy, Terms and a 404 page.
+- Before today's additions, there were **0 standalone editorial guides** in a guides/articles directory.
+- Five tool pages have more developed educational copy: Word Counter, JSON Formatter, QR Code Generator, GST Calculator and EMI Calculator. They contain roughly 447–523 visible words each, with how-to guidance, examples and FAQs.
+- The remaining 19 tool pages are comparatively brief (the sampled pages generally contain about 110–158 visible words) and mostly have a short “How to use” section and related links, but no dedicated FAQ/example section.
+- Improvement opportunity: expand those 19 pages selectively with unique use cases, worked examples, limitations/privacy details and relevant FAQs. Do not add filler or duplicate copy merely to increase word count.
+
+### Two original guides published
+
+Created and committed:
+1. `guides/format-json-online.html` — beginner guide to formatting, minifying and validating JSON, with before/after examples, common syntax errors, FAQs and links to JSON/CSV tools.
+2. `guides/calculate-gst-india.html` — India-focused GST arithmetic guide with inclusive/exclusive formulas, worked rupee examples, CGST/SGST/IGST context, FAQs, appropriate tax-advice caveats and links to Tolvix calculators.
+
+Both pages include unique titles/descriptions, canonical URLs, Open Graph metadata, Article structured data, responsive shared stylesheet, existing Google Analytics ID and internal navigation. Both were added to the homepage guide section and sitemap.
+
+Commits:
+- JSON guide: `b64db22c8a5fa719d20fbe6a97cdf2ae95a9a924`
+- GST guide: `667a7b9dca5dd3153ba43b5e59a1e972a71e5dfa`
+- Sitemap and homepage guide links were updated after the article commits.
+
+### Google Search Console and Analytics access status
+
+- Repository review confirms the sitemap contains the existing site URLs; the two new guide URLs have now been added.
+- A public search query for the Tolvix hostname did not return results in the search engine used for this check. This is **not** a definitive indexing test; search operators can omit pages.
+- Google Search Console's private indexing, impressions, clicks and performance reports could not be read from the available connected tools in this session.
+- Google Analytics property reports, current users, page views, top pages and acquisition sources could not be read from the available connected tools in this session.
+- Therefore no current traffic baseline or top-performing-page ranking is claimed. Do not invent traffic numbers. The next reliable step is to connect an authorized Search Console/Analytics reporting integration or inspect the account reports directly.
+
+### Day 3 status
+
+- [x] Audit repository page inventory and content depth across all 24 tool pages.
+- [x] Identify five expanded educational tool pages and 19 comparatively brief pages.
+- [x] Publish two original SEO-oriented guides.
+- [x] Add guide links to homepage.
+- [x] Add both guide URLs to sitemap.
+- [ ] Confirm Cloudflare deployment of the new guide commits.
+- [ ] Verify both guide URLs in a real browser after deployment.
+- [ ] Inspect Search Console indexing, impressions and clicks.
+- [ ] Inspect Analytics traffic, top pages, acquisition sources and establish a measured baseline.
+
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
 - [x] Review/update About, Contact and Privacy Policy source files; create Terms of Use page and add links in homepage/footer/navigation.\n- [ ] Verify all four pages on the live Cloudflare website after deployment.
-- [ ] Audit the website and count useful original content pages towards the 10–15 target.
+- [x] Audit the website content depth: 24 tool pages reviewed; five expanded tool guides and 19 comparatively brief tool pages identified. Two standalone guides added on 4 November 2026.
 - [x] Add calculator validation for empty/invalid values (Discount, GST, Percentage and Tip); source re-fetched and changes confirmed.
 - [x] User confirmed live calculator functionality is working properly (4 November 2026); not independently reproduced in this environment.
 - [x] User confirmed live functionality testing of the tools is working properly (4 November 2026); retain the code-level test record above as separate evidence.
@@ -259,9 +304,10 @@ The user shared Google PageSpeed Insights reports for the Tolvix homepage (`http
 - [x] User confirmed live functionality testing is working properly (4 November 2026); AI Detector browser behavior not independently inspected here.
 - [x] User confirmed mobile/browser testing is working properly (4 November 2026); not independently reproduced on a physical device here.
 - [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run an automated live crawl of every internal link after deployment (user reports the site is working; automated exhaustive crawl remains unverified).
-- [ ] Review Google Analytics traffic sources and current user counts.
-- [ ] Review Google Search Console indexing, impressions and clicks.
-- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Complete the final AdSense readiness review before applying.
+- [ ] Review Google Analytics traffic sources and current user counts (account report access not available in this session).
+- [ ] Review Google Search Console indexing, impressions and clicks (account report access not available in this session).
+- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Verify the two new guide pages are deployed and inspect their live rendering.
+- [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
