@@ -311,7 +311,7 @@ Added 18 new tool pages and one shared browser-processing script:
 - **Image tools (6):** Image Compressor, Universal Image Converter, Image Cropper, Image Resizer, JPG to PNG, PNG to JPG.
 - **PDF tools (8):** Merge PDF, Split PDF, PDF to Image, Image to PDF, PDF Watermark, PDF Page Numbering, PDF Metadata Editor, Add Text to PDF.
 - **Developer / number tools (4):** HTML Minifier, CSS Minifier, JavaScript Minifier, Binary / Decimal / Hex Converter.
-- Shared implementation: `assets/advanced-tools.js`; PDF operations use pdf-lib from jsDelivr and PDF rendering uses PDF.js from cdnjs.
+- Shared implementation: `assets/advanced-tools.js`; PDF operations use pdf-lib from jsDelivr and PDF rendering uses PDF.js from cdnjs. Final shared-processing hardening commit: `d302ba264af1d65a5feded0b5e417d613deaf894`.
 - Added all 18 cards to the homepage and all 18 URLs to `sitemap.xml`; homepage tool count is now 43.
 - Image processing is local in the browser. PDF document processing is local after the PDF libraries load. Large images are limited to 25 MB in the shared image workflow.
 - CSS and HTML minifiers use conservative whitespace reduction; HTML raw-text blocks (script, style, pre and textarea) are preserved. JavaScript minification uses Terser in the browser. Review all minified output before production use.
