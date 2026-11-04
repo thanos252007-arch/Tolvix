@@ -303,6 +303,20 @@ Commits:
 - GitHub page commit: `bd1e1661b14ec202ead6f6c89d1545b3f78c79fb`.
 - Live Cloudflare deployment and real-browser behavior still need confirmation; source changes alone do not prove deployment.
 
+
+### 18 additional tools added — 4 November 2026
+
+Added 18 new tool pages and one shared browser-processing script:
+
+- **Image tools (6):** Image Compressor, Universal Image Converter, Image Cropper, Image Resizer, JPG to PNG, PNG to JPG.
+- **PDF tools (8):** Merge PDF, Split PDF, PDF to Image, Image to PDF, PDF Watermark, PDF Page Numbering, PDF Metadata Editor, Add Text to PDF.
+- **Developer / number tools (4):** HTML Minifier, CSS Minifier, JavaScript Minifier, Binary / Decimal / Hex Converter.
+- Shared implementation: `assets/advanced-tools.js`; PDF operations use pdf-lib from jsDelivr and PDF rendering uses PDF.js from cdnjs.
+- Added all 18 cards to the homepage and all 18 URLs to `sitemap.xml`; homepage tool count is now 43.
+- Image processing is local in the browser. PDF document processing is local after the PDF libraries load. Large images are limited to 25 MB in the shared image workflow.
+- Minifiers are intentionally conservative; JavaScript whitespace reduction preserves quoted strings, comments and line breaks rather than attempting unsafe aggressive compression.
+- **Validation status:** GitHub source files were committed. Full real-browser functional testing, PDF edge-case testing, CDN availability checks and Cloudflare live deployment confirmation remain pending. Do not treat these as fully browser-verified until tested on the live site.
+
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
@@ -317,8 +331,8 @@ Commits:
 - [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run an automated live crawl of every internal link after deployment (user reports the site is working; automated exhaustive crawl remains unverified).
 - [ ] Review Google Analytics traffic sources and current user counts (account report access not available in this session).
 - [ ] Review Google Search Console indexing, impressions and clicks (account report access not available in this session).
-- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Verify the two new guide pages and the Image to Base64 tool are deployed and inspect their live rendering.
-- [ ] Test the Image to Base64 converter in a real browser with valid, non-image, oversized and empty-file cases.\n- [ ] Complete the final AdSense readiness review before applying.
+- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Verify the two new guide pages, Image to Base64 and all 18 new tools are deployed and inspect their live rendering.
+- [ ] Test the Image to Base64 converter and all 18 new tools in a real browser with valid, invalid and edge-case files.\n- [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
