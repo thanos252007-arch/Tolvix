@@ -434,3 +434,14 @@ UI audit and design guidance adapted from [unslop](https://github.com/heydamir/u
 - Source commit: `155dbf817d8c3f9cd6b09c7b07c02970e8e8e955`.
 - Source checks: dark color scheme, black backgrounds, white primary text, dark cards/inputs, blue accent, responsive and focus styles present.
 - **Live deployment and browser appearance still need confirmation after Cloudflare deploys.**
+
+
+## Homepage visual enhancement — 4 November 2026
+
+- Refined the Tolvix homepage into a more polished dark SaaS-style directory while retaining the glossy black background, white text and cobalt-blue accent.
+- Added a compact highlights strip for the 43-tool catalogue, ₹0 access, no-account use and browser-based processing wording (with a qualification that processing varies by tool).
+- Added category jump links for Text, Calculators, Developer, Images, PDF and Code/Numbers.
+- Improved directory search guidance and added an accessible no-results message when a search has no matches.
+- Added restrained hover lift, border highlights, subtle surface sheen, improved preview rows and responsive spacing. Reduced-motion preferences remain respected.
+- Preserved all existing tool routes/cards, guides, Analytics ID, Search Console verification, SEO metadata and existing search behavior.
+- Source changes committed to `main`; live Cloudflare deployment, real-browser checks and fresh PageSpeed scores remain to be confirmed after deployment.
