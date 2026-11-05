@@ -222,3 +222,64 @@ code{overflow-wrap:anywhere}
   .toolhead{padding-top:38px}
   .actions button,.actions .btn{min-height:42px}
 }
+
+
+/* Tolvix premium finish — restrained depth, clearer hierarchy, no tool logic changes */
+:root{
+  --surface-glass:rgba(17,19,23,.88);
+  --accent-soft:rgba(121,167,255,.12);
+}
+body{background-color:var(--bg);background-image:radial-gradient(ellipse at 50% -22%,rgba(121,167,255,.095),transparent 42%),linear-gradient(145deg,#070809 0%,#101216 48%,#08090b 100%);background-attachment:fixed}
+header{position:sticky;top:0;background:rgba(8,9,11,.86);box-shadow:0 8px 28px rgba(0,0,0,.2);border-bottom-color:rgba(255,255,255,.075)}
+.brand{gap:11px;font-size:19px;letter-spacing:-.035em}
+.brand img{width:36px;height:36px;filter:drop-shadow(0 3px 10px rgba(121,167,255,.16))}
+.links a{position:relative;padding:9px 0;transition:color .18s var(--ease)}
+.links a:after{content:"";position:absolute;left:0;right:100%;bottom:3px;height:1px;background:var(--accent);transition:right .2s var(--ease)}
+.links a:hover:after,.links a:focus-visible:after{right:0}
+.hero{padding-top:82px;padding-bottom:66px}
+.hero-copy h1{letter-spacing:-.052em}
+.hero-copy h1 span{text-shadow:0 0 28px rgba(121,167,255,.16)}
+.hero-kicker{padding:7px 11px;border:1px solid rgba(121,167,255,.2);border-radius:999px;background:rgba(121,167,255,.055)}
+.hero-kicker:before{width:7px;height:7px;border-radius:50%;box-shadow:0 0 12px rgba(121,167,255,.6)}
+.searchbox .search{min-height:52px;border-radius:12px;border-color:rgba(255,255,255,.13);background:rgba(8,10,13,.82);transition:border-color .18s var(--ease),box-shadow .18s var(--ease)}
+.searchbox .search:focus-visible{box-shadow:0 0 0 4px rgba(121,167,255,.09),inset 0 1px 3px rgba(0,0,0,.55)}
+.tool-preview{border-color:rgba(255,255,255,.12);background:linear-gradient(145deg,rgba(34,39,48,.92),rgba(14,16,20,.97) 68%);box-shadow:0 24px 70px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.075)}
+.preview-link{border-color:rgba(255,255,255,.075);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012))}
+.preview-link:focus-visible,.grid>.card:focus-within{outline:2px solid rgba(121,167,255,.65);outline-offset:3px}
+.trust-strip{border-color:rgba(255,255,255,.085);background:linear-gradient(90deg,transparent,rgba(255,255,255,.018),transparent)}
+.trust-strip>div{min-height:42px}
+.trust-strip strong{font-size:19px;letter-spacing:-.04em}
+.category-nav a{background:rgba(255,255,255,.018);border-color:rgba(255,255,255,.105);padding-inline:15px}
+.category-nav a:focus-visible{outline-offset:3px}
+.tools-section>h2{font-size:clamp(25px,3vw,31px);letter-spacing:-.04em}
+.tool-category{margin-top:38px}
+.category-heading{gap:12px;margin-bottom:15px}
+.category-heading h3{font-size:19px;letter-spacing:-.025em}
+.category-heading h3:before{height:18px;margin-right:11px}
+.grid{gap:17px}
+.grid>.card{min-height:194px;padding:22px;border-color:rgba(255,255,255,.085);background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.012) 58%),#121418;box-shadow:0 10px 28px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.025)}
+.grid>.card:after{content:"";position:absolute;top:0;right:0;width:76px;height:76px;background:radial-gradient(circle at top right,rgba(121,167,255,.09),transparent 72%);pointer-events:none;opacity:0;transition:opacity .2s var(--ease)}
+.grid>.card:hover:after{opacity:1}
+.grid>.card h3{font-size:16px;letter-spacing:-.025em}
+.grid>.card p{line-height:1.65}
+.grid>.card .btn{font-weight:600}
+.content{border-color:rgba(255,255,255,.09);background:linear-gradient(145deg,rgba(255,255,255,.035),transparent 50%),rgba(17,19,23,.92);box-shadow:0 14px 38px rgba(0,0,0,.2)}
+.panel{border-color:rgba(255,255,255,.12)}
+.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{border-color:rgba(121,167,255,.72);box-shadow:0 0 0 4px rgba(121,167,255,.085)}
+button,.primary-action{box-shadow:0 5px 18px rgba(55,103,190,.16)}
+button:hover,.primary-action:hover{box-shadow:0 8px 24px rgba(55,103,190,.22)}
+.result{border-color:rgba(255,255,255,.1);background:linear-gradient(145deg,rgba(255,255,255,.035),transparent 65%),#101216}
+.footer{border-top-color:rgba(255,255,255,.09)}
+@media(max-width:900px){.hero{padding-top:64px;padding-bottom:52px}}
+@media(max-width:680px){
+  header{backdrop-filter:blur(16px)}
+  .hero{padding-top:48px;padding-bottom:38px}
+  .hero-kicker{font-size:11px}
+  .trust-strip strong{font-size:17px}
+  .grid{gap:13px}
+  .grid>.card{padding:19px}
+  .tool-category{margin-top:31px}
+}
+@media(prefers-reduced-motion:reduce){
+  .links a:after,.grid>.card:after{transition:none}
+}
