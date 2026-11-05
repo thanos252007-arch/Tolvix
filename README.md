@@ -475,3 +475,15 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - CSS commit: `91af2631f99eb480847672b19926973471259dad`.
 
 **Status:** GitHub source update is committed. Wait for Cloudflare deployment, then inspect the homepage and a few tool pages on desktop and mobile. This is not yet a live-browser visual verification.
+
+
+### Signature visual detail pass — 5 November 2026
+
+- Added a very subtle editorial grid texture behind the dark interface and a restrained cobalt hairline beneath the header.
+- Refined hero typography with a soft blue-white text treatment, stronger hierarchy and responsive sizing.
+- Polished quick-link arrow controls, card focus states, section heading accent and small interaction transitions.
+- Kept the visual language restrained: no heavy neon glow, no added imagery, no new dependencies and no changes to tool logic or page content.
+- Respects reduced-motion preferences and retains mobile breakpoints.
+- CSS commit: `89b697264a7563f415d741b78ebf85c9d1853b82`.
+
+**Status:** Source committed. Verify the Cloudflare deployment and inspect the homepage on mobile and desktop before considering this pass complete.
