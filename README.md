@@ -570,3 +570,9 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - Record this as user-confirmed live functionality testing; it was not independently reproduced in this environment.
 - The homepage currently contains 43 tool cards arranged into six categories. The source audit confirmed all 43 routes are present and assigned once.
 - Next quality step: continue monitoring user feedback and fix any newly reported edge cases; then focus on Search Console indexing/search performance and GA4 traffic measurement.
+
+## Brand update — 5 November 2026
+
+- Replaced the previous Tolvix symbol in `assets/tolvix-mark.svg` with the new black-and-white circular bird mark supplied and approved by the project owner.
+- Kept the existing asset path, so the homepage header continues to load the updated logo without changing navigation, layout, analytics, SEO metadata, or tool functionality.
+- The logo is a lightweight SVG vector asset and scales cleanly across screen sizes.
