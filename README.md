@@ -90,11 +90,11 @@ This is an internal preparation checklist, not a statement of Google's official 
 | 1 | Website live and accessible | User checked the live homepage and all four key information/legal pages and confirmed everything is working properly. | ✅ User-verified live pages |
 | 2 | Useful original content | 10 standalone SEO guides reviewed and expanded; 38 of 43 tool pages now include additional task-specific explanations, examples, workflows or limitations. Source audit completed 5 November 2026. | ✅ Source content expanded; live review pending |
 | 3 | All tools working properly | User reports all 43 tools were tested on the live site and are working properly (5 November 2026). This is user-confirmed, not independently reproduced here. | ✅ User-confirmed 43/43 |
-| 4 | About Us | Page content revised and expanded on 5 November; recheck the latest commit after Cloudflare deployment. | 🟡 Source updated; latest live version pending |
-| 5 | Contact Us | Clarified public GitHub Issues contact route, privacy cautions and bug-report details on 5 November; recheck after deployment. | 🟡 Source updated; latest live version pending |
-| 6 | Privacy Policy | Expanded hosting, analytics, third-party library, QR service and future advertising disclosures on 5 November; recheck after deployment and revise again when AdSense is actually enabled. | 🟡 Source updated; latest live version pending |
+| 4 | About Us | User confirmed the revised About page is working on the live site (5 November 2026). | ✅ User-verified live |
+| 5 | Contact Us | User confirmed the revised Contact page is working on the live site (5 November 2026). | ✅ User-verified live |
+| 6 | Privacy Policy | User confirmed the revised Privacy Policy is working on the live site (5 November 2026); update again when AdSense and any consent platform are actually configured. | ✅ User-verified live; future ad update required |
 | 7 | Terms of Use | Terms page checked on the live website by the user. | ✅ User-verified live |
-| 8 | Navigation and internal links | User confirmed key pages and mobile/browser testing; a complete automated audit of every tool-page link remains. | 🟡 Key navigation checked; full audit pending |
+| 8 | Navigation and internal links | Source spot-check of homepage, About, Contact, Privacy, Terms, one guide and two tool pages confirms all four legal/trust footer links, page titles and canonical tags. User reports the latest pages work live; exhaustive all-page crawl remains open. | 🟡 Template spot-check passed; full crawl pending |
 | 9 | Mobile experience | User confirmed mobile/browser testing is working properly (5 November 2026); a dedicated keyboard-only and screen-reader audit remains. | 🟡 User-confirmed mobile checks; accessibility audit pending |
 | 10 | Genuine traffic and analytics | A previous project check reported 10 Analytics users (5 India and 5 US). This is an earlier snapshot, not a live/current count and not necessarily organic traffic. | 🟡 Monitor |
 
@@ -331,7 +331,7 @@ Added 18 new tool pages and one shared browser-processing script:
 - [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run an automated live crawl of every internal link after deployment (user reports the site is working; automated exhaustive crawl remains unverified).
 - [ ] Review Google Analytics traffic sources and current user counts (account report access not available in this session).
 - [ ] Review Google Search Console indexing, impressions and clicks (account report access not available in this session).
-- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [ ] Verify the latest expanded 10 guides, 38 tool-page content updates and revised About/Contact/Privacy pages render correctly after Cloudflare deployment.
+- [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [x] User confirmed the latest expanded guides, tool-page content and About/Contact/Privacy pages work live (5 November 2026).
 - [ ] Retest image tools with standard JPG/PNG files after the image-decoding feedback fix.
 - [ ] Retest PDF tools after the pdf-lib/PDF.js CDN fallback fix; inspect browser console/network errors if loading still fails.
 - [ ] Test the Image to Base64 converter and all 18 new tools in a real browser with valid, invalid and edge-case files.\n- [ ] Complete the final AdSense readiness review before applying.
@@ -368,6 +368,25 @@ Completed on GitHub `main`:
 - Sampled visible word counts after edits. Most expanded short tool pages now have roughly 210–330 visible words; the longer core tools remain more detailed. Word count alone does not establish content quality or AdSense eligibility.
 - No tool logic or upload behavior was changed in this pass.
 - **Pending:** Cloudflare deployment and live browser review of the updated content, privacy wording and page layout. The user's earlier confirmation that all 43 tools work remains a user-confirmed functionality test; this content pass has not been independently tested in a live browser.
+
+
+## Day 2 AdSense policy and traffic-safety review — 5 November 2026
+
+Reviewed current Google AdSense policy guidance and spot-checked the live-site source templates:
+
+- Checked the homepage, About, Contact, Privacy, Terms, one SEO guide, Word Counter and Image Compressor page. All eight source files contain a footer with About, Contact, Privacy and Terms links, a page title and a canonical link. This is a representative template spot-check, not an exhaustive crawl of every URL.
+- The user confirmed the latest legal/trust pages and all 43 tools are working on the live site. Record this as user-confirmed, not as an independent browser test.
+- No AdSense ad code or ad placements have been added. Do not add ads until the account is approved and placement can be designed safely.
+- Placement guardrails for launch: ads must be clearly distinguishable from Tolvix tool controls, menus, upload/download buttons and results; never place ads where a tap could be mistaken for a tool action; do not use arrows or copy that encourages ad clicks; keep publisher content greater than advertising/promotional material; avoid disruptive pop-ups, forced redirects or automatic downloads.
+- Traffic guardrails: never click Tolvix's own ads, ask friends to click, buy paid-to-click traffic, use bots, click exchanges or incentivised visits. Monitor unusual traffic/click patterns in AdSense after approval and follow Google's invalid-traffic guidance.
+- Consent readiness: the earlier GA4 country snapshot included Sweden. Before serving personalized ads to visitors in the EEA, UK or Switzerland, choose and correctly configure a Google-certified CMP integrated with the IAB TCF. Google also requires legally valid consent for cookies/local storage where applicable and for ad-personalisation data use. Do not install an unnecessary banner now; configure and test the CMP before ads are served to those regions.
+- The Privacy Policy currently says AdSense is not enabled. When an AdSense account and consent setup are actually configured, update the policy to name the real services, cookies/data uses, vendor information and user choices.
+
+Official guidance reviewed: Google AdSense Program policies, invalid-traffic guidance, Google publisher CMP requirements for EEA/UK/Switzerland, and Google's site-readiness/UX guidance. See the official policy links in the project notes before launch.
+
+### Next action
+
+Use Google Search Console Performance (Search results, last 28 days) and Indexing → Pages to establish the genuine organic-search baseline and identify any indexing problems. This requires the user's Search Console report/screenshots; no private Search Console account data was available through the connected tools during this review.
 
 ## 8. README maintenance rule
 
