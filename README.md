@@ -88,7 +88,7 @@ This is an internal preparation checklist, not a statement of Google's official 
 | # | Requirement | Latest known condition | Status |
 |---|---|---|---|
 | 1 | Website live and accessible | User checked the live homepage and all four key information/legal pages and confirmed everything is working properly. | ✅ User-verified live pages |
-| 2 | Useful original content | 10 standalone SEO guides reviewed and expanded; 38 of 43 tool pages now include additional task-specific explanations, examples, workflows or limitations. Source audit completed 5 November 2026. | ✅ Source content expanded; live review pending |
+| 2 | Useful original content | User confirmed the latest 10 expanded guides and 38 expanded tool pages work on the live site (5 November 2026). | ✅ User-verified live content |
 | 3 | All tools working properly | User reports all 43 tools were tested on the live site and are working properly (5 November 2026). This is user-confirmed, not independently reproduced here. | ✅ User-confirmed 43/43 |
 | 4 | About Us | User confirmed the revised About page is working on the live site (5 November 2026). | ✅ User-verified live |
 | 5 | Contact Us | User confirmed the revised Contact page is working on the live site (5 November 2026). | ✅ User-verified live |
@@ -320,7 +320,8 @@ Added 18 new tool pages and one shared browser-processing script:
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
-- [x] Review and expand About, Contact and Privacy Policy; user confirmed the revised live pages work on 5 November.\n- [x] Create Terms of Use page and add links in homepage/footer/navigation; user confirmed the pages work live.
+- [x] Review and expand About, Contact and Privacy Policy; user confirmed the revised live pages work on 5 November.
+- [x] Create Terms of Use page and add links in homepage/footer/navigation; user confirmed the pages work live.
 - [x] Complete the latest content audit: 10 standalone guides reviewed and expanded; 38 of 43 tool pages received task-specific educational content on 5 November. The earlier 24-page audit remains as historical context.
 - [x] Add calculator validation for empty/invalid values (Discount, GST, Percentage and Tip); source re-fetched and changes confirmed.
 - [x] User confirmed live calculator functionality is working properly (4 November 2026); not independently reproduced in this environment.
@@ -328,13 +329,13 @@ Added 18 new tool pages and one shared browser-processing script:
 - [x] User confirmed live tool functionality is working properly, including the website's tools (4 November 2026); QR third-party request/download not independently inspected here.
 - [x] User confirmed live functionality testing is working properly (4 November 2026); AI Detector browser behavior not independently inspected here.
 - [x] User confirmed mobile/browser testing is working properly (4 November 2026); not independently reproduced on a physical device here.
-- [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.\n- [x] Add relevant contextual related-tool links to all 24 tool pages.\n- [ ] Run an automated live crawl of every internal link after deployment (user reports the site is working; automated exhaustive crawl remains unverified).
+- [x] Add consistent Terms of Use navigation/footer links to all 24 tool pages.
+- [x] Add relevant contextual related-tool links to all 24 tool pages.
+- [ ] Run an automated live crawl of every internal link after deployment (user reports the site is working; automated exhaustive crawl remains unverified).
 - [ ] Review Google Analytics traffic sources and current user counts (account report access not available in this session).
 - [ ] Review Google Search Console indexing, impressions and clicks (account report access not available in this session).
 - [x] Run PageSpeed Insights for the homepage on mobile and desktop; record Lighthouse lab scores and timings above.\n- [ ] Re-run PageSpeed on representative tool pages and inspect field Core Web Vitals when real-user data becomes available.\n- [x] User confirms mobile/browser checks are working properly (4 November 2026); detailed console/network log was not independently captured in this environment.\n- [ ] Complete a dedicated keyboard-only and screen-reader accessibility audit (not explicitly confirmed yet).\n- [x] User confirmed the latest expanded guides, tool-page content and About/Contact/Privacy pages work live (5 November 2026).
-- [ ] Retest image tools with standard JPG/PNG files after the image-decoding feedback fix.
-- [ ] Retest PDF tools after the pdf-lib/PDF.js CDN fallback fix; inspect browser console/network errors if loading still fails.
-- [ ] Test the Image to Base64 converter and all 18 new tools in a real browser with valid, invalid and edge-case files.\n- [ ] Complete the final AdSense readiness review before applying.
+- [x] User confirmed all 43 tools, including image and PDF tools, work on the live site (5 November 2026); detailed edge-case and console/network logs were not independently captured.\n- [ ] Complete the final AdSense readiness review before applying.
 
 ---
 
