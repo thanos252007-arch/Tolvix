@@ -499,3 +499,16 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - CSS commit: `39e45ba5fd9d80e46e6b797ebe716a8409363f74`.
 
 **Status:** GitHub source update committed. This is a CSS-only source change; wait for Cloudflare deployment and inspect the homepage at desktop and mobile widths before treating the live appearance as verified.
+
+
+### Product-grade tool workspace refinement — 5 November 2026
+
+- Extended the premium visual system from the homepage directory into shared tool pages.
+- Refined tool-page headings and category labels, with a restrained separator and clearer type hierarchy.
+- Improved shared tool panels, input/select/textarea states, file-picker buttons, action controls and result surfaces.
+- Styled related-tool links as compact navigational chips to make the next useful action easier to find.
+- Added mobile-specific control spacing and preserved keyboard focus and reduced-motion behavior.
+- No tool HTML, processing JavaScript, routes, analytics, SEO metadata or file-processing behavior was changed.
+- CSS commit: `2ea11001b48aefa9b5c2fdf1745f75108887f8b1`.
+
+**Status:** Source change committed to `main`. It requires Cloudflare deployment and visual checks across representative text, calculator, image and PDF tool pages; live appearance and tool behavior are not claimed as independently tested.
