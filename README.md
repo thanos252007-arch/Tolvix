@@ -487,3 +487,15 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - CSS commit: `89b697264a7563f415d741b78ebf85c9d1853b82`.
 
 **Status:** Source committed. Verify the Cloudflare deployment and inspect the homepage on mobile and desktop before considering this pass complete.
+
+
+### Ultra-premium tool card redesign — 5 November 2026
+
+- Refined all homepage tool cards with a consistent icon tile, stronger title hierarchy, more readable descriptions and clearer “Open tool” actions.
+- Added subtle layered charcoal surfaces, a restrained cobalt top highlight, soft geometric detail and a more deliberate hover/focus treatment.
+- Added category-aware typographic symbols for text, calculators, images, PDFs, QR and developer utilities without introducing icon fonts, external assets or JavaScript.
+- Improved card spacing and mobile sizing; keyboard focus and reduced-motion preferences remain supported.
+- Preserved all 43 tool links, tool behavior, homepage search, SEO content, analytics and existing branding.
+- CSS commit: `39e45ba5fd9d80e46e6b797ebe716a8409363f74`.
+
+**Status:** GitHub source update committed. This is a CSS-only source change; wait for Cloudflare deployment and inspect the homepage at desktop and mobile widths before treating the live appearance as verified.
