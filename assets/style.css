@@ -475,3 +475,117 @@ header .wrap:after{content:"";position:absolute;left:0;right:0;bottom:-1px;heigh
   .grid>.card,.grid>.card .btn{transition:none}
   .grid>.card:hover{transform:none}
 }
+
+
+/* Product-grade tool workspace — shared treatment for every tool page */
+.toolhead{
+  position:relative;
+  padding-top:62px;
+  padding-bottom:30px;
+}
+.toolhead:after{
+  content:"";
+  display:block;
+  width:min(100%,880px);
+  height:1px;
+  margin-top:26px;
+  background:linear-gradient(90deg,rgba(121,167,255,.38),rgba(255,255,255,.08),transparent);
+}
+.toolhead .pill{
+  padding:7px 12px;
+  border:1px solid rgba(121,167,255,.22);
+  border-radius:999px;
+  background:rgba(121,167,255,.075);
+  color:#a9c6ff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.toolhead h1{max-width:850px;letter-spacing:-.045em}
+.toolhead .lead{color:#b9c2d0;line-height:1.72}
+.panel{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.105);
+  border-radius:20px;
+  padding:clamp(20px,3vw,30px);
+  background:
+    radial-gradient(ellipse at 100% 0%,rgba(121,167,255,.075),transparent 42%),
+    linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012) 55%),
+    #111317;
+  box-shadow:0 22px 55px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.045);
+}
+.field{margin:20px 0}
+.field label{margin-bottom:9px;font-size:13px;font-weight:650;letter-spacing:.01em}
+.field input:not([type="checkbox"]):not([type="radio"]),
+.field textarea,.field select{
+  min-height:48px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:11px;
+  background:#0a0c0f;
+  color:#f5f7fa;
+  box-shadow:inset 0 2px 5px rgba(0,0,0,.24);
+  transition:border-color .18s var(--ease),box-shadow .18s var(--ease),background .18s var(--ease);
+}
+.field textarea{min-height:170px;line-height:1.65}
+.field input:focus,.field textarea:focus,.field select:focus{
+  border-color:rgba(121,167,255,.72);
+  background:#0d1015;
+  box-shadow:0 0 0 4px rgba(121,167,255,.09),inset 0 2px 5px rgba(0,0,0,.2);
+  outline:none;
+}
+.field input[type="file"]{padding:9px;background:rgba(0,0,0,.22)}
+.field input[type="file"]::file-selector-button{
+  min-height:34px;
+  padding:6px 12px;
+  border:1px solid rgba(121,167,255,.25);
+  border-radius:8px;
+  background:rgba(121,167,255,.1);
+  color:#c8d9ff;
+  font:600 12px/1.2 inherit;
+}
+.actions{gap:11px;margin:22px 0}
+.actions button,.actions .btn{
+  min-height:44px;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:650;
+}
+.actions .secondary{border-color:rgba(255,255,255,.14);background:#20242b;color:#e7ebf2}
+.result{
+  min-height:54px;
+  padding:16px;
+  border:1px solid rgba(121,167,255,.17);
+  border-radius:12px;
+  background:linear-gradient(145deg,rgba(121,167,255,.055),transparent 65%),#0d1014;
+  line-height:1.65;
+}
+.result:empty{display:none}
+.panel .muted,.panel small{color:#9da8b8}
+.panel hr{border:0;border-top:1px solid rgba(255,255,255,.09);margin:24px 0}
+.related-tools{
+  max-width:880px;
+  margin:30px auto 48px;
+  padding:22px 24px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:16px;
+  background:rgba(255,255,255,.018);
+}
+.related-tools h2{margin:0 0 12px;font-size:15px;letter-spacing:-.01em}
+.related-tools a{display:inline-flex;align-items:center;min-height:34px;margin:4px 7px 4px 0;padding:5px 10px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.025);font-size:12px;text-decoration:none}
+.related-tools a:hover{border-color:rgba(121,167,255,.35);background:rgba(121,167,255,.08)}
+@media(max-width:680px){
+ .toolhead{padding-top:42px;padding-bottom:20px}
+ .toolhead:after{margin-top:20px}
+ .panel{border-radius:16px;padding:18px}
+ .field{margin:17px 0}
+ .field textarea{min-height:145px}
+ .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .actions button,.actions .btn{width:100%;padding-inline:10px}
+ .related-tools{margin:24px auto 36px;padding:18px}
+}
+@media(prefers-reduced-motion:reduce){
+ .field input,.field textarea,.field select{transition:none}
+}
