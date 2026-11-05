@@ -320,7 +320,7 @@ Added 18 new tool pages and one shared browser-processing script:
 ## 6. Next actions
 
 - [x] Confirm latest GitHub changes deployed on Cloudflare Workers (user confirmed on 5 November 2026).
-- [x] Review and expand About, Contact and Privacy Policy source content on 5 November; latest content changes still need live verification after Cloudflare deployment.\n- [x] Create Terms of Use page and add links in homepage/footer/navigation; recheck after the latest content deployment.
+- [x] Review and expand About, Contact and Privacy Policy; user confirmed the revised live pages work on 5 November.\n- [x] Create Terms of Use page and add links in homepage/footer/navigation; user confirmed the pages work live.
 - [x] Complete the latest content audit: 10 standalone guides reviewed and expanded; 38 of 43 tool pages received task-specific educational content on 5 November. The earlier 24-page audit remains as historical context.
 - [x] Add calculator validation for empty/invalid values (Discount, GST, Percentage and Tip); source re-fetched and changes confirmed.
 - [x] User confirmed live calculator functionality is working properly (4 November 2026); not independently reproduced in this environment.
