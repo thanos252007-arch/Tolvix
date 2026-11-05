@@ -94,8 +94,8 @@ This is an internal preparation checklist, not a statement of Google's official 
 | 5 | Contact Us | Clarified public GitHub Issues contact route, privacy cautions and bug-report details on 5 November; recheck after deployment. | 🟡 Source updated; latest live version pending |
 | 6 | Privacy Policy | Expanded hosting, analytics, third-party library, QR service and future advertising disclosures on 5 November; recheck after deployment and revise again when AdSense is actually enabled. | 🟡 Source updated; latest live version pending |
 | 7 | Terms of Use | Terms page checked on the live website by the user. | ✅ User-verified live |
-| 8 | Navigation and internal links | User confirmed the key pages are working; a complete audit of every tool-page link remains. | 🟡 Key navigation checked; full audit pending |
-| 9 | Mobile experience | Responsive CSS and viewport settings were confirmed; complete manual mobile testing remains. | 🟡 Test |
+| 8 | Navigation and internal links | User confirmed key pages and mobile/browser testing; a complete automated audit of every tool-page link remains. | 🟡 Key navigation checked; full audit pending |
+| 9 | Mobile experience | User confirmed mobile/browser testing is working properly (5 November 2026); a dedicated keyboard-only and screen-reader audit remains. | 🟡 User-confirmed mobile checks; accessibility audit pending |
 | 10 | Genuine traffic and analytics | A previous project check reported 10 Analytics users (5 India and 5 US). This is an earlier snapshot, not a live/current count and not necessarily organic traffic. | 🟡 Monitor |
 
 ### AdSense application plan
