@@ -463,3 +463,15 @@ Eight new practical guides were added, bringing the editorial library to 10: ima
 
 ### Remaining verification
 This is a source-level audit, not a complete live-browser test. Real interactions, file uploads/downloads, PDF/CDN loading, console/network errors, mobile behavior and Cloudflare deployment after these commits still need live verification. Re-test the previously reported JPG decode and PDF library loading issues before marking them fixed. Search Console indexing and GA4 metrics still require the user's Google dashboards.
+
+
+### Premium interface refinement — 5 November 2026
+
+- Added a restrained ambient blue highlight over the glossy black background while preserving white primary text, readable grey secondary text and the cobalt accent.
+- Refined the sticky translucent header, brand mark, navigation underline, hero hierarchy, search focus treatment, quick-link panel, category chips and tool-card depth.
+- Improved keyboard focus visibility and input focus feedback; kept reduced-motion preferences respected.
+- Refined responsive spacing and card layouts for smaller screens.
+- No tool HTML, tool JavaScript, routes, analytics, Search Console verification, sitemap or SEO content was changed in this visual-only pass.
+- CSS commit: `91af2631f99eb480847672b19926973471259dad`.
+
+**Status:** GitHub source update is committed. Wait for Cloudflare deployment, then inspect the homepage and a few tool pages on desktop and mobile. This is not yet a live-browser visual verification.
