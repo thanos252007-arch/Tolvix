@@ -512,3 +512,14 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - CSS commit: `2ea11001b48aefa9b5c2fdf1745f75108887f8b1`.
 
 **Status:** Source change committed to `main`. It requires Cloudflare deployment and visual checks across representative text, calculator, image and PDF tool pages; live appearance and tool behavior are not claimed as independently tested.
+
+
+### Homepage tool categories reorganized — 5 November 2026
+
+- Reorganized all 43 homepage tool cards into six clearer categories: Text Tools (10), Calculators (7), Developer & Data Tools (9), Image Tools (7), PDF Tools (8), and Everyday & Security Tools (2).
+- Moved QR Code Generator and Password Generator into Everyday & Security; moved Word Frequency Counter and AI Detector & Humanizer into Text; grouped EMI and Tip calculators with the other calculators; moved Image to Base64 into Image Tools.
+- Updated the category jump navigation and category descriptions to match the new structure.
+- Preserved all 43 tool routes, card content, homepage search behavior, analytics, SEO metadata and sitemap.
+- Source validation confirmed exactly 43 cards, all 43 unique routes assigned once, and all assigned routes already represented by existing homepage cards.
+- Homepage commit: `b07e353608f38ba6df9661d1590465be126acddf`.
+- Live Cloudflare deployment and visual/mobile checks still require confirmation after deployment.
