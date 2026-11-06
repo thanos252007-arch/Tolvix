@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 4 November 2026 (18 additional tools reviewed and safeguards improved)  
+> **Project log last updated:** 6 November 2026 (18 additional tools reviewed and safeguards improved)  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -576,3 +576,14 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - Replaced the previous Tolvix symbol in `assets/tolvix-mark.svg` with the new black-and-white circular bird mark supplied and approved by the project owner.
 - Kept the existing asset path, so the homepage header continues to load the updated logo without changing navigation, layout, analytics, SEO metadata, or tool functionality.
 - The logo is a lightweight SVG vector asset and scales cleanly across screen sizes.
+
+
+## SEO expansion — 6 November 2026
+
+- Audited and refreshed unique search-focused HTML titles, meta descriptions and Open Graph title/description text across all 43 tool pages.
+- Added contextual related-guide links to all 43 tool pages while preserving their existing canonical URLs, tool interfaces, processing scripts, Google Analytics Measurement ID `G-WH86KPZW58`, and existing verification assets.
+- Retained the original 10 SEO guides and created 20 additional topic-specific guides, bringing the guide library to 30 pages.
+- Added the 20 new guide URLs to `sitemap.xml` and linked all 30 guides from the homepage in topic groups.
+- New guide topics cover essay word counts, CSS/HTML/JavaScript minification, CSV/JSON conversion, discounts, duplicate lines, loan EMI, image cropping/resizing and PNG/JPG conversion, Base64 image data URLs, number bases, password practices, PDF text/metadata/watermarks, percentages, QR testing and find-and-replace workflows.
+- The new guides include unique titles and descriptions, canonical URLs, Article structured data, GA4 tracking, practical workflows, limitations and related-tool links.
+- Source-level checks are required before deployment; this change does not guarantee indexing, rankings or traffic. Search Console should be used to monitor discovery and indexing after the updated site is deployed.
