@@ -597,3 +597,12 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - Checked all 20 newly created guides for title, meta description, canonical URL, GA4 tracking, Article structured data and FAQ content.
 - Verified the homepage lists 30 guides and the XML sitemap contains 78 unique URLs (43 tools, 30 guides, homepage and existing trust pages).
 - These are repository/source checks only. Live Cloudflare deployment, browser rendering, tool operation and Search Console indexing still need post-deployment confirmation.
+
+
+### Tool card and directory quality pass — 6 November 2026
+
+- Refined the homepage tool directory for faster scanning: clearer category headings, more consistent card spacing and stronger title/description hierarchy.
+- Upgraded the 43 tool cards with more legible icon tiles, calmer layered surfaces, a consistent full-width Open tool action and a clearer hover/focus state.
+- Improved mobile card density and touch-target sizing while preserving the existing one-column narrow-phone layout, keyboard focus and reduced-motion support.
+- CSS-only change: no tool routes, HTML, processing logic, analytics, metadata, sitemap or guide content was changed.
+- Source update committed to main; Cloudflare deployment and live desktop/mobile visual checks remain to be confirmed.
