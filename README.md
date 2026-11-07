@@ -606,3 +606,16 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - Improved mobile card density and touch-target sizing while preserving the existing one-column narrow-phone layout, keyboard focus and reduced-motion support.
 - CSS-only change: no tool routes, HTML, processing logic, analytics, metadata, sitemap or guide content was changed.
 - Source update committed to main; Cloudflare deployment and live desktop/mobile visual checks remain to be confirmed.
+
+
+
+
+### Homepage quality and accessibility pass — 7 November 2026
+
+- Added a keyboard-accessible “Skip to content” link on the homepage and named the primary navigation landmark.
+- Made the site header sticky so visitors can reach the main navigation while browsing long tool and guide directories; adjusted anchor scroll offsets to account for the header.
+- Added a concise homepage FAQ covering pricing, account requirements, browser processing and mobile compatibility. Privacy wording distinguishes browser-local processing from features that may rely on third-party services or libraries.
+- Styled the FAQ with native, keyboard-operable disclosure elements and consistent dark-theme focus and spacing.
+- Preserved all 43 tool cards, 30 guide links, tool routes, tool-processing scripts, GA4 Measurement ID, Search Console verification, canonical URLs and sitemap.
+- Source commits: homepage `b0b818703401732a8f42d441794898fdcfd547ee`; shared CSS `0ea01b887d466ade834632377a2dd76187c3ea79`.
+- **Verification status:** GitHub source updates are committed. Cloudflare deployment, live desktop/mobile rendering, keyboard testing and a fresh PageSpeed run are not independently confirmed. The FAQ uses native HTML `details/summary` controls; test open/close behavior on mobile after deployment.
