@@ -764,3 +764,55 @@ p,li,h1,h2,h3,a,small,strong{overflow-wrap:anywhere}
  header nav:has(.mobile-menu-toggle) .links{display:none}
  header nav:has(.mobile-menu-toggle) .links.is-open{display:flex}
 }
+
+
+/* Complete light-theme surfaces: keep controls and generated content readable. */
+:root[data-theme="light"] body{background:#f4f6fa!important;color:var(--text)}
+:root[data-theme="light"] .hero-kicker,
+:root[data-theme="light"] .category-nav a,
+:root[data-theme="light"] .preview-count,
+:root[data-theme="light"] .personal-tool-link,
+:root[data-theme="light"] .related-tools a{background:#fff;color:#344158;border-color:rgba(20,30,50,.14)}
+:root[data-theme="light"] .tool-preview,
+:root[data-theme="light"] .preview-link,
+:root[data-theme="light"] .secondary-action,
+:root[data-theme="light"] .personal-tools{background:#fff;color:#253149;border-color:rgba(20,30,50,.14);box-shadow:0 8px 24px rgba(30,45,70,.07)}
+:root[data-theme="light"] .preview-description,
+:root[data-theme="light"] .preview-link small,
+:root[data-theme="light"] .personal-note,
+:root[data-theme="light"] .category-heading p,
+:root[data-theme="light"] .toolhead .lead,
+:root[data-theme="light"] .panel .muted,
+:root[data-theme="light"] .panel small{color:#526078}
+:root[data-theme="light"] .searchbox .search,
+:root[data-theme="light"] .field input,
+:root[data-theme="light"] .field textarea,
+:root[data-theme="light"] .field select,
+:root[data-theme="light"] .field input[type="file"]{background:#fff!important;color:#172033!important;border-color:rgba(20,30,50,.2)}
+:root[data-theme="light"] .field input::placeholder,
+:root[data-theme="light"] .field textarea::placeholder,
+:root[data-theme="light"] .searchbox .search::placeholder{color:#69778c}
+:root[data-theme="light"] .result,
+:root[data-theme="light"] pre,
+:root[data-theme="light"] .markdown-preview pre{background:#eef2f8!important;color:#172033!important;border-color:rgba(20,30,50,.14)}
+:root[data-theme="light"] .actions .secondary,
+:root[data-theme="light"] .secondary,
+:root[data-theme="light"] .theme-toggle,
+:root[data-theme="light"] .quiet-button,
+:root[data-theme="light"] .favorite-toggle{background:#edf1f7!important;color:#243149!important;border-color:rgba(20,30,50,.17)}
+:root[data-theme="light"] .field input[type="file"]::file-selector-button{background:#edf1f7;color:#243149;border-color:rgba(20,30,50,.18)}
+:root[data-theme="light"] .file-drop-zone,
+:root[data-theme="light"] .new-drop{background:#edf4ff;color:#253149;border-color:rgba(45,100,190,.35)}
+:root[data-theme="light"] .tool-progress{background:#dfe6f0}
+:root[data-theme="light"] .toolhead .pill{background:#eaf1ff;color:#31558d;border-color:rgba(45,100,190,.2)}
+:root[data-theme="light"] .content,
+:root[data-theme="light"] .content p,
+:root[data-theme="light"] .content li{color:#344158}
+:root[data-theme="light"] .preview-link:hover strong{color:#172033}
+:root[data-theme="light"] .grid>.card h3{color:#172033}
+:root[data-theme="light"] .grid>.card .btn{background:#edf4ff;color:#31558d;border-color:rgba(45,100,190,.2)}
+:root[data-theme="light"] .grid>.card:hover{background:#f8faff;border-color:rgba(45,100,190,.3)}
+:root[data-theme="light"] .csv-table th{background:#edf1f7;color:#172033}
+:root[data-theme="light"] .csv-table td{color:#253149}
+:root[data-theme="light"] .diff-added{color:#17633e}
+:root[data-theme="light"] .diff-removed{color:#9b3030}
