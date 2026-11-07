@@ -49,3 +49,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 /* Progress feedback for standard tools that render into #result. */
 (()=>{const buttons=[...document.querySelectorAll('[data-run]')];if(!buttons.length)return;const result=document.getElementById('result');if(!result)return;const bar=document.createElement('div');bar.className='tool-progress';bar.hidden=true;bar.setAttribute('role','progressbar');bar.setAttribute('aria-label','Tool is processing');bar.innerHTML='<span></span>';result.before(bar);let busy=false;buttons.forEach(b=>b.addEventListener('click',()=>{busy=true;bar.hidden=false;result.setAttribute('aria-busy','true')},true));new MutationObserver(()=>{if(busy&&result.textContent.trim()!=='Your result will appear here.'){busy=false;bar.hidden=true;result.removeAttribute('aria-busy')}}).observe(result,{childList:true,subtree:true,characterData:true})})();
+
+/* Consistent skip link and navigation naming on tool pages. */
+(()=>{const main=document.querySelector('main');if(main){if(!main.id)main.id='main-content';if(!document.querySelector('.skip-link')){const a=document.createElement('a');a.className='skip-link';a.href='#'+main.id;a.textContent='Skip to content';document.body.prepend(a)}}const nav=document.querySelector('header nav');if(nav&&!nav.hasAttribute('aria-label'))nav.setAttribute('aria-label','Primary navigation')})();
