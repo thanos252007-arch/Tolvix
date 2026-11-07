@@ -24,3 +24,22 @@ case"tip":{let bills=v("billAmount").trim(),pcts=v("tipPercent").trim(),peoples=
 case"password":{let len=Math.floor(n("passLength")),sets=[];if($("passUpper")?.checked)sets.push("ABCDEFGHJKLMNPQRSTUVWXYZ");if($("passLower")?.checked)sets.push("abcdefghijkmnopqrstuvwxyz");if($("passNumbers")?.checked)sets.push("23456789");if($("passSymbols")?.checked)sets.push("!@#$%^&*()-_=+[]{}?");if(!(len>=8&&len<=64)||!sets.length){out("Choose a length from 8 to 64 and at least one character type.");break}if(!window.crypto?.getRandomValues){out("Secure random generation is not available in this browser.");break}let all=sets.join(""),arr=[];sets.forEach(set=>arr.push(set[secureRandomInt(set.length)]));while(arr.length<len)arr.push(all[secureRandomInt(all.length)]);for(let i=arr.length-1;i>0;i--){let j=secureRandomInt(i+1);[arr[i],arr[j]]=[arr[j],arr[i]]}out(arr.join(""));break}
 case"frequency":{let words=t.toLocaleLowerCase().match(/[\p{L}\p{N}']+/gu)||[],counts=new Map();words.forEach(w=>counts.set(w,(counts.get(w)||0)+1));let sorted=[...counts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));out("Total words: "+words.length+"\nUnique words: "+counts.size+"\n\n"+(sorted.length?sorted.map(([w,n])=>w+" — "+n).join("\n"):"No words found."));break}
 }}document.addEventListener("click",async e=>{let b=e.target.closest("[data-run]");if(b)runTool(b.dataset.run);if(e.target.closest("[data-copy]"))copyResult();let download=e.target.closest("#downloadQr");if(download){let image=$("qrImage");if(!image||image.hidden||!image.src){out("Generate a QR code first.");return}download.disabled=true;download.textContent="Preparing download…";try{let response=await fetch(image.src);if(!response.ok)throw Error("Could not fetch QR image");let blob=await response.blob();let objectUrl=URL.createObjectURL(blob);let link=document.createElement("a");link.href=objectUrl;link.download="tolvix-qr-code.png";document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(objectUrl),1000);out("Your QR code download has started.")}catch(error){out("Download failed. Please check your internet connection and try generating the QR code again.")}finally{download.disabled=false;download.textContent="Download QR code"}}});
+
+/* Shared quality-of-life controls for standard text and calculator tools */
+document.addEventListener("DOMContentLoaded",()=>{
+  const runButton=document.querySelector("[data-run]");
+  if(!runButton)return;
+  const actionRow=runButton.closest(".actions")||runButton.parentElement;
+  if(actionRow&&!actionRow.querySelector("[data-reset-tool]")){
+    const reset=document.createElement("button");reset.type="button";reset.className="secondary";reset.dataset.resetTool="";reset.textContent="Reset";
+    actionRow.append(reset);
+  }
+  document.addEventListener("click",e=>{
+    if(!e.target.closest("[data-reset-tool]"))return;
+    document.querySelectorAll("input,textarea,select").forEach(el=>{if(el.type==="checkbox"||el.type==="radio")el.checked=el.defaultChecked;else if(el.type!=="file")el.value=el.defaultValue;else el.value="";});
+    const result=document.getElementById("result");if(result)result.textContent="Your result will appear here.";
+    const qr=document.getElementById("qrImage");if(qr){qr.hidden=true;qr.removeAttribute("src")}
+    const download=document.getElementById("downloadQr");if(download)download.hidden=true;
+    if(typeof gtag==="function")gtag("event","tool_reset",{page_path:location.pathname});
+  });
+});
