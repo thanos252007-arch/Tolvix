@@ -619,3 +619,15 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - Preserved all 43 tool cards, 30 guide links, tool routes, tool-processing scripts, GA4 Measurement ID, Search Console verification, canonical URLs and sitemap.
 - Source commits: homepage `b0b818703401732a8f42d441794898fdcfd547ee`; shared CSS `0ea01b887d466ade834632377a2dd76187c3ea79`.
 - **Verification status:** GitHub source updates are committed. Cloudflare deployment, live desktop/mobile rendering, keyboard testing and a fresh PageSpeed run are not independently confirmed. The FAQ uses native HTML `details/summary` controls; test open/close behavior on mobile after deployment.
+
+
+### Product quality upgrade — 7 November 2026
+
+- Improved homepage tool discovery with synonym-aware search, keyboard Enter/Arrow Down navigation to the first result, and clearer no-result guidance.
+- Added device-local favorites and recently opened tools to the homepage. Visitors can save favorites and clear their recent-tool history; no account or server-side profile is created.
+- Added a persistent light/dark appearance toggle on the homepage, with the existing dark theme remaining the default.
+- Added a reusable Reset control to standard tools powered by `assets/tools.js`; it restores form defaults, clears file inputs, resets the result area and hides generated QR output where applicable.
+- Added homepage GA4 events for tool opens and standard-tool reset actions, preserving Measurement ID `G-WH86KPZW58`.
+- Refined responsive styling and light-theme surfaces while retaining the Tolvix black/white/cobalt visual identity and reduced-motion support.
+- Existing 43 tool routes, 30 guides, canonical URLs, verification file and sitemap were preserved.
+- **Scope and verification:** source edits only. The homepage workspace controls are currently homepage features; the generic Reset control applies to pages using `assets/tools.js`, not every advanced file-processing tool. Drag-and-drop, progress indicators, new tools, complete breadcrumb/schema rollout, privacy review of every page, and live performance/AdSense checks remain separate work. No Cloudflare deployment or live-browser testing is claimed.
