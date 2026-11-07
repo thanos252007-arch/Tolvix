@@ -715,3 +715,5 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Preserved GA4 and Search Console verification assets and all remaining tool routes.
 
 **Verification status:** GitHub source updates were committed and re-fetched for source checks. Cloudflare deployment and live browser verification are still pending; after deployment, test the homepage and several different tool pages in both themes, including file upload and output panels.
+
+- Follow-up light-mode fix: explicitly switch the homepage's long-form content and 30-guide cards from their dark gradient surface to white, including headings, body text, links and borders.
