@@ -63,3 +63,7 @@ const button=document.createElement('button');button.type='button';button.classN
 button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));links.classList.toggle('is-open',open);button.textContent=open?'Close':'Menu'});
 links.addEventListener('click',e=>{if(e.target.closest('a')){button.setAttribute('aria-expanded','false');links.classList.remove('is-open');button.textContent='Menu'}});
 })();
+
+
+/* Apply the saved theme and expose the same toggle on every tool page. */
+(()=>{const root=document.documentElement;let saved='dark';try{saved=localStorage.getItem('tolvix-theme')||'dark'}catch{}root.dataset.theme=saved==='light'?'light':'dark';const nav=document.querySelector('header nav');if(!nav||nav.querySelector('.theme-toggle'))return;const button=document.createElement('button');button.type='button';button.className='theme-toggle';button.setAttribute('aria-pressed',String(root.dataset.theme==='light'));button.textContent=root.dataset.theme==='light'?'Dark mode':'Light mode';nav.append(button);button.addEventListener('click',()=>{const light=root.dataset.theme!=='light';root.dataset.theme=light?'light':'dark';button.textContent=light?'Dark mode':'Light mode';button.setAttribute('aria-pressed',String(light));try{localStorage.setItem('tolvix-theme',light?'light':'dark')}catch{}})})();
