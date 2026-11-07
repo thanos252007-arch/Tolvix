@@ -761,6 +761,6 @@ p,li,h1,h2,h3,a,small,strong{overflow-wrap:anywhere}
 .mobile-menu-toggle{display:none;border:1px solid var(--line-strong);border-radius:9px;background:var(--surface);color:var(--text);padding:8px 12px;font:inherit;font-size:13px;cursor:pointer}
 @media(max-width:720px){
  .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center}
- header nav .links{display:none}
- header nav .links.is-open{display:flex}
+ header nav:has(.mobile-menu-toggle) .links{display:none}
+ header nav:has(.mobile-menu-toggle) .links.is-open{display:flex}
 }
