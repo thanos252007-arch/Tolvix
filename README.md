@@ -689,3 +689,10 @@ Updated the root `_headers` file with:
 - Added a Negative Marking Calculator with configurable total questions, correct/incorrect answers, marks per correct answer and penalty per incorrect answer. It reports net score, unattempted questions and attempted-answer accuracy.
 - Added both calculator pages to the homepage directory and XML sitemap, bringing the tool catalogue from 51 to 53.
 - Preserved the existing GA4 Measurement ID, Search Console verification, shared design system and existing tool routes. Source changes only; deploy through Cloudflare and test both calculators on desktop and mobile before treating them as live-verified.
+
+### Calculator SEO and internal linking — 7 November 2026
+
+- Refined unique page titles, meta descriptions, Open Graph titles/descriptions and WebApplication descriptions across all nine calculator pages: Age, BMI, Discount, EMI, GST, Percentage, Tip, SGPA and Negative Marking.
+- Added contextual cross-links between related calculators, including student-focused links between SGPA and Negative Marking.
+- Preserved canonical URLs, analytics, calculator logic and existing page content.
+- Source updates committed to `main`; Cloudflare deployment and live search-result appearance still need confirmation. Metadata changes do not guarantee ranking or indexing.
