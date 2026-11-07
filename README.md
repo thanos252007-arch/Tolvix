@@ -696,3 +696,10 @@ Updated the root `_headers` file with:
 - Added contextual cross-links between related calculators, including student-focused links between SGPA and Negative Marking.
 - Preserved canonical URLs, analytics, calculator logic and existing page content.
 - Source updates committed to `main`; Cloudflare deployment and live search-result appearance still need confirmation. Metadata changes do not guarantee ranking or indexing.
+
+
+## AI writing-pattern tool update — 7 November 2026
+
+Updated `tools/ai-detector.html` to separate the writing-pattern review from the rule-based clarity editor. The analysis now reports observable features (sentence-length consistency, repeated content words, repeated sentence openings, selected formal transitions and selected filler phrases) with an explanation and limitation for each finding. Removed the aggregate heuristic score and any human/AI classification. The clarity editor lists the conservative phrase/spacing edits it applies and clearly says when it leaves the text unchanged. The page states that it does not use a machine-learning model, does not estimate AI authorship probability and cannot prove who wrote a passage. All analysis and editing remain browser-local. Existing GA4 Measurement ID and canonical URL are preserved.
+
+**Testing status:** source updated in GitHub `main`. A deployed browser test of both workflows, copy behavior and mobile layout is still required; do not treat this commit alone as confirmation of Cloudflare deployment or live functionality.
