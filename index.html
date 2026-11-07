@@ -64,4 +64,12 @@
   const nav=document.querySelector('header nav');if(nav){const theme=document.createElement('button');theme.type='button';theme.className='theme-toggle';theme.textContent='Light mode';theme.setAttribute('aria-pressed','false');nav.append(theme);theme.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';theme.textContent=light?'Dark mode':'Light mode';theme.setAttribute('aria-pressed',String(light));try{localStorage.setItem('tolvix-theme',light?'light':'dark')}catch{}});try{const saved=localStorage.getItem('tolvix-theme');if(saved==='light'){document.documentElement.dataset.theme='light';theme.textContent='Dark mode';theme.setAttribute('aria-pressed','true')}}catch{}}
   renderSaved();
 })();
-</script></body></html>
+</script>
+/* Homepage mobile navigation and favicon */
+(()=>{const head=document.head;if(head&&!head.querySelector('link[rel~="icon"]')){const icon=document.createElement('link');icon.rel='icon';icon.type='image/svg+xml';icon.href='/favicon.svg';head.append(icon)}
+const nav=document.querySelector('header nav'),links=nav?.querySelector('.links');if(!nav||!links||nav.querySelector('.mobile-menu-toggle'))return;
+const button=document.createElement('button');button.type='button';button.className='mobile-menu-toggle';button.textContent='Menu';button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','tolvix-primary-links');links.id='tolvix-primary-links';nav.insertBefore(button,links);
+button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));links.classList.toggle('is-open',open);button.textContent=open?'Close':'Menu'});
+links.addEventListener('click',e=>{if(e.target.closest('a')){button.setAttribute('aria-expanded','false');links.classList.remove('is-open');button.textContent='Menu'}});
+})();
+</body></html>
