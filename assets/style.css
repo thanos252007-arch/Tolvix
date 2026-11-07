@@ -692,3 +692,34 @@ header{
 @media(prefers-reduced-motion:reduce){
   .skip-link{transition:none}
 }
+
+
+/* Personal workspace and theme controls — November 2026 */
+.theme-toggle,.quiet-button{min-height:36px;padding:7px 11px;border:1px solid rgba(255,255,255,.14);border-radius:9px;background:#171a20;color:#dbe4f4;font:600 12px/1.2 inherit;cursor:pointer}
+.theme-toggle:hover,.quiet-button:hover{border-color:rgba(121,167,255,.5);color:#fff}
+.personal-tools{margin:0 auto 24px;padding:18px 20px;border:1px solid rgba(255,255,255,.09);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.035),transparent 65%),#101216}
+.personal-tools[hidden]{display:none}
+.personal-tools-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.personal-tools-head h2{margin:0;font-size:16px;letter-spacing:-.02em}
+.personal-note{color:var(--quiet);font-size:12px}
+.personal-tool-list{display:flex;flex-wrap:wrap;gap:8px}
+.personal-tool-link{display:inline-flex;align-items:center;min-height:36px;padding:7px 11px;border:1px solid rgba(255,255,255,.1);border-radius:9px;background:rgba(255,255,255,.025);font-size:12px}
+.favorite-toggle{position:absolute;top:12px;right:13px;z-index:3;width:32px;height:32px;border:1px solid rgba(255,255,255,.12);border-radius:9px;background:#191d24;color:#aebbd0;font-size:18px;line-height:1;cursor:pointer}
+.favorite-toggle.is-favorite{color:#ffd77a;border-color:rgba(255,215,122,.3);background:rgba(255,215,122,.08)}
+.grid>.card{position:relative;padding-right:58px}
+.grid>.card .btn{margin-right:-37px;width:calc(100% + 37px)}
+#grid .card[hidden],.tool-category[hidden]{display:none!important}
+@media(max-width:680px){.theme-toggle{margin-left:auto}.personal-tools{padding:15px}.personal-tools-head h2{font-size:15px}.favorite-toggle{top:9px;right:9px}.grid>.card{padding-right:48px}.grid>.card .btn{margin-right:-31px;width:calc(100% + 31px)}}
+@media(prefers-reduced-motion:reduce){.personal-tool-link,.favorite-toggle{transition:none}}
+:root[data-theme="light"]{color-scheme:light;--bg:#f4f6fa;--surface:#fff;--surface-raised:#edf1f7;--line:rgba(20,30,50,.12);--line-strong:rgba(20,30,50,.2);--text:#172033;--muted:#48566b;--quiet:#657187}
+:root[data-theme="light"] body{background:#f4f6fa;color:#172033}
+:root[data-theme="light"] header{background:rgba(248,250,253,.94);border-color:rgba(20,30,50,.12)}
+:root[data-theme="light"] .links a,:root[data-theme="light"] .brand{color:#253149}
+:root[data-theme="light"] .panel,:root[data-theme="light"] .personal-tools,:root[data-theme="light"] .grid>.card{background:#fff;border-color:rgba(20,30,50,.13);box-shadow:0 8px 24px rgba(30,45,70,.07)}
+:root[data-theme="light"] .grid>.card p,:root[data-theme="light"] .lead,:root[data-theme="light"] .category-heading p{color:#526078}
+:root[data-theme="light"] .favorite-toggle,:root[data-theme="light"] .theme-toggle,:root[data-theme="light"] .quiet-button{background:#f0f3f8;color:#243149;border-color:rgba(20,30,50,.15)}
+:root[data-theme="light"] .content{color:#253149}
+:root[data-theme="light"] .content h2,:root[data-theme="light"] .content h3{color:#172033}
+:root[data-theme="light"] .homepage-faq{background:#fff;border-color:rgba(20,30,50,.12)}
+:root[data-theme="light"] .homepage-faq summary{color:#172033}
+:root[data-theme="light"] .homepage-faq details p{color:#526078}
