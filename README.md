@@ -681,3 +681,11 @@ Updated the root `_headers` file with:
 - Refreshed the 404 page header to use the current Tolvix mark and primary navigation label.
 - Existing 2026 copyright and descriptive metadata were retained where already present. Contact page intentionally does not invent a phone number or public email address.
 - Source-level changes only; confirm Cloudflare deployment and test the live site on mobile before treating these changes as verified.
+
+
+## Student calculator expansion — 7 November 2026
+
+- Added an SGPA Calculator supporting up to eight subjects, user-selected 10-point or 4-point scales, and credit-weighted grade point calculation. Users enter the grade points and credits supplied by their own institution; no universal marks-to-grade conversion is assumed.
+- Added a Negative Marking Calculator with configurable total questions, correct/incorrect answers, marks per correct answer and penalty per incorrect answer. It reports net score, unattempted questions and attempted-answer accuracy.
+- Added both calculator pages to the homepage directory and XML sitemap, bringing the tool catalogue from 51 to 53.
+- Preserved the existing GA4 Measurement ID, Search Console verification, shared design system and existing tool routes. Source changes only; deploy through Cloudflare and test both calculators on desktop and mobile before treating them as live-verified.
