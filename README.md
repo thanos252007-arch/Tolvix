@@ -703,3 +703,15 @@ Updated the root `_headers` file with:
 Updated `tools/ai-detector.html` to separate the writing-pattern review from the rule-based clarity editor. The analysis now reports observable features (sentence-length consistency, repeated content words, repeated sentence openings, selected formal transitions and selected filler phrases) with an explanation and limitation for each finding. Removed the aggregate heuristic score and any human/AI classification. The clarity editor lists the conservative phrase/spacing edits it applies and clearly says when it leaves the text unchanged. The page states that it does not use a machine-learning model, does not estimate AI authorship probability and cannot prove who wrote a passage. All analysis and editing remain browser-local. Existing GA4 Measurement ID and canonical URL are preserved.
 
 **Testing status:** source updated in GitHub `main`. A deployed browser test of both workflows, copy behavior and mobile layout is still required; do not treat this commit alone as confirmation of Cloudflare deployment or live functionality.
+
+
+## Site cleanup and theme consistency — 7 November 2026
+
+- Removed the AI Detector page and its homepage card because the heuristic-based checker did not meet the product's expectations. It is no longer part of the Tolvix tool catalogue; the user plans to build it as a separate website.
+- Removed the duplicate legacy URL Encoder card and page. Kept the single URL Encoder / Decoder tool at `/tools/url-encoder-decoder.html`.
+- Removed both retired URLs from `sitemap.xml`. The current homepage catalogue contains 51 tools; the sitemap contains 86 URLs.
+- Completed light-theme styling for tool inputs, textareas, selects, file controls, result panels, code blocks, preview cards, personal-tool controls and other previously dark-only surfaces.
+- Added saved-theme restoration and a consistent Light/Dark toggle to shared tool pages. The homepage retains its existing toggle and shared localStorage preference.
+- Preserved GA4 and Search Console verification assets and all remaining tool routes.
+
+**Verification status:** GitHub source updates were committed and re-fetched for source checks. Cloudflare deployment and live browser verification are still pending; after deployment, test the homepage and several different tool pages in both themes, including file upload and output panels.
