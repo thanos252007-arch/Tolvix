@@ -631,3 +631,12 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - Refined responsive styling and light-theme surfaces while retaining the Tolvix black/white/cobalt visual identity and reduced-motion support.
 - Existing 43 tool routes, 30 guides, canonical URLs, verification file and sitemap were preserved.
 - **Scope and verification:** source edits only. The homepage workspace controls are currently homepage features; the generic Reset control applies to pages using `assets/tools.js`, not every advanced file-processing tool. Drag-and-drop, progress indicators, new tools, complete breadcrumb/schema rollout, privacy review of every page, and live performance/AdSense checks remain separate work. No Cloudflare deployment or live-browser testing is claimed.
+
+
+### Quality expansion — November 2026
+
+- Added eight tools: Markdown Editor, Word-to-PDF print workflow, PDF Page Extractor, Image Color Picker, Text Diff Checker, URL Encoder/Decoder, Password Strength Checker and CSV Viewer.
+- Shared enhancements for standard and advanced tools include drag-and-drop file selection, keyboard-accessible upload zones, reset controls, processing feedback, and copy/download actions for text output.
+- Tool pages receive generated breadcrumb navigation and WebApplication/BreadcrumbList structured data from the shared tool scripts. Existing canonical URLs and analytics configuration are retained.
+- Homepage and sitemap expanded to 51 tools. No framework or build dependency added.
+- Accessibility and performance changes are source-level improvements, not a certified WCAG audit or Lighthouse benchmark. Live deployment, browser-based file fixture testing, real-device testing, and AdSense approval readiness remain unverified.
