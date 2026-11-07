@@ -672,3 +672,12 @@ Updated the root `_headers` file with:
 - The website has not undergone a professional penetration test, full dependency/Supply-chain audit, complete XSS review of all 51 tool pages, or automated dynamic security scan.
 - No claim is made that hackers cannot attack the site or that the current configuration is fully secure.
 - This is a GitHub source update. Cloudflare deployment and live response headers have not been independently verified. After deployment, inspect the homepage and a tool page with browser developer tools or a trusted HTTP header checker and confirm the new headers are present and tools still work.
+
+
+## 2026-11-07 — Mobile and site-wide usability pass
+
+- Added global overflow safeguards and narrow-screen layout rules.
+- Added an accessible collapsible mobile navigation and favicon wiring on the homepage and shared tool pages.
+- Refreshed the 404 page header to use the current Tolvix mark and primary navigation label.
+- Existing 2026 copyright and descriptive metadata were retained where already present. Contact page intentionally does not invent a phone number or public email address.
+- Source-level changes only; confirm Cloudflare deployment and test the live site on mobile before treating these changes as verified.
