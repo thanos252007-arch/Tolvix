@@ -816,3 +816,19 @@ p,li,h1,h2,h3,a,small,strong{overflow-wrap:anywhere}
 :root[data-theme="light"] .csv-table td{color:#253149}
 :root[data-theme="light"] .diff-added{color:#17633e}
 :root[data-theme="light"] .diff-removed{color:#9b3030}
+
+
+/* Homepage long-form content cards must also switch to the light palette. */
+:root[data-theme="light"] main>.content,
+:root[data-theme="light"] main>.content#guides{
+  background:#fff!important;
+  color:#253149!important;
+  border:1px solid rgba(20,30,50,.12)!important;
+  box-shadow:0 8px 24px rgba(30,45,70,.07)!important;
+}
+:root[data-theme="light"] main>.content h2,
+:root[data-theme="light"] main>.content h3,
+:root[data-theme="light"] main>.content strong{color:#172033!important}
+:root[data-theme="light"] main>.content p,
+:root[data-theme="light"] main>.content li{color:#526078!important}
+:root[data-theme="light"] main>.content a{color:#315fba!important}
