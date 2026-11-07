@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 6 November 2026 (18 additional tools reviewed and safeguards improved)  
+> **Project log last updated:** 7 November 2026 (security baseline reviewed and response headers hardened)nal tools reviewed and safeguards improved)  
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -642,3 +642,33 @@ This is a source-level audit, not a complete live-browser test. Real interaction
 - Accessibility and performance changes are source-level improvements, not a certified WCAG audit or Lighthouse benchmark. Live deployment, browser-based file fixture testing, real-device testing, and AdSense approval readiness remain unverified.
 
 - Final source-level QA after the feature additions: 51 homepage tool cards; 86 unique sitemap URLs; all eight new tool URLs present; JavaScript syntax checks passed for the shared standard, advanced and new-tool scripts. This does not replace live browser, file-fixture, accessibility-tool or Lighthouse testing.
+
+
+## Security review and hardening — 7 November 2026
+
+### Architecture review
+
+- Reviewed `worker.js`: the Worker only forwards requests to Cloudflare Static Assets. No application API, database, authentication system, server-side file upload endpoint, or application secret was found in this Worker.
+- Reviewed the shared tool scripts and representative password, QR, Markdown and PDF pages. The reviewed file-processing tools primarily process user-selected files in the browser. This reduces server-side exposure but does not make a browser or website immune to malicious files, browser extensions, compromised dependencies or client-side attacks.
+- Password generation uses the browser Web Crypto API (`crypto.getRandomValues`) in the shared tool logic.
+- The QR Code Generator sends the entered text/URL to the third-party `api.qrserver.com` service. Users must not submit passwords, private documents or confidential data there.
+- PDF processing loads third-party libraries from CDN providers. A compromised or unavailable third-party script could affect the page that loads it.
+
+### Response-header hardening
+
+Updated the root `_headers` file with:
+- `X-Content-Type-Options: nosniff`
+- `X-Frame-Options: DENY` and CSP `frame-ancestors 'none'` / `frame-src 'none'`
+- `X-Permitted-Cross-Domain-Policies: none`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- A restrictive `Permissions-Policy` for camera, microphone, geolocation and payment APIs
+- One-year HSTS on the current HTTPS hostname
+- Additional CSP restrictions for base URLs, objects, forms, manifests, frames, fonts, media and workers
+- `blob:` in image/media/worker sources where browser-local file previews and PDF processing may need it
+
+### Remaining security work and limitations
+
+- The current CSP still includes `'unsafe-inline'` in `script-src` for compatibility with inline analytics initialization and page scripts. This weakens protection against some injected-script/XSS scenarios. A follow-up should move inline executable JavaScript into reviewed external files or use per-response nonces/hashes, then remove `'unsafe-inline'` from `script-src` without breaking structured data or tool behavior.
+- The website has not undergone a professional penetration test, full dependency/Supply-chain audit, complete XSS review of all 51 tool pages, or automated dynamic security scan.
+- No claim is made that hackers cannot attack the site or that the current configuration is fully secure.
+- This is a GitHub source update. Cloudflare deployment and live response headers have not been independently verified. After deployment, inspect the homepage and a tool page with browser developer tools or a trusted HTTP header checker and confirm the new headers are present and tools still work.
