@@ -52,3 +52,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 /* Consistent skip link and navigation naming on tool pages. */
 (()=>{const main=document.querySelector('main');if(main){if(!main.id)main.id='main-content';if(!document.querySelector('.skip-link')){const a=document.createElement('a');a.className='skip-link';a.href='#'+main.id;a.textContent='Skip to content';document.body.prepend(a)}}const nav=document.querySelector('header nav');if(nav&&!nav.hasAttribute('aria-label'))nav.setAttribute('aria-label','Primary navigation')})();
+
+
+/* Mobile menu and favicon for pages loading the shared tools script. */
+(()=>{const head=document.head;if(head&&!head.querySelector('link[rel~="icon"]')){const icon=document.createElement('link');icon.rel='icon';icon.type='image/svg+xml';icon.href='/favicon.svg';head.append(icon)}
+const nav=document.querySelector('header nav'),links=nav?.querySelector('.links');if(!nav||!links||nav.querySelector('.mobile-menu-toggle'))return;
+const button=document.createElement('button');button.type='button';button.className='mobile-menu-toggle';button.textContent='Menu';button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','tolvix-primary-links');links.id='tolvix-primary-links';nav.insertBefore(button,links);
+button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));links.classList.toggle('is-open',open);button.textContent=open?'Close':'Menu'});
+links.addEventListener('click',e=>{if(e.target.closest('a')){button.setAttribute('aria-expanded','false');links.classList.remove('is-open');button.textContent='Menu'}});
+})();
