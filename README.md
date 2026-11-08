@@ -728,3 +728,5 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Preserved the existing GA4 Measurement ID, Search Console verification file, hostname, brand assets and existing routes.
 
 **Source verification:** all six new tool pages and six guide pages were created on `main`. Homepage cards and guide links were added and the sitemap was updated. These are source changes; verify Cloudflare deployment, open every new tool in a browser, test each control, and submit the updated sitemap in Search Console. New URLs are not guaranteed to be indexed or rank immediately.
+
+- Follow-up source validation: checked inline JavaScript syntax for all six new tools. Corrected URL validation in the Meta Tag Generator after the syntax check caught an escaped-regex error; the corrected script now parses successfully. This is syntax validation only, not a full interactive browser test.
