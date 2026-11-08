@@ -717,3 +717,14 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 **Verification status:** GitHub source updates were committed and re-fetched for source checks. Cloudflare deployment and live browser verification are still pending; after deployment, test the homepage and several different tool pages in both themes, including file upload and output panels.
 
 - Follow-up light-mode fix: explicitly switch the homepage's long-form content and 30-guide cards from their dark gradient surface to white, including headings, body text, links and borders.
+
+
+## SEO and tool expansion — 13 November 2026
+
+- Added six browser-local utilities to the catalogue: UTM Link Builder, Reading Time Calculator, Meta Tag Generator, JavaScript Regex Tester, Markdown Table Generator and robots.txt Generator.
+- Added six original practical guides covering campaign tracking, reading-time estimates, HTML metadata, JavaScript regular expressions, Markdown tables and robots.txt setup. Each guide links to its matching tool.
+- Updated the homepage directory, category navigation, search keywords, tool count (51 → 57) and guide count (30 → 36).
+- Added all 12 new canonical URLs to `sitemap.xml`; existing sitemap entries were retained.
+- Preserved the existing GA4 Measurement ID, Search Console verification file, hostname, brand assets and existing routes.
+
+**Source verification:** all six new tool pages and six guide pages were created on `main`. Homepage cards and guide links were added and the sitemap was updated. These are source changes; verify Cloudflare deployment, open every new tool in a browser, test each control, and submit the updated sitemap in Search Console. New URLs are not guaranteed to be indexed or rank immediately.
