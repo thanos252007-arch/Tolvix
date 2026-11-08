@@ -730,3 +730,16 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 **Source verification:** all six new tool pages and six guide pages were created on `main`. Homepage cards and guide links were added and the sitemap was updated. These are source changes; verify Cloudflare deployment, open every new tool in a browser, test each control, and submit the updated sitemap in Search Console. New URLs are not guaranteed to be indexed or rank immediately.
 
 - Follow-up source validation: checked inline JavaScript syntax for all six new tools. Corrected URL validation in the Meta Tag Generator after the syntax check caught an escaped-regex error; the corrected script now parses successfully. This is syntax validation only, not a full interactive browser test.
+
+## Site quality and content audit — 9 November 2026
+
+- Reviewed the homepage directory, About page, Contact page, Privacy Policy, responsive stylesheet, six recently added tools and their six matching SEO guides.
+- Found and fixed a broken internal-link pattern in all six newer guides: the “Try the related free tool” section had assigned explanatory heading text as the link destination. Each guide now links to its correct matching tool, and the explanatory note is displayed as readable page content.
+- Added a matching guide link and a distinct practical tip to each of the six newer tool pages: UTM Link Builder, Reading Time Calculator, Meta Tag Generator, Regex Tester, Markdown Table Generator and robots.txt Generator.
+- Updated About page copy to reflect the seven current homepage categories.
+- Reviewed Contact page: it accurately directs visitors to public GitHub Issues, warns users not to post confidential information, and does not invent an email address or response-time promise.
+- Refreshed the Privacy Policy: removed the disclosure for the retired AI Detector, clarified browser-local handling for the six newer utilities, and removed a duplicated third-party-services section while retaining the QR service and CDN disclosures.
+- Corrected the Image Compressor page's unrelated PDF-library privacy note and replaced generic placeholder instructions on the Image Compressor and PDF Merge pages with task-specific steps.
+- Source verification after the edits: homepage contains 57 tool cards and 36 guide links; sitemap contains 98 unique URLs; all six new guide-to-tool links and all six corresponding tool-to-guide links resolve to the intended repository paths.
+- Responsive CSS includes desktop/tablet/mobile breakpoints and reduced-motion rules. This is a source review, not a live visual test on physical devices.
+- **Deployment and testing status:** changes are committed to GitHub `main`. Cloudflare deployment, live page status, interactive button behavior, and actual mobile/desktop rendering still need browser verification. Do not treat source checks as proof that the live site has updated.
