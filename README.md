@@ -743,3 +743,5 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Source verification after the edits: homepage contains 57 tool cards and 36 guide links; sitemap contains 98 unique URLs; all six new guide-to-tool links and all six corresponding tool-to-guide links resolve to the intended repository paths.
 - Responsive CSS includes desktop/tablet/mobile breakpoints and reduced-motion rules. This is a source review, not a live visual test on physical devices.
 - **Deployment and testing status:** changes are committed to GitHub `main`. Cloudflare deployment, live page status, interactive button behavior, and actual mobile/desktop rendering still need browser verification. Do not treat source checks as proof that the live site has updated.
+
+- Follow-up editorial pass: added original worked examples to all six recently added SEO guides, covering newsletter UTM tagging, reading-time arithmetic, page-specific metadata, a JavaScript regex pattern, Markdown table alignment/escaping, and a cautious robots.txt example. The examples include practical QA checks and limitations rather than generic filler.
