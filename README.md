@@ -754,3 +754,6 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Linked the guide from the homepage Developer guide group and added its canonical URL to the XML sitemap.
 - Updated the homepage guide count from 36 to 37. Existing GA4 tracking ID, Search Console verification, canonical host and tool routes are preserved.
 - **Verification scope:** GitHub source changes only. Submit the updated sitemap in Search Console and inspect the deployed guide before treating it as live. Search engines may take days or longer to crawl and rank a new page; this change cannot guarantee visits by tomorrow.
+
+
+- Follow-up metadata consistency check: corrected the homepage meta description, Open Graph description and WebSite structured-data description from 36 to 37 guides so the search/social snippets match the current homepage guide count.
