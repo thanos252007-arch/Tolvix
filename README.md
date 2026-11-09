@@ -768,3 +768,12 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - The `workers.dev` endpoint remains enabled for now; disable it only after verifying all custom-domain routes and deployment behavior.
 - Completed a source audit of all tool and guide HTML pages in the repository. Legacy `workers.dev` canonical and related metadata references were replaced with `https://tolvix.in`; the audit found no remaining legacy hostname references in those pages. Existing page paths, tool functionality, analytics and verification assets were preserved.
 - **Verification scope:** Source updates are committed to `main`; the user confirmed the Cloudflare deployment is active and the new sitemap was accepted by Search Console with 99 URLs. GitHub source checks confirm the homepage, key tool pages, guides, About, Contact, Privacy and Terms use the new host. The user also confirmed representative live pages load. The `workers.dev` endpoint remains enabled until final live canonical and redirect checks are complete.
+
+
+### Canonical host and WWW redirect verification — 9 November 2026
+
+- Configured a Cloudflare Single Redirect named **WWW to Non-WWW Redirect** using the `https://www.tolvix.in/*` wildcard source and `https://tolvix.in/${1}` destination.
+- Set the redirect to **301 Permanent Redirect** and enabled **Preserve query string**.
+- The user tested both `https://www.tolvix.in/` and `https://www.tolvix.in/tools/word.html` and confirmed that each redirects successfully to the matching `https://tolvix.in` URL.
+- The apex domain `https://tolvix.in` remains the preferred canonical hostname. The `workers.dev` endpoint remains enabled until any separate decision to disable it.
+- **Verification scope:** the user confirmed these two live redirect tests. Other routes and query-string preservation have not been exhaustively tested. Google Search Console may take time to process the canonical and redirect signals.
