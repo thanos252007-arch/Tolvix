@@ -745,3 +745,12 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - **Deployment and testing status:** changes are committed to GitHub `main`. Cloudflare deployment, live page status, interactive button behavior, and actual mobile/desktop rendering still need browser verification. Do not treat source checks as proof that the live site has updated.
 
 - Follow-up editorial pass: added original worked examples to all six recently added SEO guides, covering newsletter UTM tagging, reading-time arithmetic, page-specific metadata, a JavaScript regex pattern, Markdown table alignment/escaping, and a cautious robots.txt example. The examples include practical QA checks and limitations rather than generic filler.
+
+
+## Organic search content update — 9 November 2026
+
+- Published a practical developer workflow guide covering JSON formatting, URL component encoding, Base64, JavaScript regex testing and CSV conversion.
+- Added worked examples, positive/negative regex cases, links to matching tools and related guides, privacy cautions and a result-check checklist.
+- Linked the guide from the homepage Developer guide group and added its canonical URL to the XML sitemap.
+- Updated the homepage guide count from 36 to 37. Existing GA4 tracking ID, Search Console verification, canonical host and tool routes are preserved.
+- **Verification scope:** GitHub source changes only. Submit the updated sitemap in Search Console and inspect the deployed guide before treating it as live. Search engines may take days or longer to crawl and rank a new page; this change cannot guarantee visits by tomorrow.
