@@ -2,7 +2,7 @@
 
 Tolvix is a free online tools website built to make everyday text, calculation, developer and productivity tasks simple and accessible.
 
-- **Live website:** https://tolvix.thanos252007.workers.dev/
+- **Live website:** https://tolvix.in/
 - **GitHub repository:** https://github.com/thanos252007-arch/Tolvix
 - **Hosting:** Cloudflare Workers
 - **Budget approach:** ₹0 / free-tier services
@@ -757,3 +757,13 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 
 
 - Follow-up metadata consistency check: corrected the homepage meta description, Open Graph description and WebSite structured-data description from 36 to 37 guides so the search/social snippets match the current homepage guide count.
+
+
+## Custom domain migration — 9 November 2026
+
+- Connected `tolvix.in` and `www.tolvix.in` to the existing production Cloudflare Worker; the user confirmed both domains load successfully.
+- Set the homepage canonical URL, Open Graph URL and WebSite JSON-LD URL to `https://tolvix.in/`.
+- Updated every sitemap location and the `robots.txt` Sitemap directive to use `https://tolvix.in`.
+- Preserved the existing Google Analytics Measurement ID (`G-WH86KPZW58`) and Google Search Console verification meta tag/file.
+- The `workers.dev` endpoint remains enabled for now; disable it only after verifying all custom-domain routes and deployment behavior.
+- **Verification scope:** GitHub source changes. Recheck the deployed homepage, representative tool/guide canonicals, sitemap and robots.txt, then submit `https://tolvix.in/sitemap.xml` in Google Search Console. Individual tool and guide canonical tags still require a repository-wide audit before the migration is considered complete.
