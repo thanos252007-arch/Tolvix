@@ -777,3 +777,15 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - The user tested both `https://www.tolvix.in/` and `https://www.tolvix.in/tools/word.html` and confirmed that each redirects successfully to the matching `https://tolvix.in` URL.
 - The apex domain `https://tolvix.in` remains the preferred canonical hostname. The `workers.dev` endpoint remains enabled until any separate decision to disable it.
 - **Verification scope:** the user confirmed these two live redirect tests. Other routes and query-string preservation have not been exhaustively tested. Google Search Console may take time to process the canonical and redirect signals.
+
+
+## 9 November 2026 — domain migration and quality follow-up
+
+- Confirmed the custom domain `https://tolvix.in` and the `www.tolvix.in` to apex 301 redirect using user-run browser checks.
+- Migrated canonical URLs and site metadata to `https://tolvix.in`; source audit found no remaining old `workers.dev` host references in tool or guide HTML pages.
+- Updated `robots.txt` and the 99-entry `sitemap.xml` to the custom domain. Google Search Console reported sitemap submission as **Success** with 99 discovered URLs.
+- User confirmed the homepage and JSON Formatter are indexed and that Google's selected canonical matches the custom-domain URL for both pages. The new property's aggregate Page indexing report is still processing.
+- Homepage directory links to all 57 tools and 37 guides; this source-level check confirms the directory inventory is represented in internal navigation. This is not a guarantee that every URL is indexed.
+- Reviewed homepage, Word Counter, JSON Formatter and the JSON formatting guide for page titles, descriptions, canonical tags, useful explanatory content, FAQs and contextual links. Corrected the JSON Formatter's related-tool link from the obsolete `/tools/url-encoder.html` path to the current `/tools/url-encoder-decoder.html` route.
+- Responsive styles and mobile viewport metadata are present in the source. Full cross-device browser testing, exhaustive link crawling across every page, and real-user tool interaction testing remain manual verification tasks; do not mark these complete solely from source inspection.
+- Analytics Measurement ID `G-WH86KPZW58` and Search Console verification file were preserved.
