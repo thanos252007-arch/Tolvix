@@ -825,3 +825,11 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - A real-device visual test, keyboard-only test, screen-reader check, and full automated accessibility scan remain to be completed.
 - Google Search Console query/page performance data is not accessible through the repository. Search-query prioritisation should use the actual Search Console Performance export rather than assumed keyword volumes.
 - Google must recrawl and reprocess updated URLs; code changes do not immediately change rankings or guarantee traffic.
+
+## 10 November 2026 — guide quality and audit follow-up
+
+- Expanded four previously thin guides with topic-specific worked examples, practical validation steps, common mistakes, and security or deployment checks: binary/decimal/hex conversion, percentage calculations, CSS minification, and password practices.
+- Source review of a 20-guide sample found several pages around 276–307 visible words and a generic checklist that did not match the guide topic. The four guides above now replace that generic checklist with relevant instructions. Other sampled short guides remain candidates for the next content pass.
+- A source-level spot check confirmed each edited guide retains its page title, description, canonical URL, H1 and related tool link.
+- Live HTTP crawling and interactive browser testing could not be completed in this environment: external DNS/network access to tolvix.in was unavailable. No claim is made that live status codes, JavaScript interactions, or every tool workflow have been tested.
+- Google Search Console Performance data is not connected to the available tools in this session, so no new impressions/clicks comparison is claimed. Use the tolvix.in property and a consistent date range for the next comparison.
