@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 10 November 2026 (homepage search-intent improvement and SEO source review)
+> **Project log last updated:** 10 November 2026 (six supporting SEO guides improved)
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -848,3 +848,25 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Final snippet refinement: all ten priority page titles now target the specific tool intent with concise branded wording; meta descriptions were brought into a concise 136–155 character range and matching Open Graph descriptions were updated. Added a dedicated FAQ section to the Percentage Calculator. Rechecked the ten page canonicals, H1s, GA4 ID and internal tool/guide link destinations after the edits; no missing internal destinations were found in this ten-page sample.
 
 - Structured-data follow-up: added valid WebApplication JSON-LD to the PDF Merge and Image Compressor pages, which previously had no JSON-LD block. Parsed the structured-data blocks on all ten priority pages successfully; PDF Merge and Image Compressor now each have a WebApplication block. This is source validation, not Google's rich-result or live deployment validation.
+
+
+## Supporting guide improvement pass — 10 November 2026
+
+Updated six guides to support the priority tools and answer practical search questions with specific, useful instructions:
+
+| Guide | Improvements |
+|---|---|
+| [GST calculation in India](guides/calculate-gst-india.html) | Clear add-GST and inclusive-price formulas, worked rupee examples, CGST/SGST/IGST explanation, rate caveats, common mistakes and calculator links. |
+| [Loan EMI in India](guides/calculate-loan-emi-india.html) | Reducing-balance EMI formula, monthly-rate conversion, worked ₹5 lakh example, tenure/interest trade-off, flat versus reducing balance, fees and lender-schedule checks. |
+| [Create and test QR codes](guides/create-and-test-qr-codes.html) | Step-by-step generation, payload privacy, quiet zone/contrast/size, print testing, static versus dynamic QR codes and troubleshooting. |
+| [Compress images online](guides/compress-images-online.html) | Lossy/lossless explanation, JPG/PNG/WebP selection, resize-versus-compress distinction, quality checks, practical workflows and links to resizer/cropper tools. |
+| [Essay word count](guides/word-count-for-essays.html) | Assignment-specific counting rules, draft-check workflow, meaningful ways to expand or trim, count differences between tools and FAQs. |
+| [Calculate percentages](guides/calculate-percentages.html) | Formulas for part/rate/change, worked discount and percentage-point examples, common mistakes and links to related calculators. |
+
+- Replaced generic, unrelated checklist copy in the EMI, QR and essay guides with topic-specific guidance.
+- Updated page titles, meta descriptions, Open Graph descriptions and Article structured-data review dates/headlines/descriptions.
+- Added contextual links to each matching tool and other genuinely related Tolvix resources. Existing tool pages already link back to their matching guide.
+- Source audit: all six canonical URLs remain on https://tolvix.in; all six retain GA4 Measurement ID G-WH86KPZW58; Article JSON-LD parses successfully; every internal tool/guide link checked in these six pages resolves to a file in the repository.
+- No new pages were created, so the sitemap URL list did not need changes. This is a source-level audit; it does not verify live Cloudflare deployment, browser behaviour or Google indexing.
+
+Search performance is not guaranteed by content edits. Track the impact with the same 28-day GA4 page-view metric and Google Search Console clicks/impressions after Google recrawls the pages.
