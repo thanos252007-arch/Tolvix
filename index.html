@@ -65,18 +65,21 @@
   const nav=document.querySelector('header nav');if(nav){const theme=document.createElement('button');theme.type='button';theme.className='theme-toggle';theme.textContent='Light mode';theme.setAttribute('aria-pressed','false');nav.append(theme);theme.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';theme.textContent=light?'Dark mode':'Light mode';theme.setAttribute('aria-pressed',String(light));try{localStorage.setItem('tolvix-theme',light?'light':'dark')}catch{}});try{const saved=localStorage.getItem('tolvix-theme');if(saved==='light'){document.documentElement.dataset.theme='light';theme.textContent='Dark mode';theme.setAttribute('aria-pressed','true')}}catch{}}
   const categoryLinks=[...document.querySelectorAll('.category-nav a[href^="#"]')];
   const categoryTargets=categoryLinks.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
-  if('IntersectionObserver' in window){
-    const categoryObserver=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(!entry.isIntersecting)return;
-        categoryLinks.forEach(link=>{
-          if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','location');
-          else link.removeAttribute('aria-current');
-        });
-      });
-    },{rootMargin:'-18% 0px -68% 0px'});
-    categoryTargets.forEach(target=>categoryObserver.observe(target));
-  }
+  const updateActiveCategory=()=>{
+    const marker=window.scrollY+Math.min(180,window.innerHeight*.28);
+    let active=categoryTargets[0];
+    categoryTargets.forEach(target=>{if(target.getBoundingClientRect().top+window.scrollY<=marker)active=target});
+    categoryLinks.forEach(link=>{
+      if(active&&link.hash==='#'+active.id)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  let categoryTick=false;
+  const scheduleCategoryUpdate=()=>{if(categoryTick)return;categoryTick=true;requestAnimationFrame(()=>{updateActiveCategory();categoryTick=false})};
+  window.addEventListener('scroll',scheduleCategoryUpdate,{passive:true});
+  window.addEventListener('resize',scheduleCategoryUpdate);
+  categoryLinks.forEach(link=>link.addEventListener('click',()=>setTimeout(updateActiveCategory,80)));
+  updateActiveCategory();
   renderSaved();
 })();
 /* Homepage mobile navigation and favicon */
