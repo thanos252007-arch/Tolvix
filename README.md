@@ -870,3 +870,18 @@ Updated six guides to support the priority tools and answer practical search que
 - No new pages were created, so the sitemap URL list did not need changes. This is a source-level audit; it does not verify live Cloudflare deployment, browser behaviour or Google indexing.
 
 Search performance is not guaranteed by content edits. Track the impact with the same 28-day GA4 page-view metric and Google Search Console clicks/impressions after Google recrawls the pages.
+
+
+## Homepage usability and accessibility pass — 10 November 2026
+
+Updated the homepage structure and stylesheet to address the 20-item usability audit while preserving existing tool behaviour and URLs.
+
+- Standardized recent/favourite shortcuts with the compact visual language used by the hero quick links, including accessible tool names and category context.
+- Converted the 37-guide directory into nine responsive topic cards with clearer spacing and hierarchy; placed Writing beside SEO, Marketing & Writing.
+- Positioned category navigation after recent/favourite sections and immediately above the tool directory; added an IntersectionObserver active-section state using `aria-current="location"`.
+- Moved homepage search above the hero CTA buttons without changing its ID or search logic.
+- Made all 57 tool titles direct links to their existing destinations while retaining the Open tool links and favourite controls.
+- Improved homepage spacing, hero heading line-height, kicker readability, button arrow consistency, guide density, Clear history hierarchy, theme-toggle hierarchy and task-preview emphasis.
+- Preserved canonical URL, GA4 Measurement ID `G-WH86KPZW58`, Search Console verification, all 57 tool destinations and all 37 guide destinations.
+- Source checks passed for 57 tool cards/title links, matching title/button destinations, 37 guide links, nine guide groups, absence of nested anchors, search placement and retention of canonical/analytics/verification.
+- This is a repository source update. Live Cloudflare deployment and browser interaction on desktop/mobile still require post-deploy verification; no claim is made that the external usability audit has been independently re-run.
