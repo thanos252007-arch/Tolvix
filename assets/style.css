@@ -832,3 +832,50 @@ p,li,h1,h2,h3,a,small,strong{overflow-wrap:anywhere}
 :root[data-theme="light"] main>.content p,
 :root[data-theme="light"] main>.content li{color:#526078!important}
 :root[data-theme="light"] main>.content a{color:#315fba!important}
+
+
+/* Homepage usability pass — 10 November 2026 */
+.personal-tool-link{flex:1 1 220px;min-width:0;min-height:58px;padding:10px 12px;border-radius:var(--radius-control)}
+.personal-tool-link strong{font-size:14px;line-height:1.35}
+.personal-tool-link small{display:block;margin-top:3px;color:var(--quiet);font-size:12px}
+.personal-tool-link .preview-arrow{flex:0 0 auto}
+#guides{width:min(1180px,calc(100% - 40px))}
+#guides .guide-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+#guides .guide-category{min-width:0;padding:18px;border:1px solid var(--line);border-radius:var(--radius-card);background:linear-gradient(145deg,rgba(255,255,255,.035),transparent 65%),var(--surface)}
+#guides .guide-category h3{margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.4;color:var(--text)}
+#guides .guide-category ul{display:grid;grid-template-columns:1fr;gap:9px;margin:0;padding:0;list-style:none}
+#guides .guide-category li{margin:0;min-width:0}
+#guides .guide-category a{display:block;padding:8px 10px;border:1px solid transparent;border-radius:var(--radius-control);color:var(--muted);line-height:1.5}
+#guides .guide-category a:hover,#guides .guide-category a:focus-visible{border-color:var(--line-strong);background:var(--surface-raised);color:var(--text)}
+.category-nav a[aria-current="location"]{border-color:rgba(121,167,255,.58);background:rgba(121,167,255,.15);color:var(--text);box-shadow:inset 0 0 0 1px rgba(121,167,255,.12)}
+.hero-copy h1{line-height:1.14}
+.hero-kicker{font-size:13px;line-height:1.5}
+.grid>.card .btn:after{content:"→";font-size:15px;line-height:1;transition:transform .2s var(--ease)}
+.grid>.card .btn:hover:after{transform:translateX(2px)}
+.category-nav a,.personal-tool-link,.preview-link{border-radius:var(--radius-control)}
+.grid>.card,.tool-preview,.personal-tools,#guides .guide-category{border-radius:var(--radius-card)}
+.tool-category{margin-top:34px}
+.tools-section{padding-top:28px}
+.tools-section>h2{margin-bottom:12px}
+#guides{margin-top:28px;margin-bottom:40px}
+.personal-tools-head{justify-content:flex-start;gap:14px}
+.quiet-button{min-height:32px;padding:5px 8px;border:1px solid transparent;background:transparent;color:var(--quiet);font-size:12px;font-weight:500;box-shadow:none}
+.quiet-button:hover{border-color:transparent;background:rgba(255,255,255,.055);color:var(--text)}
+.grid>.card .card-title-link{color:inherit;text-decoration:none}
+.grid>.card .card-title-link:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+.grid>.card h3:focus-within{color:var(--text)}
+.tool-preview{background:linear-gradient(155deg,rgba(255,255,255,.025),transparent 72%),var(--surface);box-shadow:0 12px 34px rgba(0,0,0,.24)}
+.tool-preview h2{font-size:19px}
+.theme-toggle{min-height:34px;padding:6px 9px;border:1px solid transparent;border-radius:var(--radius-control);background:transparent;color:var(--muted);box-shadow:none;font:inherit;font-size:13px;font-weight:500}
+.theme-toggle:hover{border-color:transparent;background:rgba(255,255,255,.055);color:var(--text);box-shadow:none}
+:root[data-theme="light"] .quiet-button,:root[data-theme="light"] .theme-toggle{background:transparent!important;color:#526078!important;border-color:transparent!important}
+:root[data-theme="light"] .quiet-button:hover,:root[data-theme="light"] .theme-toggle:hover{background:rgba(20,30,50,.055)!important;color:#172033!important}
+@media(max-width:680px){
+ #guides{width:calc(100% - 32px)}
+ #guides .guide-categories{grid-template-columns:1fr;gap:12px;margin-top:18px}
+ #guides .guide-category{padding:16px}
+ .personal-tool-link{flex:1 1 100%}
+ .personal-tools-head{align-items:center}
+ .category-nav{scroll-margin-top:100px}
+}
+@media(prefers-reduced-motion:reduce){.grid>.card .btn:after{transition:none}}
