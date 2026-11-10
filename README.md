@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 7 November 2026 (security baseline reviewed and response headers hardened)nal tools reviewed and safeguards improved)  
+> **Project log last updated:** 10 November 2026 (homepage search-intent improvement and SEO source review)
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -791,3 +791,14 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Analytics Measurement ID `G-WH86KPZW58` and Search Console verification file were preserved.
 
 - Cross-category source review: GST Calculator links to its India-focused guide and related calculators; Image Compressor links to compression/format guides and Image Resizer; UTM Link Builder links to its campaign guide and relevant developer tools; PDF Merge links to PDF-specific utilities. Removed an irrelevant Image-to-Base64 recommendation from the PDF Merge page and added PDF-to-Image instead. Expanded the PDF merge guide with contextual links to PDF Split, PDF-to-Image and page numbering.
+
+
+## Organic search and technical SEO pass — 10 November 2026
+
+- Reviewed the current homepage title, meta description, canonical URL, Open Graph metadata, WebSite structured data, category navigation, tool directory, guide directory, FAQ section, and footer navigation.
+- Confirmed the homepage communicates 57 free tools and 37 practical guides, with visible category navigation for text, calculators, developer/data, image, PDF, everyday/security, and SEO/writing tools.
+- Improved the homepage H1 and opening description so the main visible heading explicitly covers online tools for text, calculations, images, PDFs and code; added concrete calculator use cases (percentages, GST and loan EMIs) to clarify search intent.
+- Rechecked the repository's robots.txt and sitemap source: robots.txt allows crawling and points to the custom-domain sitemap; the sitemap uses the canonical `https://tolvix.in` host. The Search Console submission was previously confirmed as Success with 99 discovered URLs.
+- Rechecked representative Word Counter, JSON Formatter, QR Code Generator, GST Calculator, PDF Merge, JSON guide and PDF Merge guide metadata. Their sampled title, description and canonical tags use the custom domain and page-specific wording.
+- Preserved the GA4 Measurement ID, Search Console verification assets, existing tool routes and user-facing functionality.
+- **Verification boundary:** this is a source-level review and edit. A full 94-page crawl, live browser interaction test, Google indexing refresh, and physical mobile-device test have not been completed in this pass. Search rankings and next-day traffic are not guaranteed.
