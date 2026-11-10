@@ -885,3 +885,15 @@ Updated the homepage structure and stylesheet to address the 20-item usability a
 - Preserved canonical URL, GA4 Measurement ID `G-WH86KPZW58`, Search Console verification, all 57 tool destinations and all 37 guide destinations.
 - Source checks passed for 57 tool cards/title links, matching title/button destinations, 37 guide links, nine guide groups, absence of nested anchors, search placement and retention of canonical/analytics/verification.
 - This is a repository source update. Live Cloudflare deployment and browser interaction on desktop/mobile still require post-deploy verification; no claim is made that the external usability audit has been independently re-run.
+
+
+## Homepage usability follow-up — 10 November 2026
+
+- Reduced the tool directory's vertical footprint with tighter card spacing and a staggered CSS multi-column layout on desktop/tablet. All 57 tools remain in the DOM and retain their existing links; mobile remains a single-column list.
+- Replaced the category IntersectionObserver entry-race with a scroll-position-based active-category calculation, so the highlighted pill tracks the section at the reading position and remains synchronized after clicks/resizes.
+- Increased category-heading hierarchy, removed the forced uppercase treatment from the hero kicker, strengthened search-field contrast, and aligned hero actions to the search field width.
+- Distinguished the secondary guide action from the primary Browse action; changed each Open tool link to a compact, high-contrast control with the arrow grouped beside its label.
+- Rebalanced card padding and guide category headings; returned the SEO/Marketing/Writing guide group to the normal card grid and split its links into two columns on wide screens.
+- Consolidated homepage radius usage around four shared radius tokens.
+- Preserved all 57 tool cards, 37 guide links, canonical URL, GA4 Measurement ID and Search Console verification.
+- Source-level change only. The multi-column visual layout, active category behavior, responsive appearance and keyboard/screen-reader experience still require post-deployment browser testing. No claim is made that the live page has been independently re-audited.
