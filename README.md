@@ -897,3 +897,11 @@ Updated the homepage structure and stylesheet to address the 20-item usability a
 - Consolidated homepage radius usage around four shared radius tokens.
 - Preserved all 57 tool cards, 37 guide links, canonical URL, GA4 Measurement ID and Search Console verification.
 - Source-level change only. The multi-column visual layout, active category behavior, responsive appearance and keyboard/screen-reader experience still require post-deployment browser testing. No claim is made that the live page has been independently re-audited.
+
+
+## Tool-card alignment correction — 10 November 2026
+
+- Replaced the staggered CSS multi-column tool directory with a conventional responsive CSS Grid: three columns on desktop, two on tablet and one on mobile.
+- Set equal grid row sizing and consistent card minimum height, padding, heading space and description line clamping so cards in each row align evenly.
+- Kept card actions anchored at the bottom and preserved all tool content, links, search behavior and keyboard/DOM order.
+- Source-level CSS update; verify the deployed layout at desktop, tablet and mobile widths after Cloudflare deployment.
