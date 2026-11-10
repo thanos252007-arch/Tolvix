@@ -802,3 +802,23 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Rechecked representative Word Counter, JSON Formatter, QR Code Generator, GST Calculator, PDF Merge, JSON guide and PDF Merge guide metadata. Their sampled title, description and canonical tags use the custom domain and page-specific wording.
 - Preserved the GA4 Measurement ID, Search Console verification assets, existing tool routes and user-facing functionality.
 - **Verification boundary:** this is a source-level review and edit. A full 94-page crawl, live browser interaction test, Google indexing refresh, and physical mobile-device test have not been completed in this pass. Search rankings and next-day traffic are not guaranteed.
+
+## SEO, internal-link and UX audit — 10 November 2026
+
+- Rechecked the repository structure: 57 tool pages and 37 guide pages (94 pages total).
+- Confirmed the sitemap contains 99 unique URLs and the homepage links to all 57 tool pages and all 37 guides.
+- Reviewed page titles, meta descriptions, canonical tags and primary H1 headings across the 94 tool and guide pages. The pages reviewed had a page-specific title and description, one primary H1, and canonical URLs on the `https://tolvix.in/` domain after the fixes below.
+- Fixed stale URL Encoder links in the QR Code, Base64, Image to Base64, Number Base Converter, Password Generator and Slug tool pages to point to `/tools/url-encoder-decoder.html`.
+- Fixed the Slug Converter canonical URL, which still pointed to the old `workers.dev` host.
+- Removed the stale AI Detector recommendation from the Word Frequency page and linked to the Text Diff Checker instead.
+- Added the Tolvix brand to four text-tool page titles (Reverse Text, Sort Lines, Remove Extra Spaces and Word Frequency).
+- Expanded the Add Text to PDF, PDF Watermark and PDF Split guides with task-specific examples, practical steps, limitations, privacy checks and related PDF tool links.
+- Confirmed responsive CSS breakpoints are present at 900px, 680px and 440px, plus reduced-motion support.
+- No sitemap URL additions were needed; existing 99-URL sitemap remains consistent with the current page set.
+
+### Audit limitations / next checks
+
+- This was a source-level repository audit. It did not execute every tool in a real browser or perform a full live-site crawl across all links.
+- A real-device visual test, keyboard-only test, screen-reader check, and full automated accessibility scan remain to be completed.
+- Google Search Console query/page performance data is not accessible through the repository. Search-query prioritisation should use the actual Search Console Performance export rather than assumed keyword volumes.
+- Google must recrawl and reprocess updated URLs; code changes do not immediately change rankings or guarantee traffic.
