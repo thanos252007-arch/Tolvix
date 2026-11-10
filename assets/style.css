@@ -879,3 +879,32 @@ p,li,h1,h2,h3,a,small,strong{overflow-wrap:anywhere}
  .category-nav{scroll-margin-top:100px}
 }
 @media(prefers-reduced-motion:reduce){.grid>.card .btn:after{transition:none}}
+
+
+/* Homepage design tokens: a compact scale for repeated interface elements. */
+:root{
+  --home-font-xs:12px;
+  --home-font-sm:13px;
+  --home-font-base:14px;
+  --home-font-card:16px;
+  --home-font-section:19px;
+  --home-font-title:28px;
+  --home-copy:var(--muted);
+  --home-subtle:var(--quiet);
+  --home-strong:var(--text);
+  --home-line:var(--line);
+  --home-radius-small:8px;
+  --home-radius-control:10px;
+  --home-radius-card:14px;
+  --home-radius-panel:18px;
+}
+.hero-kicker{font-size:var(--home-font-sm);color:var(--accent)}
+.preview-description,.preview-link strong,#guides .guide-category a{font-size:var(--home-font-base)}
+.preview-link small,.personal-tool-link small,.search-hint,.quiet-button{font-size:var(--home-font-xs)}
+.category-nav a{font-size:var(--home-font-sm)}
+.tool-preview h2,.category-heading h3,#guides .guide-category h3{font-size:var(--home-font-section)}
+.grid>.card h3,.personal-tools-head h2{font-size:var(--home-font-card)}
+.grid>.card .btn{font-size:var(--home-font-xs)}
+.category-nav a,.personal-tool-link,.preview-link{border-radius:var(--home-radius-control)}
+.grid>.card,.tool-preview,.personal-tools,#guides .guide-category{border-radius:var(--home-radius-card)}
+:root[data-theme="light"] #guides .guide-category a{color:#344158}
