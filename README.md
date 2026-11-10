@@ -846,3 +846,5 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 
 
 - Final snippet refinement: all ten priority page titles now target the specific tool intent with concise branded wording; meta descriptions were brought into a concise 136–155 character range and matching Open Graph descriptions were updated. Added a dedicated FAQ section to the Percentage Calculator. Rechecked the ten page canonicals, H1s, GA4 ID and internal tool/guide link destinations after the edits; no missing internal destinations were found in this ten-page sample.
+
+- Structured-data follow-up: added valid WebApplication JSON-LD to the PDF Merge and Image Compressor pages, which previously had no JSON-LD block. Parsed the structured-data blocks on all ten priority pages successfully; PDF Merge and Image Compressor now each have a WebApplication block. This is source validation, not Google's rich-result or live deployment validation.
