@@ -833,3 +833,13 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - A source-level spot check confirmed each edited guide retains its page title, description, canonical URL, H1 and related tool link.
 - Live HTTP crawling and interactive browser testing could not be completed in this environment: external DNS/network access to tolvix.in was unavailable. No claim is made that live status codes, JavaScript interactions, or every tool workflow have been tested.
 - Google Search Console Performance data is not connected to the available tools in this session, so no new impressions/clicks comparison is claimed. Use the tolvix.in property and a consistent date range for the next comparison.
+
+
+## Priority tool SEO and content pass — 10 November 2026
+
+- Updated the page title, meta description and matching Open Graph title/description for the ten priority tools: Word Counter, QR Code Generator, GST Calculator, EMI Calculator, SGPA Calculator, PDF Merge, Image Compressor, Percentage Calculator, Negative Marking Calculator and JSON Formatter.
+- Added task-specific content and examples rather than generic filler: assignment word-count guidance; QR print/scanning checks; GST-inclusive/exclusive worked example and rate caveat; loan comparison guidance; credit-weighted SGPA example and SPPU-specific limitation; PDF submission checklist; image-format and compression FAQs; percentage worked examples; negative-marking worked example and FAQs; and JSON/API validation guidance.
+- Expanded SGPA page title, description and H1 to include SPPU search intent while clarifying that users must enter institution-issued grade points and credits; the tool is not an official university result service and does not convert marks into grades.
+- Preserved existing tool controls, JavaScript, canonical URLs, GA4 Measurement ID, Search Console verification, and current sitemap routes. No new URLs were introduced, so sitemap changes were not required.
+- Source-level follow-up checked all ten edited pages for title, description, canonical, H1 and internal tool/guide link destinations. This does not replace live browser interaction testing or confirm Cloudflare deployment.
+- Search rankings and the first-week target of 600 rolling 28-day views are goals, not guaranteed outcomes. Google must recrawl and reassess updated pages; measure impact using the same GA4 28-day page-view metric and Search Console date range.
