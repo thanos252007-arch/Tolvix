@@ -975,3 +975,18 @@ p,li,h1,h2,h3,a,small,strong{overflow-wrap:anywhere}
   #guides .guide-category:nth-child(9) ul{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.grid>.card{break-inside:avoid}}
+
+
+/* Distinct tool symbols improve scanning without replacing accessible text labels. */
+.grid>.card[data-search*="diff checker"] h3:before{content:"⇄"}
+.grid>.card[data-search*="markdown"] h3:before{content:"M↓"}
+.grid>.card[data-search*="frequency"] h3:before{content:"ƒ"}
+.grid>.card[data-search*="sort lines"] h3:before{content:"↕"}
+.grid>.card[data-search*="case converter"] h3:before{content:"Aa"}
+.grid>.card[data-search*="age calculator"] h3:before{content:"◷"}
+.grid>.card[data-search*="tip calculator"] h3:before{content:"％"}
+.grid>.card[data-search*="sgpa"] h3:before{content:"A+"}
+.grid>.card[data-search*="negative marking"] h3:before{content:"−"}
+.grid>.card[data-search*="minifier"] h3:before{content:"⌘"}
+.grid>.card[data-search*="converter"] h3:before{content:"⇄"}
+.grid>.card[data-search*="encoder"] h3:before{content:"↔"}
