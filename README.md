@@ -816,6 +816,9 @@ Updated `tools/ai-detector.html` to separate the writing-pattern review from the
 - Confirmed responsive CSS breakpoints are present at 900px, 680px and 440px, plus reduced-motion support.
 - No sitemap URL additions were needed; existing 99-URL sitemap remains consistent with the current page set.
 
+
+- Follow-up verification: the Slug Converter's Open Graph URL and WebApplication structured-data URL also contained the legacy Worker hostname. Both were corrected to `https://tolvix.in/tools/slug.html` after the initial audit pass.
+
 ### Audit limitations / next checks
 
 - This was a source-level repository audit. It did not execute every tool in a real browser or perform a full live-site crawl across all links.
