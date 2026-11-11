@@ -1042,3 +1042,11 @@ The file was built from the current repository sitemap inventory. It does not re
 - Added richer card borders, fine accent rails, deeper but soft shadows, polished icon badges, improved hover states and matching guide/tool-page panels.
 - Tuned mobile spacing and reduced-motion behavior. The dark theme and all site functionality, SEO metadata, analytics and verification settings remain unchanged.
 - CSS-only change; verify after Cloudflare deployment on desktop and mobile, including a representative tool page.
+
+
+## Blue-and-white light mode refresh — 11 November 2026
+
+- Refined light mode around a clear blue-and-white palette: crisp white surfaces, pale blue ambient backgrounds, sapphire-blue accents and deep navy text.
+- Removed the previous champagne/beige colour influence from the light theme across the hero, search, buttons, navigation, tool and guide cards, tool panels, form controls and result areas.
+- Kept the dark theme unchanged. This is a CSS-only visual update; tool logic, page content, canonical URLs, GA4 and Search Console verification are untouched.
+- Source update committed to `assets/style.css`; visual appearance should be confirmed after the Cloudflare deployment with a hard refresh on desktop and mobile.
