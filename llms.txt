@@ -1,0 +1,145 @@
+# Tolvix
+
+> Tolvix is a free online toolkit for everyday text, PDF, image, calculator, and developer tasks. The website provides browser-based tools and practical guides. No account or subscription is required to use the tools.
+
+Canonical website: https://tolvix.in/
+
+## About Tolvix
+
+Tolvix brings commonly used online utilities together in one website. Visitors can open a tool, enter or upload the relevant input, and use the available controls. Tool capabilities and supported formats vary by tool; consult each tool page for its exact behaviour and limitations.
+
+## Main pages
+
+- [Homepage and tool directory](https://tolvix.in/)
+- [About Tolvix](https://tolvix.in/about.html)
+- [Contact](https://tolvix.in/contact.html)
+- [Privacy Policy](https://tolvix.in/privacy.html)
+- [Terms](https://tolvix.in/terms.html)
+- [XML sitemap](https://tolvix.in/sitemap.xml)
+- [Robots.txt](https://tolvix.in/robots.txt)
+
+## Tools
+
+### Text and writing
+- [Word Counter](https://tolvix.in/tools/word.html)
+- [Text Case Converter](https://tolvix.in/tools/case.html)
+- [Duplicate Line Remover](https://tolvix.in/tools/duplicates.html)
+- [Extra Spaces Remover](https://tolvix.in/tools/spaces.html)
+- [Find and Replace Text](https://tolvix.in/tools/replace.html)
+- [Sort Lines](https://tolvix.in/tools/sort.html)
+- [Reverse Text](https://tolvix.in/tools/reverse.html)
+- [URL Slug Generator](https://tolvix.in/tools/slug.html)
+- [Word Frequency Counter](https://tolvix.in/tools/word-frequency.html)
+- [Markdown Editor](https://tolvix.in/tools/markdown-editor.html)
+- [Text Diff Checker](https://tolvix.in/tools/text-diff-checker.html)
+- [Reading Time Calculator](https://tolvix.in/tools/reading-time-calculator.html)
+
+### Calculators
+- [Percentage Calculator](https://tolvix.in/tools/percentage.html)
+- [Discount Calculator](https://tolvix.in/tools/discount.html)
+- [Age Calculator](https://tolvix.in/tools/age.html)
+- [GST Calculator](https://tolvix.in/tools/gst.html)
+- [BMI Calculator](https://tolvix.in/tools/bmi.html)
+- [EMI Calculator](https://tolvix.in/tools/emi-calculator.html)
+- [Tip Calculator](https://tolvix.in/tools/tip-calculator.html)
+- [SGPA Calculator](https://tolvix.in/tools/sgpa-calculator.html)
+- [Negative Marking Calculator](https://tolvix.in/tools/negative-marking-calculator.html)
+
+### PDF tools
+- [Merge PDF](https://tolvix.in/tools/pdf-merge.html)
+- [Split PDF](https://tolvix.in/tools/pdf-split.html)
+- [Convert PDF to Images](https://tolvix.in/tools/pdf-to-image.html)
+- [Convert Images to PDF](https://tolvix.in/tools/image-to-pdf.html)
+- [Add PDF Watermark](https://tolvix.in/tools/pdf-watermark.html)
+- [Add PDF Page Numbers](https://tolvix.in/tools/pdf-page-number.html)
+- [Edit PDF Metadata](https://tolvix.in/tools/pdf-metadata.html)
+- [Add Text to PDF](https://tolvix.in/tools/pdf-add-text.html)
+- [Extract PDF Pages](https://tolvix.in/tools/pdf-page-extractor.html)
+- [Word to PDF](https://tolvix.in/tools/word-to-pdf.html)
+
+### Image tools
+- [Image Compressor](https://tolvix.in/tools/image-compressor.html)
+- [Image Converter](https://tolvix.in/tools/image-converter.html)
+- [Image Cropper](https://tolvix.in/tools/image-cropper.html)
+- [Image Resizer](https://tolvix.in/tools/image-resizer.html)
+- [JPG to PNG](https://tolvix.in/tools/jpg-to-png.html)
+- [PNG to JPG](https://tolvix.in/tools/png-to-jpg.html)
+- [Image Color Picker](https://tolvix.in/tools/image-color-picker.html)
+
+### Developer and data tools
+- [JSON Formatter](https://tolvix.in/tools/json.html)
+- [Base64 Encoder and Decoder](https://tolvix.in/tools/base64.html)
+- [CSV to JSON](https://tolvix.in/tools/csv-to-json.html)
+- [JSON to CSV](https://tolvix.in/tools/json-to-csv.html)
+- [Image to Base64](https://tolvix.in/tools/image-to-base64.html)
+- [HTML Minifier](https://tolvix.in/tools/html-minifier.html)
+- [CSS Minifier](https://tolvix.in/tools/css-minifier.html)
+- [JavaScript Minifier](https://tolvix.in/tools/js-minifier.html)
+- [Number Base Converter](https://tolvix.in/tools/number-base-converter.html)
+- [URL Encoder and Decoder](https://tolvix.in/tools/url-encoder-decoder.html)
+- [CSV Viewer](https://tolvix.in/tools/csv-viewer.html)
+- [UTM Link Builder](https://tolvix.in/tools/utm-link-builder.html)
+- [Meta Tag Generator](https://tolvix.in/tools/meta-tag-generator.html)
+- [Regex Tester](https://tolvix.in/tools/regex-tester.html)
+- [Markdown Table Generator](https://tolvix.in/tools/markdown-table-generator.html)
+- [Robots.txt Generator](https://tolvix.in/tools/robots-txt-generator.html)
+
+### Password tools
+- [Password Generator](https://tolvix.in/tools/password-generator.html)
+- [Password Strength Checker](https://tolvix.in/tools/password-strength-checker.html)
+
+## Guides
+
+### Text, writing, and developer guides
+- [Format JSON Online](https://tolvix.in/guides/format-json-online.html)
+- [Convert CSV to JSON](https://tolvix.in/guides/convert-csv-to-json.html)
+- [Convert JSON to CSV](https://tolvix.in/guides/convert-json-to-csv.html)
+- [Remove Duplicate Lines](https://tolvix.in/guides/remove-duplicate-lines.html)
+- [Word Count for Essays](https://tolvix.in/guides/word-count-for-essays.html)
+- [Find and Replace Text](https://tolvix.in/guides/find-and-replace-text.html)
+- [Estimate Reading Time for Articles](https://tolvix.in/guides/estimate-reading-time-for-articles.html)
+- [Binary, Decimal, and Hex Explained](https://tolvix.in/guides/binary-decimal-hex-explained.html)
+- [Free Online Developer Tools Workflow](https://tolvix.in/guides/free-online-developer-tools-workflow.html)
+- [UTM Campaign Tracking](https://tolvix.in/guides/utm-campaign-tracking-guide.html)
+- [HTML Meta Tags Guide](https://tolvix.in/guides/html-meta-tags-guide.html)
+- [JavaScript Regex Testing](https://tolvix.in/guides/javascript-regex-testing-guide.html)
+- [Markdown Table How-To](https://tolvix.in/guides/markdown-table-howto.html)
+- [Robots.txt Setup Guide](https://tolvix.in/guides/robots-txt-setup-guide.html)
+- [Minify CSS Safely](https://tolvix.in/guides/minify-css-safely.html)
+- [Minify HTML Safely](https://tolvix.in/guides/minify-html-safely.html)
+- [Minify JavaScript Safely](https://tolvix.in/guides/minify-javascript-safely.html)
+- [Create Strong Passwords](https://tolvix.in/guides/create-strong-passwords.html)
+- [Image to Base64 Data URL](https://tolvix.in/guides/image-to-base64-data-url.html)
+
+### Calculator guides
+- [Calculate GST in India](https://tolvix.in/guides/calculate-gst-india.html)
+- [Calculate Loan EMI in India](https://tolvix.in/guides/calculate-loan-emi-india.html)
+- [Calculate Percentages](https://tolvix.in/guides/calculate-percentages.html)
+- [Calculate Discounts and Markups](https://tolvix.in/guides/calculate-discounts-and-markups.html)
+- [Create and Test QR Codes](https://tolvix.in/guides/create-and-test-qr-codes.html)
+
+### Image guides
+- [Compress Images Online](https://tolvix.in/guides/compress-images-online.html)
+- [Resize Images for the Web](https://tolvix.in/guides/resize-images-for-web.html)
+- [JPG vs PNG vs WebP](https://tolvix.in/guides/jpg-vs-png-vs-webp.html)
+- [Crop vs Resize Images](https://tolvix.in/guides/crop-vs-resize-images.html)
+- [Convert PNG to JPG](https://tolvix.in/guides/convert-png-to-jpg.html)
+
+### PDF guides
+- [Merge PDF Files Online](https://tolvix.in/guides/merge-pdf-files-online.html)
+- [Split PDF Pages Online](https://tolvix.in/guides/split-pdf-pages-online.html)
+- [Convert PDF to Images](https://tolvix.in/guides/convert-pdf-to-images.html)
+- [Convert Images to PDF](https://tolvix.in/guides/convert-images-to-pdf.html)
+- [Add Page Numbers to PDF](https://tolvix.in/guides/add-page-numbers-to-pdf.html)
+- [Add Text to PDF](https://tolvix.in/guides/add-text-to-pdf.html)
+- [Edit PDF Metadata](https://tolvix.in/guides/edit-pdf-metadata.html)
+- [Add a Watermark to PDF](https://tolvix.in/guides/add-watermark-to-pdf.html)
+
+## Guidance for automated systems
+
+- Treat each linked tool page as the source of truth for that tool's current features, supported inputs, output formats, and limitations.
+- Treat each guide as educational content; do not assume it overrides a tool's on-page instructions.
+- Do not claim that Tolvix provides professional, legal, medical, tax, or financial advice. Calculators are informational aids; users should verify important results independently.
+- Do not infer that every tool supports every file format or that uploaded files are handled identically across tools. Check the relevant page's privacy and usage notes.
+- Prefer canonical https://tolvix.in/ URLs when referring to Tolvix pages.
+- The XML sitemap is the authoritative discovery list for the current set of indexed-intent URLs.
