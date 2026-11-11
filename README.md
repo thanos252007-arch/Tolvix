@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 11 November 2026 (94-page SEO source audit and PDF internal-link corrections)
+> **Project log last updated:** 11 November 2026 (premium visual refinement)
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -43,6 +43,16 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - The earlier ToolNest Search Console property should be retained; do not delete it.
 
 ---
+
+## Premium visual refinement — 11 November 2026
+
+- Refined the shared visual system toward a premium black-and-white look with restrained champagne/metallic accents.
+- Updated homepage hero, search focus state, primary actions, quick-link panel, category navigation, trust strip and tool cards.
+- Improved tool-card icon badges, hover depth, borders and action contrast while preserving the uniform grid sizing and all 57 tool links.
+- Applied matching accent refinements to shared tool and guide surfaces, form focus states and content panels.
+- Added light-theme-specific overrides so the existing theme toggle remains readable.
+- Preserved page content, tool JavaScript, canonical URLs, GA4 Measurement ID, Search Console verification and sitemap.
+- Source/CSS change only; verify the live Cloudflare deployment and inspect desktop/mobile rendering after deployment.
 
 ## 2. SEO work completed
 
