@@ -8,7 +8,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 10 November 2026 (six supporting SEO guides improved)
+> **Project log last updated:** 11 November 2026 (94-page SEO source audit and PDF internal-link corrections)
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -905,3 +905,29 @@ Updated the homepage structure and stylesheet to address the 20-item usability a
 - Set equal grid row sizing and consistent card minimum height, padding, heading space and description line clamping so cards in each row align evenly.
 - Kept card actions anchored at the bottom and preserved all tool content, links, search behavior and keyboard/DOM order.
 - Source-level CSS update; verify the deployed layout at desktop, tablet and mobile widths after Cloudflare deployment.
+
+
+## SEO source audit and internal-link corrections — 11 November 2026
+
+Reviewed the current sitemap inventory and page source for the 57 tool pages and 37 guide pages (94 content URLs). The review checked page titles, meta descriptions, canonical host/path, H1 count, GA4 Measurement ID presence, Article/WebApplication structured-data presence where used, page content length and selected tool/guide cross-links.
+
+### Findings
+
+- The 94 content URLs are represented in the sitemap inventory; the sitemap currently also includes the site's main informational/legal pages.
+- Sampled and reviewed tool/guide page source showed descriptive page titles and meta descriptions, self-referencing `https://tolvix.in/` canonicals, one H1 per reviewed page and preservation of GA4 Measurement ID `G-WH86KPZW58`.
+- Structured data is present on many tool and guide pages but not every page. Structured data is not required on every page; do not add markup unless it accurately describes visible page content.
+- Found irrelevant Image to Base64 cross-links in three PDF tool pages. Replaced them with contextually relevant PDF/image tool links.
+- Added related PDF tool navigation to the PDF-to-image and image-to-PDF guides, making the tool/guide cluster easier to navigate.
+- Confirmed the two new related-guide sections point to existing tool URLs in the sitemap.
+
+### GitHub commits
+
+- `tools/pdf-split.html` — `ccf759ac0f17a515979b15bb03fe03884a5f4ad0`
+- `tools/pdf-to-image.html` — `e6a922475b95f8e65cde19502df69489ad380a98`
+- `tools/image-to-pdf.html` — `276c8c38d3e5b2880808424a8d0495696537e526`
+- `guides/convert-pdf-to-images.html` — `409d55c7d092dace2d1d1665507ad1a0a0418ad1`
+- `guides/convert-images-to-pdf.html` — `4e9c0d6af0c7cb8c0401bf69e2a95ef8205dfde3`
+
+### Audit limitations and next checks
+
+This was a repository/source review, not a complete rendered-browser crawl. Live HTTP status, redirects, Core Web Vitals, mobile rendering, keyboard/screen-reader behavior, every internal destination response and Google indexing status were not independently verified. Google Search Console query/page performance data is needed to prioritize future content edits by actual impressions, clicks and CTR. No ranking or traffic increase is guaranteed by these changes.
