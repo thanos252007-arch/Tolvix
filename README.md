@@ -974,3 +974,24 @@ The homepage directory continues to link to all 57 tools and all 37 guides. No n
 ### Verification boundary
 
 This work was committed to GitHub `main`. The link destinations were selected from the current sitemap inventory, but a fresh automated crawl of every rendered page and live HTTP destination has not been run. Cloudflare deployment, mobile rendering, keyboard/screen-reader behaviour, and Search Console recrawl/indexing still require independent verification. Content and internal links do not guarantee rankings or next-day traffic.
+
+
+## Live broken-link and page-health audit — 11 November 2026
+
+A repeatable live audit was added and executed successfully from GitHub Actions:
+
+- Workflow: `.github/workflows/live-link-audit.yml`
+- Audit script: `scripts/live-link-audit.py`
+- Run: `42972868497` — conclusion: **success**
+- Sitemap fetched and parsed: **99 URLs**
+- Tool pages checked: **57**
+- Guide pages checked: **37**
+- Internal link/resource references checked: **2,136**
+- Unique internal destinations fetched: **104**
+- Result: **0 broken internal links, 0 failed sitemap pages, and 0 failed internal destinations**.
+
+The audit checks live HTTP responses for sitemap pages and same-site links/resources, validates canonical tags on tool and guide pages, checks same-page fragments, and confirms the `www` host resolves to the apex domain. It is configured to run on pushes to `main` and can also be started manually from GitHub Actions.
+
+A separate source-level pass across the 94 HTML files also found no missing repository destinations, all pages had one H1 and a Tolvix canonical URL, and the GA4 measurement ID remained present.
+
+**Scope note:** This is an automated live HTTP and internal-link check, not a full interactive browser QA session. External third-party links, tool calculations/file-processing behaviour, visual layout, keyboard/screen-reader use, and Core Web Vitals are not covered by this link audit.
