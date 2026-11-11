@@ -931,3 +931,46 @@ Reviewed the current sitemap inventory and page source for the 57 tool pages and
 ### Audit limitations and next checks
 
 This was a repository/source review, not a complete rendered-browser crawl. Live HTTP status, redirects, Core Web Vitals, mobile rendering, keyboard/screen-reader behavior, every internal destination response and Google indexing status were not independently verified. Google Search Console query/page performance data is needed to prioritize future content edits by actual impressions, clicks and CTR. No ranking or traffic increase is guaranteed by these changes.
+
+
+## Tool content and 94-page internal-link improvement — 11 November 2026
+
+### Weaker tool pages expanded
+
+Added practical examples and tool-specific FAQs to six pages that had relatively short supporting content:
+
+- **Age Calculator:** calendar-based worked example, leap-year/month-length explanation, reference-date guidance and age-calculation FAQs.
+- **BMI Calculator:** worked 70 kg / 175 cm example, unit-conversion reminder, formula and adult-use/limitations FAQs.
+- **CSS Minifier:** readable CSS before/after example, cascade and regression-testing guidance, unused-CSS and license-comment FAQs.
+- **HTML Minifier:** HTML before/after example, whitespace-sensitive markup cautions, testing workflow and SEO/minification FAQs.
+- **Image Cropper:** pixel-coordinate crop example, safe crop-boundary checks, crop-versus-resize and privacy FAQs.
+- **Image Resizer:** proportional 1200 × 800 to 600 × 400 example, aspect-ratio guidance, upscaling and compression FAQs.
+
+Removed generic FAQ copy that incorrectly referred to PDF conversion limitations on CSS/HTML/image pages. Replaced irrelevant Image-to-Base64 recommendations with related minifier or image tools. Updated privacy/processing explanations to match the actual browser-side workflows.
+
+### Contextual internal links across all 94 content pages
+
+Added or refreshed a dedicated **Explore related tools and guides** section across all 57 tool pages and all 37 guide pages. Links are grouped by task so visitors can move between the tool, its supporting how-to guide and adjacent utilities:
+
+- Text and writing tools connect to word counting, reading time, text cleanup, find/replace and Markdown resources.
+- Calculators connect to relevant calculation tools and guides for GST, percentages, discounts and loan EMI.
+- Image tools connect to image conversion, compression, cropping, resizing and format guides.
+- PDF tools connect to merge, split, page extraction, image conversion, watermark, metadata and page-numbering workflows.
+- Developer tools connect JSON/CSV, number conversion, minifiers, URL/UTM, regex, metadata and robots.txt resources.
+- QR and password tools connect to their dedicated guides and complementary utilities.
+
+The homepage directory continues to link to all 57 tools and all 37 guides. No new pages or URLs were created, so the sitemap did not need to change. Existing canonical URLs, GA4 Measurement ID `G-WH86KPZW58`, Search Console verification assets, tool controls and processing scripts were preserved.
+
+### Representative GitHub commits
+
+- Age Calculator content: `9621a66` (followed by related-link refinement).
+- BMI Calculator content: `2238bd0` (followed by related-link refinement).
+- CSS Minifier content: `2a49975` and privacy/FAQ correction `1e7f808`.
+- HTML Minifier content: `d76bb32` and privacy/FAQ correction `b5f04fa`.
+- Image Cropper content: `810d4a3` and privacy/FAQ correction `cc9f5b5`.
+- Image Resizer content: `f7ab331` and privacy/FAQ correction `60de24a`.
+- All 37 guide pages and all 57 tool pages received contextual-link updates in individual commits on `main`; the latest tool-page link commits include `82d83b1` (Markdown Table Generator) and `6b8aa4d` (Word to PDF), while the latest guide-page link commits include `f05013f` (Robots.txt setup) and `8335815` (Developer tools workflow).
+
+### Verification boundary
+
+This work was committed to GitHub `main`. The link destinations were selected from the current sitemap inventory, but a fresh automated crawl of every rendered page and live HTTP destination has not been run. Cloudflare deployment, mobile rendering, keyboard/screen-reader behaviour, and Search Console recrawl/indexing still require independent verification. Content and internal links do not guarantee rankings or next-day traffic.
