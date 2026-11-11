@@ -84,6 +84,9 @@ Tolvix brings commonly used online utilities together in one website. Visitors c
 - [Markdown Table Generator](https://tolvix.in/tools/markdown-table-generator.html)
 - [Robots.txt Generator](https://tolvix.in/tools/robots-txt-generator.html)
 
+### QR tools
+- [QR Code Generator](https://tolvix.in/tools/qr.html)
+
 ### Password tools
 - [Password Generator](https://tolvix.in/tools/password-generator.html)
 - [Password Strength Checker](https://tolvix.in/tools/password-strength-checker.html)
