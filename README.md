@@ -1050,3 +1050,12 @@ The file was built from the current repository sitemap inventory. It does not re
 - Removed the previous champagne/beige colour influence from the light theme across the hero, search, buttons, navigation, tool and guide cards, tool panels, form controls and result areas.
 - Kept the dark theme unchanged. This is a CSS-only visual update; tool logic, page content, canonical URLs, GA4 and Search Console verification are untouched.
 - Source update committed to `assets/style.css`; visual appearance should be confirmed after the Cloudflare deployment with a hard refresh on desktop and mobile.
+
+
+## Ultra-premium blue-and-white light mode polish — 11 November 2026
+
+- Added a final visual refinement layer to light mode: cleaner white surfaces, restrained ice-blue ambient lighting, deep sapphire accents and navy typography.
+- Refined header glass treatment, hero hierarchy, search depth, primary CTA, trust strip, tool/guide card elevation and shared tool-page panels and form controls.
+- Hover effects are more restrained and consistent; mobile and reduced-motion overrides are included.
+- Dark mode and all application behavior remain unchanged. CSS-only update; analytics, canonical URLs, Search Console verification and sitemap are untouched.
+- Source change committed to `assets/style.css`. Confirm the final rendered result after Cloudflare deployment on desktop and mobile.
