@@ -1084,3 +1084,14 @@ The file was built from the current repository sitemap inventory. It does not re
 - Replaced an unrelated document-conversion FAQ and Image-to-Base64 recommendation on the Image Compressor page with image-specific guidance about destination file-size/format limits, resizing before compression, keeping originals and checking exported image quality.
 - Kept the existing image-processing privacy explanation and linked the relevant Privacy Policy and Terms pages.
 - These are targeted metadata/content-relevance fixes based on the current page source. They do not guarantee next-day rankings or traffic; monitor Search Console clicks/impressions and GA4 organic sessions after recrawling.
+
+
+## Search-intent and homepage discovery update — 11 November 2026
+
+- Refined title tags, meta descriptions and matching Open Graph title/description values for eight high-potential tool pages: Word Counter, QR Code Generator, Image Compressor, GST Calculator, EMI Calculator, Percentage Calculator, Merge PDF and JSON Formatter.
+- Updated homepage title/description and hero copy to reflect the actual main task groups available on Tolvix.
+- Added a six-link “Popular free online tools” section near the top of the homepage for Word Counter, QR Code Generator, Image Compressor, Merge PDF, GST Calculator and Percentage Calculator.
+- Added QR Code Generator to the homepage hero quick links while retaining the existing Word Counter, Image Compressor, Merge PDF and JSON Formatter links.
+- Styled the featured links for desktop and mobile layouts, with coordinated dark/light theme colours, visible keyboard focus and reduced-motion support.
+- Source verification: all eight tool pages plus homepage retain one H1, their Tolvix canonical URL and GA4 Measurement ID G-WH86KPZW58. The homepage's six featured destinations are existing tool URLs; no new URLs were created, so the sitemap did not need changes.
+- These changes improve query relevance and internal discovery; they do not guarantee rankings, impressions, clicks or a specific traffic total. Monitor Search Console and GA4 after the updated pages are crawled.
