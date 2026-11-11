@@ -1059,3 +1059,13 @@ The file was built from the current repository sitemap inventory. It does not re
 - Hover effects are more restrained and consistent; mobile and reduced-motion overrides are included.
 - Dark mode and all application behavior remain unchanged. CSS-only update; analytics, canonical URLs, Search Console verification and sitemap are untouched.
 - Source change committed to `assets/style.css`. Confirm the final rendered result after Cloudflare deployment on desktop and mobile.
+
+
+## Shared light/dark theme persistence fix — 11 November 2026
+
+- Fixed theme preference consistency when navigating from the homepage to individual tools, guides and supporting pages.
+- Added `assets/theme.js`, loaded synchronously before the shared stylesheet so the saved `tolvix-theme` preference is applied before page styles render, avoiding a dark-theme flash or incorrect default on destination pages.
+- The shared script also provides a theme toggle on pages that did not previously have one, while detecting and reusing the existing homepage/tool-page toggle to avoid duplicates.
+- Added the early script reference to the homepage, all 57 tool pages, all 37 guide pages, the About, Contact, Privacy and Terms pages, and the 404 page.
+- Dark/light preference is stored under the same `tolvix-theme` localStorage key across the site. Analytics, tool logic, canonical URLs, sitemap and Search Console verification are unchanged.
+- Source-level spot checks confirmed the shared script loads before the stylesheet on the homepage, a tool page and a guide page. Verify the live behavior after Cloudflare deployment by selecting Light mode on the homepage and opening a tool, then repeat in Dark mode.
