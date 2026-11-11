@@ -1015,3 +1015,12 @@ The file gives AI assistants and other automated readers a concise, curated over
 
 The file was built from the current repository sitemap inventory. It does not replace `robots.txt`, the XML sitemap, canonical tags, or Search Console. Its presence is a discovery aid, not a guarantee that any AI system will crawl, cite, or recommend Tolvix.
 
+
+
+## Visual polish pass — 11 November 2026
+
+- Added a restrained ambient glow and stronger type hierarchy to the homepage hero, with improved search-field sizing and clearer CTA interaction states.
+- Refined the glass-like header, quick-link panel, trust strip, tool cards and guide cards with consistent rounded geometry, subtle depth and restrained hover movement.
+- Improved mobile hero sizing, two-column CTA layout, compact trust-strip grid and small-screen spacing while retaining the equal-height tool-card grid.
+- Added smooth anchor navigation with reduced-motion support and focus-friendly states; no tool logic, page URLs, SEO metadata, analytics or Search Console verification was changed.
+- CSS-only source update; confirm the Cloudflare deployment and review on an actual phone and desktop before treating visual QA as complete.
