@@ -46,13 +46,13 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 
 ## Premium visual refinement — 11 November 2026
 
-- Refined the shared visual system toward a premium black-and-white look with restrained champagne/metallic accents.
-- Updated homepage hero, search focus state, primary actions, quick-link panel, category navigation, trust strip and tool cards.
+- Refined the shared visual system to glossy obsidian black with champagne-blue accents and subtle champagne highlights.
+- Updated homepage hero, search focus state, gradient primary actions, quick-link panel, category navigation, trust strip and tool cards with layered blue/champagne lighting.
 - Improved tool-card icon badges, hover depth, borders and action contrast while preserving the uniform grid sizing and all 57 tool links.
-- Applied matching accent refinements to shared tool and guide surfaces, form focus states and content panels.
-- Added light-theme-specific overrides so the existing theme toggle remains readable.
+- Applied matching champagne-blue accents to shared tool and guide surfaces, form focus states, input fields, result panels and content panels.
+- Added a coordinated cool-blue and warm-champagne light theme so the existing theme toggle remains readable.
 - Preserved page content, tool JavaScript, canonical URLs, GA4 Measurement ID, Search Console verification and sitemap.
-- Source/CSS change only; verify the live Cloudflare deployment and inspect desktop/mobile rendering after deployment.
+- Final palette refinement: replaced the earlier gold-led accent with a balanced champagne-blue palette, added glossy layered highlights and matched the light theme. Source/CSS change only; verify the live Cloudflare deployment and inspect desktop/mobile rendering after deployment.
 
 ## 2. SEO work completed
 
