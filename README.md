@@ -995,3 +995,13 @@ The audit checks live HTTP responses for sitemap pages and same-site links/resou
 A separate source-level pass across the 94 HTML files also found no missing repository destinations, all pages had one H1 and a Tolvix canonical URL, and the GA4 measurement ID remained present.
 
 **Scope note:** This is an automated live HTTP and internal-link check, not a full interactive browser QA session. External third-party links, tool calculations/file-processing behaviour, visual layout, keyboard/screen-reader use, and Core Web Vitals are not covered by this link audit.
+
+
+## AI-readable site discovery file — 11 November 2026
+
+Added a root-level `llms.txt` file at https://tolvix.in/llms.txt and committed it to the GitHub `main` branch.
+
+The file gives AI assistants and other automated readers a concise, curated overview of Tolvix, links to the homepage and key policy/contact pages, groups the current tool and guide URLs by topic, and provides conservative guidance to consult each individual page for its actual features, supported formats, privacy notes and limitations.
+
+The file was built from the current repository sitemap inventory. It does not replace `robots.txt`, the XML sitemap, canonical tags, or Search Console. Its presence is a discovery aid, not a guarantee that any AI system will crawl, cite, or recommend Tolvix.
+
