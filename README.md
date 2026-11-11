@@ -1024,3 +1024,12 @@ The file was built from the current repository sitemap inventory. It does not re
 - Improved mobile hero sizing, two-column CTA layout, compact trust-strip grid and small-screen spacing while retaining the equal-height tool-card grid.
 - Added smooth anchor navigation with reduced-motion support and focus-friendly states; no tool logic, page URLs, SEO metadata, analytics or Search Console verification was changed.
 - CSS-only source update; confirm the Cloudflare deployment and review on an actual phone and desktop before treating visual QA as complete.
+
+
+## Premium light-theme refinement — 11 November 2026
+
+- Refined light mode into a porcelain-white and soft-slate palette with restrained premium blue and warm-champagne highlights.
+- Improved contrast and surface depth across the header, hero, search field, CTAs, quick links, trust strip, category navigation, tool cards, guide cards, tool panels, form controls and result areas.
+- Added cleaner borders, softer shadows, subtle gradients and consistent focus states while keeping the dark theme unchanged.
+- Preserved theme-toggle behavior, tool functionality, responsive grid sizing, page metadata, canonical URLs, GA4 and Search Console verification.
+- CSS-only update; verify the live Cloudflare deployment and inspect both homepage and tool pages in light mode on desktop and mobile.
