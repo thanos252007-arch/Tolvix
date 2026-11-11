@@ -1076,3 +1076,11 @@ The file was built from the current repository sitemap inventory. It does not re
 - Corrected the `priceCurrency` value to `INR` on `tools/json.html`, `tools/image-compressor.html` and `tools/pdf-merge.html`.
 - Kept the offer price at zero and preserved each page's tool behavior, visible content, canonical URL, GA4 tag and other structured-data fields.
 - This is a structured-data consistency fix, not a ranking guarantee. Validate the live pages after Cloudflare deploy and inspect any reported structured-data warnings in Search Console.
+
+
+## Focused SEO cleanup — 11 November 2026
+
+- Corrected the zero-price WebApplication offer currency from USD to INR on the Word Counter and QR Code Generator pages, keeping the offer price at zero and preserving their canonical URLs, visible functionality and GA4 measurement tag.
+- Replaced an unrelated document-conversion FAQ and Image-to-Base64 recommendation on the Image Compressor page with image-specific guidance about destination file-size/format limits, resizing before compression, keeping originals and checking exported image quality.
+- Kept the existing image-processing privacy explanation and linked the relevant Privacy Policy and Terms pages.
+- These are targeted metadata/content-relevance fixes based on the current page source. They do not guarantee next-day rankings or traffic; monitor Search Console clicks/impressions and GA4 organic sessions after recrawling.
