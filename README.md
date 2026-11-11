@@ -1033,3 +1033,12 @@ The file was built from the current repository sitemap inventory. It does not re
 - Added cleaner borders, softer shadows, subtle gradients and consistent focus states while keeping the dark theme unchanged.
 - Preserved theme-toggle behavior, tool functionality, responsive grid sizing, page metadata, canonical URLs, GA4 and Search Console verification.
 - CSS-only update; verify the live Cloudflare deployment and inspect both homepage and tool pages in light mode on desktop and mobile.
+
+
+## Light mode art-direction update — 11 November 2026
+
+- Reworked the light theme beyond simple white cards into a distinctive pearl-and-sapphire visual direction with warm champagne highlights, layered ambient lighting and translucent surfaces.
+- Gave the homepage hero a framed editorial surface, more expressive gradient headline, elevated search and CTA treatments, and a more dimensional quick-tool panel.
+- Added richer card borders, fine accent rails, deeper but soft shadows, polished icon badges, improved hover states and matching guide/tool-page panels.
+- Tuned mobile spacing and reduced-motion behavior. The dark theme and all site functionality, SEO metadata, analytics and verification settings remain unchanged.
+- CSS-only change; verify after Cloudflare deployment on desktop and mobile, including a representative tool page.
