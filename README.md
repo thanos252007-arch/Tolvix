@@ -1069,3 +1069,10 @@ The file was built from the current repository sitemap inventory. It does not re
 - Added the early script reference to the homepage, all 57 tool pages, all 37 guide pages, the About, Contact, Privacy and Terms pages, and the 404 page.
 - Dark/light preference is stored under the same `tolvix-theme` localStorage key across the site. Analytics, tool logic, canonical URLs, sitemap and Search Console verification are unchanged.
 - Source-level spot checks confirmed the shared script loads before the stylesheet on the homepage, a tool page and a guide page. Verify the live behavior after Cloudflare deployment by selecting Light mode on the homepage and opening a tool, then repeat in Dark mode.
+
+## Structured-data currency correction — 11 November 2026
+
+- Reviewed structured-data offer metadata on key free tool pages and found three pages declaring a zero-price offer in USD despite Tolvix being presented for its Indian audience.
+- Corrected the `priceCurrency` value to `INR` on `tools/json.html`, `tools/image-compressor.html` and `tools/pdf-merge.html`.
+- Kept the offer price at zero and preserved each page's tool behavior, visible content, canonical URL, GA4 tag and other structured-data fields.
+- This is a structured-data consistency fix, not a ranking guarantee. Validate the live pages after Cloudflare deploy and inspect any reported structured-data warnings in Search Console.
