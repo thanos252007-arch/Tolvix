@@ -1095,3 +1095,14 @@ The file was built from the current repository sitemap inventory. It does not re
 - Styled the featured links for desktop and mobile layouts, with coordinated dark/light theme colours, visible keyboard focus and reduced-motion support.
 - Source verification: all eight tool pages plus homepage retain one H1, their Tolvix canonical URL and GA4 Measurement ID G-WH86KPZW58. The homepage's six featured destinations are existing tool URLs; no new URLs were created, so the sitemap did not need changes.
 - These changes improve query relevance and internal discovery; they do not guarantee rankings, impressions, clicks or a specific traffic total. Monitor Search Console and GA4 after the updated pages are crawled.
+
+
+## Full tool-page SEO review — 11 November 2026
+
+- Reviewed all 57 tool pages for search-focused title tags, meta descriptions, one-H1 structure, canonical URLs and the GA4 Measurement ID.
+- Re-checked all 57 pages after updates: every page has a title, meta description, a Tolvix tool canonical URL, exactly one H1 and GA4 ID G-WH86KPZW58. No duplicate titles were found within each of the three audit batches.
+- Reworked search titles/descriptions and tool-specific FAQs on nine pages where generic or inaccurate copy weakened relevance: Markdown Editor, Text Diff Checker, URL Encoder/Decoder, CSV Viewer, Image Color Picker, Text to PDF, PDF Page Extractor, Password Strength Checker and Number Base Converter.
+- Removed an inaccurate PDF Page Extractor/CDN statement from unrelated tool FAQs; clarified the PDF Page Extractor's actual PDF.js CDN dependency; replaced generic document-conversion FAQs on the number-base converter with binary/decimal/hex explanations.
+- Added practical, task-specific answers about Markdown compatibility, comparing text revisions, URL component encoding, CSV quoting, pixel colour sampling, print-to-PDF layout, extracting page ranges, password-strength limitations and number-base conversion.
+- The other 48 tool pages were reviewed and retained where their existing search intent, metadata and page content were already specific and accurate. No mass keyword stuffing or duplicate boilerplate was added.
+- No URLs changed, so sitemap entries and canonical paths remain unchanged. Changes are intended to improve relevance and usefulness; search rankings and next-day traffic are not guaranteed.
