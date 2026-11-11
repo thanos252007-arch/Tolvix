@@ -1029,3 +1029,113 @@ p,li,h1,h2,h3,a,small,strong{overflow-wrap:anywhere}
   .grid>.card{height:auto;min-height:210px}
   .grid>.card p{min-height:0;-webkit-line-clamp:3}
 }
+
+
+/* Tolvix premium visual pass — refined monochrome surfaces and restrained champagne accents */
+:root{
+  --accent:#d7bd87;
+  --accent-hover:#ead7ae;
+  --accent-soft:rgba(215,189,135,.11);
+  --premium-border:rgba(255,255,255,.105);
+  --premium-glow:rgba(215,189,135,.13);
+}
+body{
+  background-image:
+    radial-gradient(ellipse at 50% -24%,rgba(215,189,135,.075),transparent 43%),
+    radial-gradient(ellipse at 100% 38%,rgba(255,255,255,.025),transparent 36%),
+    linear-gradient(145deg,#070707 0%,#101010 52%,#080808 100%);
+}
+header{border-bottom-color:rgba(255,255,255,.09)}
+.brand img{filter:grayscale(1) brightness(1.25);transition:transform .25s ease,filter .25s ease}
+.brand:hover img{transform:translateY(-1px);filter:grayscale(1) brightness(1.55)}
+.links a:hover{color:#fff}
+.hero{padding-top:88px;padding-bottom:72px}
+.hero:before{background:radial-gradient(ellipse at 72% 42%,rgba(215,189,135,.105),transparent 60%)}
+.hero-kicker{color:#e3cea4;border-color:rgba(215,189,135,.25);background:rgba(215,189,135,.055)}
+.hero-kicker:before{background:#d7bd87;box-shadow:0 0 12px rgba(215,189,135,.5)}
+h1 span,.hero-copy h1 span{color:#e4d0a8;text-shadow:0 0 30px rgba(215,189,135,.12)}
+.lead{color:#c7c7c7}
+.primary-action{
+  color:#17130c;background:linear-gradient(135deg,#ead7ae,#c6a96e);
+  border-color:#d7bd87;box-shadow:0 8px 26px rgba(215,189,135,.12)
+}
+.primary-action:hover{color:#17130c;background:linear-gradient(135deg,#f1e2c1,#d7bd87)}
+.secondary-action{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.025)}
+.searchbox .search{border-color:rgba(215,189,135,.28);background:rgba(8,8,8,.86);box-shadow:inset 0 1px 3px rgba(0,0,0,.5),0 8px 24px rgba(0,0,0,.16)}
+.searchbox .search:focus-visible{border-color:#d7bd87;box-shadow:0 0 0 4px rgba(215,189,135,.11)}
+.search-icon{color:#d7bd87}
+.tool-preview{
+  border-color:rgba(255,255,255,.12);
+  background:linear-gradient(150deg,rgba(255,255,255,.055),transparent 48%),linear-gradient(145deg,#191919,#101010 72%);
+  box-shadow:0 28px 76px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.075)
+}
+.preview-mark{background:#d7bd87;box-shadow:0 0 13px rgba(215,189,135,.4)}
+.preview-link:hover{border-color:rgba(215,189,135,.34);background:rgba(215,189,135,.045)}
+.preview-arrow{color:#d7bd87}
+.trust-strip{border-color:rgba(255,255,255,.09)}
+.trust-strip strong{color:#f1e4c9}
+.category-nav a{border-color:rgba(255,255,255,.13);background:rgba(255,255,255,.018)}
+.category-nav a:hover{border-color:rgba(215,189,135,.38);background:rgba(215,189,135,.07)}
+.tools-section>h2{font-size:30px;letter-spacing:-.035em}
+.category-heading{padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.065)}
+.category-heading h3{color:#f1eee7}
+.category-heading h3:before{background:linear-gradient(180deg,#ead7ae,#a88c58);box-shadow:0 0 12px rgba(215,189,135,.16)}
+.grid>.card{
+  border-color:rgba(255,255,255,.085);
+  background:linear-gradient(155deg,rgba(255,255,255,.045),rgba(255,255,255,.008) 55%),#141414;
+  box-shadow:0 10px 28px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.025)
+}
+.grid>.card:before{background:linear-gradient(90deg,transparent,rgba(215,189,135,.52),transparent)}
+.grid>.card:hover{
+  border-color:rgba(215,189,135,.3);
+  background:linear-gradient(155deg,rgba(215,189,135,.055),transparent 62%),#171717;
+  box-shadow:0 18px 38px rgba(0,0,0,.34),0 0 0 1px rgba(215,189,135,.035)
+}
+.grid>.card h3:before{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:29px;height:29px;margin:0 9px 0 0;padding:0 5px;
+  border:1px solid rgba(215,189,135,.2);border-radius:8px;
+  background:rgba(215,189,135,.07);color:#e4d0a8;
+  font-size:12px;font-weight:600;vertical-align:middle
+}
+.grid>.card .btn{
+  border-color:rgba(215,189,135,.27);background:rgba(215,189,135,.075);
+  color:#e4d0a8
+}
+.grid>.card .btn:hover{border-color:rgba(215,189,135,.5);background:rgba(215,189,135,.13);color:#f1dfba}
+#guides .guide-category{border-color:rgba(255,255,255,.09);background:linear-gradient(150deg,rgba(255,255,255,.035),transparent 55%),#141414}
+#guides .guide-category h3{color:#e4d0a8}
+.panel,.content{border-color:rgba(255,255,255,.1);box-shadow:0 18px 48px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.025)}
+.toolhead .pill{color:#e4d0a8;border-color:rgba(215,189,135,.24);background:rgba(215,189,135,.06)}
+button:not(.secondary),.actions .btn{border-color:#d7bd87}
+.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{border-color:#d7bd87;box-shadow:0 0 0 3px rgba(215,189,135,.1)}
+a{ text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline-color:rgba(215,189,135,.42)}
+.footer{border-top-color:rgba(255,255,255,.09)}
+@media(max-width:680px){
+  .hero{padding-top:54px;padding-bottom:44px}
+  .tools-section>h2{font-size:26px}
+}
+@media(prefers-reduced-motion:reduce){
+  .brand img{transition:none}
+}
+:root[data-theme="light"]{
+  --accent:#80643a;
+  --accent-hover:#624a29;
+  --accent-soft:rgba(128,100,58,.1);
+}
+:root[data-theme="light"] body{
+  background-image:radial-gradient(ellipse at 50% -24%,rgba(128,100,58,.07),transparent 43%),linear-gradient(145deg,#f7f7f5,#fff 55%,#f4f3f0)
+}
+:root[data-theme="light"] .hero-kicker,:root[data-theme="light"] .toolhead .pill{color:#72572f;border-color:rgba(128,100,58,.22);background:rgba(128,100,58,.06)}
+:root[data-theme="light"] h1 span,:root[data-theme="light"] .hero-copy h1 span{color:#80643a;text-shadow:none}
+:root[data-theme="light"] .primary-action{color:#fff;background:#80643a;border-color:#80643a}
+:root[data-theme="light"] .primary-action:hover{color:#fff;background:#624a29}
+:root[data-theme="light"] .preview-mark{background:#80643a}
+:root[data-theme="light"] .preview-arrow,:root[data-theme="light"] #guides .guide-category h3{color:#80643a}
+:root[data-theme="light"] .category-heading h3{color:#20242b}
+:root[data-theme="light"] .category-heading h3:before{background:#80643a}
+:root[data-theme="light"] .grid>.card h3:before{color:#72572f;border-color:rgba(128,100,58,.2);background:rgba(128,100,58,.07)}
+:root[data-theme="light"] .grid>.card .btn{color:#72572f;border-color:rgba(128,100,58,.25);background:rgba(128,100,58,.07)}
+:root[data-theme="light"] .grid>.card:hover{border-color:rgba(128,100,58,.28)}
+:root[data-theme="light"] .search-icon{color:#80643a}
