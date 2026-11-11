@@ -1587,3 +1587,69 @@ header{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
  :root[data-theme="light"] .grid>.card:hover,:root[data-theme="light"] #guides .guide-category:hover{transform:none}
 }
 @media(prefers-reduced-motion:reduce){:root[data-theme="light"] .grid>.card:hover,:root[data-theme="light"] #guides .guide-category:hover,:root[data-theme="light"] .preview-link:hover{transform:none}}
+
+
+/* Tolvix light mode — crisp blue and white visual system */
+:root[data-theme="light"]{
+  --accent:#2563eb;
+  --accent-hover:#1d4ed8;
+  --accent-soft:rgba(37,99,235,.09);
+  --premium-border:rgba(37,99,235,.16);
+}
+:root[data-theme="light"] body{
+  color:#172b4d;
+  background-color:#f7faff;
+  background-image:radial-gradient(ellipse at 8% 0%,rgba(96,165,250,.16),transparent 34%),radial-gradient(ellipse at 92% 10%,rgba(191,219,254,.25),transparent 32%),linear-gradient(145deg,#f1f6ff 0%,#fff 52%,#f3f7ff 100%);
+}
+:root[data-theme="light"] header{background:rgba(255,255,255,.88);border-bottom:1px solid #e1eafe;box-shadow:0 8px 28px rgba(30,64,125,.07)}
+:root[data-theme="light"] .brand span,:root[data-theme="light"] h1,:root[data-theme="light"] h2,:root[data-theme="light"] h3{color:#172b4d}
+:root[data-theme="light"] .links a{color:#526783}
+:root[data-theme="light"] .links a:hover{color:#1d4ed8;background:#eff6ff;border-color:#dbeafe;box-shadow:0 4px 12px rgba(37,99,235,.07)}
+:root[data-theme="light"] .hero:before{background:radial-gradient(ellipse at 20% 38%,rgba(59,130,246,.15),transparent 55%),radial-gradient(ellipse at 82% 55%,rgba(147,197,253,.16),transparent 48%)}
+:root[data-theme="light"] .hero-copy{border:1px solid #e1ebfc;background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(241,247,255,.92));box-shadow:0 22px 58px rgba(37,81,153,.09),inset 0 1px 0 #fff}
+:root[data-theme="light"] .hero-copy:after{background:linear-gradient(90deg,transparent,#60a5fa, #bfdbfe,transparent)}
+:root[data-theme="light"] .hero h1 span{background:linear-gradient(100deg,#1d4ed8,#3b82f6 60%,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent}
+:root[data-theme="light"] .hero .lead,:root[data-theme="light"] .lead,:root[data-theme="light"] .preview-description{color:#536985}
+:root[data-theme="light"] .hero-kicker{color:#1d4ed8;border-color:#dbeafe;background:linear-gradient(110deg,#eff6ff,#fff);box-shadow:0 4px 12px rgba(37,99,235,.06)}
+:root[data-theme="light"] .hero-kicker:before{background:linear-gradient(90deg,#2563eb,#93c5fd);box-shadow:0 0 10px rgba(37,99,235,.2)}
+:root[data-theme="light"] .searchbox .search{color:#172b4d;border:1px solid #cfe0fb;background:#fff;box-shadow:0 10px 26px rgba(37,81,153,.08),inset 0 1px 0 #fff}
+:root[data-theme="light"] .searchbox .search::placeholder{color:#8495ad}
+:root[data-theme="light"] .searchbox .search:focus-visible,:root[data-theme="light"] .field input:focus-visible,:root[data-theme="light"] .field textarea:focus-visible,:root[data-theme="light"] .field select:focus-visible{border-color:#60a5fa;box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+:root[data-theme="light"] .primary-action{color:#fff;background:linear-gradient(115deg,#1d4ed8,#2563eb 58%,#60a5fa);border:1px solid rgba(255,255,255,.65);box-shadow:0 10px 25px rgba(37,99,235,.22),inset 0 1px 0 rgba(255,255,255,.3)}
+:root[data-theme="light"] .primary-action:hover{background:linear-gradient(115deg,#1e40af,#1d4ed8 60%,#3b82f6)}
+:root[data-theme="light"] .secondary-action{color:#2454a0;border:1px solid #d5e4fb;background:linear-gradient(135deg,#fff,#f0f6ff);box-shadow:0 6px 16px rgba(37,81,153,.055)}
+:root[data-theme="light"] .tool-preview{border:1px solid #dce9fc;background:linear-gradient(145deg,#fff,#f0f6ff);box-shadow:0 25px 62px rgba(37,81,153,.12),inset 0 1px 0 #fff}
+:root[data-theme="light"] .tool-preview:after{background:linear-gradient(90deg,transparent,#60a5fa,#bfdbfe,transparent)}
+:root[data-theme="light"] .tool-preview h2,:root[data-theme="light"] .preview-link strong{color:#1e3558}
+:root[data-theme="light"] .preview-label,:root[data-theme="light"] .preview-link small,:root[data-theme="light"] .preview-foot{color:#71839d}
+:root[data-theme="light"] .preview-count{color:#1d4ed8;border-color:#dbeafe;background:#eff6ff}
+:root[data-theme="light"] .preview-link{color:#1e3558;border-color:#e2ecfb;background:linear-gradient(120deg,#fff,#f4f8ff);box-shadow:0 4px 12px rgba(37,81,153,.04)}
+:root[data-theme="light"] .preview-link:hover{border-color:#bfdbfe;box-shadow:0 9px 20px rgba(37,99,235,.09)}
+:root[data-theme="light"] .trust-strip{border:1px solid #e0eafd;background:linear-gradient(105deg,#fff,#f0f6ff);box-shadow:0 12px 30px rgba(37,81,153,.065)}
+:root[data-theme="light"] .trust-strip strong,:root[data-theme="light"] .category-heading h3,:root[data-theme="light"] #guides .guide-category h3{color:#2454a0}
+:root[data-theme="light"] .trust-strip span{color:#627792}
+:root[data-theme="light"] .category-heading{border-bottom-color:#e1eafe}
+:root[data-theme="light"] .category-heading h3:before{background:linear-gradient(180deg,#2563eb,#93c5fd);box-shadow:0 2px 9px rgba(37,99,235,.16)}
+:root[data-theme="light"] .category-nav a{color:#526783;border-color:#dce8fa;background:linear-gradient(145deg,#fff,#f2f7ff)}
+:root[data-theme="light"] .category-nav a:hover,:root[data-theme="light"] .category-nav a[aria-current="location"]{color:#1d4ed8;border-color:#bfdbfe;background:#eff6ff}
+:root[data-theme="light"] .grid>.card{color:#526783;border:1px solid #e0eafd;background:linear-gradient(145deg,#fff,#f3f7ff);box-shadow:0 8px 23px rgba(37,81,153,.06),inset 0 1px 0 #fff}
+:root[data-theme="light"] .grid>.card:before{background:linear-gradient(90deg,transparent,#60a5fa,#bfdbfe,transparent)}
+:root[data-theme="light"] .grid>.card:hover{border-color:#bfdbfe;background:linear-gradient(145deg,#fff,#edf4ff);box-shadow:0 17px 35px rgba(37,81,153,.12)}
+:root[data-theme="light"] .grid>.card h3{color:#1e3558}
+:root[data-theme="light"] .grid>.card h3:before{color:#2563eb;border-color:#dbeafe;background:linear-gradient(145deg,#eaf2ff,#fff);box-shadow:0 4px 10px rgba(37,99,235,.07)}
+:root[data-theme="light"] .grid>.card p,:root[data-theme="light"] #guides .guide-category a{color:#637792}
+:root[data-theme="light"] .grid>.card .btn{color:#2454a0;border-color:#d5e4fb;background:linear-gradient(115deg,#eff6ff,#fff)}
+:root[data-theme="light"] .grid>.card .btn:hover{color:#fff;border-color:#2563eb;background:linear-gradient(110deg,#1d4ed8,#3b82f6)}
+:root[data-theme="light"] #guides .guide-category{border:1px solid #e0eafd;background:linear-gradient(145deg,#fff,#f1f6ff);box-shadow:0 9px 24px rgba(37,81,153,.06)}
+:root[data-theme="light"] #guides .guide-category:hover{border-color:#bfdbfe;box-shadow:0 17px 34px rgba(37,81,153,.11)}
+:root[data-theme="light"] .panel,:root[data-theme="light"] .content{color:#344b69;border:1px solid #dfeafd;background:linear-gradient(145deg,#fff,#f3f7ff);box-shadow:0 15px 38px rgba(37,81,153,.07),inset 0 1px 0 #fff}
+:root[data-theme="light"] .panel h1,:root[data-theme="light"] .panel h2,:root[data-theme="light"] .panel h3,:root[data-theme="light"] .content h1,:root[data-theme="light"] .content h2,:root[data-theme="light"] .content h3{color:#1e3558}
+:root[data-theme="light"] .field label{color:#405875}
+:root[data-theme="light"] .field input,:root[data-theme="light"] .field textarea,:root[data-theme="light"] .field select{color:#1e3558;border:1px solid #d8e6fa;background:#fff}
+:root[data-theme="light"] .field input::placeholder,:root[data-theme="light"] .field textarea::placeholder{color:#8a9bb2}
+:root[data-theme="light"] .result,:root[data-theme="light"] pre{color:#344b69;border:1px solid #dce8fa;background:linear-gradient(125deg,#edf4ff,#fff)}
+:root[data-theme="light"] .toolhead .pill{color:#2454a0;border-color:#dbeafe;background:#eff6ff}
+:root[data-theme="light"] .footer{border-top-color:#e0eafd;color:#71839d}
+:root[data-theme="light"] .footer a,:root[data-theme="light"] a:focus-visible{color:#2454a0}
+:root[data-theme="light"] button:focus-visible,:root[data-theme="light"] input:focus-visible,:root[data-theme="light"] textarea:focus-visible,:root[data-theme="light"] select:focus-visible{outline-color:rgba(37,99,235,.58)}
+@media(max-width:680px){:root[data-theme="light"] .hero-copy{background:linear-gradient(145deg,#fff,#f2f7ff)}}
