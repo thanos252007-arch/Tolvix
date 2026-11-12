@@ -1125,3 +1125,17 @@ The six homepage “Popular free online tools” links already point to the key 
 - Added Schema.org `WebApplication` JSON-LD to tool pages that were missing application structured data, including the image conversion/cropping/resizing tools, JPG/PNG converters, PDF split/conversion/editing tools, Markdown editor, minifiers, URL encoder/decoder, CSV viewer, PDF page extractor, password strength checker and number-base converter.
 - Structured data uses each page's existing canonical URL, visible H1, and existing meta description; the free offer is represented with INR currency for consistency with Tolvix's India-focused project context.
 - Existing tool functionality, page URLs, canonicals, analytics measurement ID and sitemap entries were preserved. Structured data helps search engines interpret pages but does not guarantee rich results, rankings or a specific traffic increase.
+
+
+## Search Console indexing review — 12 November 2026
+
+Reviewed the four example URLs reported as “Crawled – currently not indexed”: Find & Replace, CSV Viewer, SGPA Calculator and the Privacy Policy. Source inspection confirmed each page has an explicit `index,follow` directive, a self-referencing `https://tolvix.in/` canonical URL, a page title and description; the URLs are present in the sitemap. This source review did not independently establish Google's indexing decision or live rendered content.
+
+### Content and accuracy updates
+
+- **Find & Replace:** replaced generic instructions with an exact workflow, before/after examples, and clear explanation of the actual case-sensitive substring matching behavior. Documented that all matches are replaced, empty replacement text deletes matches, and whole-word/regex/case-insensitive modes are not available. Added task-specific FAQs.
+- **CSV Viewer:** added a sample dataset, quoting and escaped-quote examples, a step-by-step preview workflow, actual 2 MB / 5,000-row / 100-column limits, and clearer viewer-versus-spreadsheet limitations. Clarified that CSV parsing happens in the browser and the tool does not upload the CSV to a Tolvix processing server.
+- **SGPA Calculator:** expanded the worked example to four subjects with different credits, a transparent weighted-points calculation, 12 total credits and a result of 8.42. Reinforced that example grade points are illustrative and students must use their institution's official grade points and credit values.
+- **Privacy Policy:** reviewed the existing statements without adding keyword-focused filler. Updated the review date, clarified the saved theme preference in browser local storage, and corrected an overly broad library/CDN description to the confirmed pdf-lib/jsDelivr dependency. Kept the existing analytics, QR third-party service, hosting, future advertising and contact disclosures.
+
+No page URLs, canonical tags, analytics IDs, tool controls or sitemap entries were changed. These edits improve clarity and accuracy but cannot guarantee indexing or rankings. After deployment, inspect the live pages and use Search Console URL Inspection to request recrawling of the three materially updated tool pages; the Privacy Policy can be recrawled after its accuracy update if needed.
