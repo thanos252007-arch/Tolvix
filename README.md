@@ -1159,3 +1159,33 @@ No page URLs, canonical tags, analytics IDs, tool controls or sitemap entries we
 - Added matching light-mode surfaces and contrast overrides, responsive adjustments and reduced-motion handling.
 - No HTML, JavaScript, tool calculations, analytics, canonical URLs, metadata, sitemap or Search Console verification changes.
 - Source-level commit only; verify the live site in both themes and at mobile/desktop widths after Cloudflare deployment.
+
+## Repository security review and ignore rules — 12 November 2026
+
+### Completed
+
+- Added a root `.gitignore` to keep local environment files, Cloudflare development variables, private key/certificate files, local credentials, dependency/build folders, Python caches, logs, backups, editor metadata and test artifacts out of future commits.
+- Kept `.env.example` and `.dev.vars.example` eligible for commit so safe placeholder templates can be shared when needed.
+- Reviewed the Cloudflare Worker entry point and `wrangler.jsonc`: the Worker forwards requests to the Static Assets binding; no application database, authentication service, server-side file upload endpoint or hard-coded Cloudflare API token was seen in those inspected files.
+- Reviewed shared tool scripts, representative PDF/image/CSV/password/minifier pages, the homepage, QR generator, theme script, privacy page, link-audit workflow and Python audit script.
+- Reviewed high-risk code patterns in the inspected JavaScript. The identified `innerHTML` uses build static interface templates/progress indicators; user-provided text and generated results in the reviewed handlers are written through form values or `textContent`, rather than interpolated into those HTML templates.
+- Ran repository-scoped searches for common credential markers including GitHub tokens, AWS access-key prefixes, Google API-key prefix, Cloudflare token variable names, database URL variables, client secrets and access tokens. No matches were returned by those searches.
+
+### Security observations and remaining hardening
+
+- The QR Code Generator sends the entered text/URL to the third-party QR service `api.qrserver.com`. This is disclosed on the tool page and in the Privacy Policy. Users should not submit confidential data.
+- PDF and JavaScript minifier features load version-pinned libraries from third-party CDNs (including jsDelivr, cdnjs and unpkg). The inspected script tags do not use Subresource Integrity (SRI); a compromised CDN or upstream package could therefore affect visitors. Consider adding verified SRI hashes or self-hosting reviewed library builds.
+- Browser-side file processing avoids uploading selected files to a Tolvix processing endpoint in the reviewed flows, but it does not remove risks from malicious files, browser vulnerabilities, browser extensions or compromised third-party libraries.
+- The repository's source-level searches are useful checks, not proof that no secret exists. The full Git history, all branches/tags, every HTML page and all deployed Cloudflare account settings were not exhaustively scanned in this pass. No claim of a complete penetration test or independent live security test is made.
+- A `.gitignore` only prevents matching untracked files from being added; it does not remove files already tracked or erase secrets from Git history. If a credential is ever found in any commit, revoke/rotate it first, then clean the history if appropriate.
+- The live GitHub Security tab still needs an owner-side check for Secret Scanning alerts, Dependabot alerts and available push-protection settings. GitHub's detection covers supported patterns and is not a guarantee that every secret will be detected.
+
+### Before inviting outside contributors
+
+1. Review the repository's **Security** tab and resolve any open secret-scanning alerts.
+2. Confirm two-factor authentication is enabled on the GitHub account.
+3. Keep Cloudflare API tokens, GitHub personal access tokens and account credentials out of repository files, issues and screenshots.
+4. Review unfamiliar pull requests before merging; never run untrusted workflow changes or scripts with secrets available.
+5. Revoke and replace any credential that may have been exposed, even if the file is later deleted.
+
+This is a source/configuration review of the files and searches described above, not a guarantee that the entire repository or deployment is vulnerability-free.
