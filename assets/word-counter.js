@@ -37,7 +37,7 @@ function updateKeyword(d){
 }
 function render(){
  const d=calculate(editor.value);last=d;
- ["words","characters","no-spaces","sentences","paragraphs","lines","unique"].forEach((k)=>put(k,d[k==="no-spaces"?"noSpaces":k].toLocaleString()));
+ [["words",d.wordCount],["characters",d.characters],["no-spaces",d.noSpaces],["sentences",d.sentences],["paragraphs",d.paragraphs],["lines",d.lines],["unique",d.unique]].forEach(([k,value])=>put(k,value.toLocaleString()));
  put("avg-word",d.avgWord.toFixed(1));put("avg-sentence",d.avgSentence.toFixed(1));put("longest",d.longest||"—");put("pages",d.pages.toFixed(2));
  put("reading",time(d.wordCount,Math.max(1,Number($("wc-reading-speed").value)||200)));put("speaking",time(d.wordCount,Math.max(1,Number($("wc-speaking-speed").value)||130)));
  $("wc-longest").title=d.longest?chars(d.longest).length+" characters":"No words";$("wc-char-hint").textContent=d.characters.toLocaleString()+" characters";
