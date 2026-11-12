@@ -1295,3 +1295,9 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Preserved all 20 individual calculator cards, links, descriptions, search keywords, styling and standalone calculator pages.
 - The homepage overview, guides and FAQ remain after the tool directory. No calculator functionality, metadata, canonical URLs, analytics or sitemap entries were changed.
 - Source order verified: SEO tools → Physics tools → homepage overview → guides. This is source-level verification; confirm the live Cloudflare deployment after publishing.
+
+### Physics card arrow cleanup — 12 November 2026
+
+- Removed the manually embedded northeast-arrow icon from each of the 20 Physics card action labels.
+- Kept the shared card-button CSS arrow, so each Physics card now displays a single consistent arrow like the rest of the tool directory.
+- Verified all 20 Physics action labels contain only “Open calculator” in the HTML; the shared CSS supplies the one arrow. No tool links or calculator behaviour changed.
