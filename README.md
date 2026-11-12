@@ -1106,3 +1106,15 @@ The file was built from the current repository sitemap inventory. It does not re
 - Added practical, task-specific answers about Markdown compatibility, comparing text revisions, URL component encoding, CSV quoting, pixel colour sampling, print-to-PDF layout, extracting page ranges, password-strength limitations and number-base conversion.
 - The other 48 tool pages were reviewed and retained where their existing search intent, metadata and page content were already specific and accurate. No mass keyword stuffing or duplicate boilerplate was added.
 - No URLs changed, so sitemap entries and canonical paths remain unchanged. Changes are intended to improve relevance and usefulness; search rankings and next-day traffic are not guaranteed.
+
+
+## Internal-link relevance cleanup — 12 November 2026
+
+Reviewed the internal tool and guide links across all 57 tool pages, with attention to the most visited tool clusters and related-tool modules. Replaced unrelated or generic cross-links with contextual paths:
+
+- Fixed leftover Image-to-Base64 footer links on JavaScript Minifier and four PDF tools, replacing them with relevant developer/PDF destinations.
+- Replaced generic JSON Formatter / Word Counter / URL Encoder recommendations on Reading Time, Regex Tester, Robots.txt Generator and UTM Link Builder with links that match each page's task.
+- Corrected the Word Frequency page's inaccurate “AI writing pattern checker” label to “Text Compare Tool”; the destination is a text-diff utility, not an AI detector.
+- Preserved existing canonical URLs, analytics, page content and tool behavior; no new URLs were created and the sitemap did not need changes.
+
+The six homepage “Popular free online tools” links already point to the key high-potential tools (Word Counter, QR Code Generator, Image Compressor, Merge PDF, GST Calculator and Percentage Calculator). This pass strengthened the contextual links around supporting pages rather than adding repetitive sitewide keyword links. Source-level edits only; the live deployment and visual navigation should still be checked after Cloudflare publishes the commits.
