@@ -1282,3 +1282,9 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Added a Node test script with 20 known-answer benchmarks and seven validation/boundary checks: `node scripts/test-physics-tools.cjs`.
 - Model limitations are displayed on each calculator. GitHub Actions run https://github.com/thanos252007-arch/Tolvix/actions/runs/43275149550 completed successfully: the Node test script passed 20 known-answer benchmarks plus invalid-input and valid-boundary checks. The separate live-link audit also passed on the same source generation: https://github.com/thanos252007-arch/Tolvix/actions/runs/43275127491. Live browser interaction, responsive visual review and hands-on mobile testing remain outstanding.
 - Formula references: OpenStax University Physics / College Physics: https://openstax.org/books/university-physics-volume-1/pages/preface and https://openstax.org/books/physics/pages/5-key-equations.
+
+### Physics calculator directory cards
+- The homepage Physics section displays all 20 calculators as individual responsive tool cards, matching the site's standard tool-card layout.
+- Each card includes a linked calculator title, a concise task description, and an Open calculator action.
+- The cards are included in the existing searchable tool directory through their `data-search` terms.
+- Updated homepage commit: `a376557794bc8cc9e93ce3bafff8c04ec64b302e`.
