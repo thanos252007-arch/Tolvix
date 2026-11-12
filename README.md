@@ -1264,3 +1264,11 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Replaced the previous advanced analysis script with a small live counter. The tool still updates as the user types and retains the existing canonical URL, GA4 integration, shared theme, structured data and relevant SEO content.
 - Updated the page copy and FAQs to match the simpler feature set; removed claims about features no longer offered.
 - Source changes committed. Validate the deployed page on desktop/mobile and test copy/clear actions after Cloudflare publishes the changes.
+
+## Word Counter search-intent refinement — 12 November 2026
+
+- Kept the simplified six-result interface unchanged.
+- Added a short, accurate explanation of browser-based word segmentation, punctuation, contractions, hyphenated terms and why counts may differ between word counters.
+- Included a small example with a verifiable six-word result and clarified character totals with and without whitespace.
+- Retained the existing title, description, canonical URL, analytics, structured data and related internal links. No extra controls or analysis features were added.
+- This is a focused content clarification, not a ranking guarantee. Review Search Console query/page performance after Google recrawls the URL.
