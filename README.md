@@ -1118,3 +1118,10 @@ Reviewed the internal tool and guide links across all 57 tool pages, with attent
 - Preserved existing canonical URLs, analytics, page content and tool behavior; no new URLs were created and the sitemap did not need changes.
 
 The six homepage “Popular free online tools” links already point to the key high-potential tools (Word Counter, QR Code Generator, Image Compressor, Merge PDF, GST Calculator and Percentage Calculator). This pass strengthened the contextual links around supporting pages rather than adding repetitive sitewide keyword links. Source-level edits only; the live deployment and visual navigation should still be checked after Cloudflare publishes the commits.
+
+
+## Structured data coverage pass — 12 November 2026
+
+- Added Schema.org `WebApplication` JSON-LD to tool pages that were missing application structured data, including the image conversion/cropping/resizing tools, JPG/PNG converters, PDF split/conversion/editing tools, Markdown editor, minifiers, URL encoder/decoder, CSV viewer, PDF page extractor, password strength checker and number-base converter.
+- Structured data uses each page's existing canonical URL, visible H1, and existing meta description; the free offer is represented with INR currency for consistency with Tolvix's India-focused project context.
+- Existing tool functionality, page URLs, canonicals, analytics measurement ID and sitemap entries were preserved. Structured data helps search engines interpret pages but does not guarantee rich results, rankings or a specific traffic increase.
