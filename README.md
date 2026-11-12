@@ -1189,3 +1189,13 @@ No page URLs, canonical tags, analytics IDs, tool controls or sitemap entries we
 5. Revoke and replace any credential that may have been exposed, even if the file is later deleted.
 
 This is a source/configuration review of the files and searches described above, not a guarantee that the entire repository or deployment is vulnerability-free.
+
+
+### Full Git-history secret scan — 12 November 2026
+
+- Added `.github/workflows/historical-secret-scan.yml`, using Gitleaks pinned to commit `ff98106e4c7b2bc287b24eaf42907196329070c7`.
+- The workflow checks out full Git history and scans all reachable commits with `gitleaks detect --log-opts="--all"`, in addition to the action's normal push-diff scan.
+- First full-history run: **success** — 1,035 commits scanned, approximately 4.51 MB examined, **no leaks detected**.
+- Workflow run: https://github.com/thanos252007-arch/Tolvix/actions/runs/43218445382
+- The workflow runs on pushes to `main`, can be started manually, and is scheduled weekly.
+- Scope note: this result covers Git history reachable from the repository's fetched refs at scan time and Gitleaks' built-in detection rules. It does not prove that every possible credential format is absent, inspect external accounts/Cloudflare settings, or replace GitHub Secret Scanning. If a real credential is ever found, revoke/rotate it immediately; deleting it from a later commit is not enough.
