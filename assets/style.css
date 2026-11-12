@@ -2013,3 +2013,67 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .homepage-overview .content-grid{grid-template-columns:1fr;gap:10px}
   .homepage-overview .content-grid>section{padding:14px}
 }
+
+/* Advanced Word Counter — November 2026 */
+.wc-panel{padding:clamp(18px,3vw,32px);margin-bottom:28px}
+.wc-panel-heading,.wc-export-row{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.wc-panel-heading h2{margin:4px 0;font-size:clamp(23px,3vw,30px)}
+.wc-panel-heading p,.wc-subpanel>p{margin:4px 0 14px;color:var(--muted)}
+.wc-eyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;color:#83aef6}
+.wc-local-badge{white-space:nowrap;padding:8px 12px;border:1px solid rgba(87,177,139,.28);border-radius:999px;background:rgba(49,153,111,.09);color:#55bd91;font-size:12px;font-weight:700}
+.wc-editor-wrap{margin:22px 0 20px;padding:12px;border:1px solid var(--line);border-radius:17px;background:var(--surface)}
+.wc-editor-wrap textarea{display:block;width:100%;min-height:230px;resize:vertical;border:0!important;outline:0!important;background:transparent!important;box-shadow:none!important;padding:12px;font:inherit;line-height:1.75;color:var(--text)}
+.wc-editor-footer{display:flex;align-items:center;gap:15px;flex-wrap:wrap;padding:10px 12px 2px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.wc-file-label,.wc-text-button{cursor:pointer;color:var(--accent,#76a7f5);font-weight:700}
+.wc-file-label input{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.wc-text-button{border:0;background:none;padding:0;font:inherit}
+.wc-stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.wc-stat{min-width:0;padding:16px;border:1px solid var(--line);border-radius:15px;background:var(--surface);display:flex;flex-direction:column;gap:5px}
+.wc-stat>span{font-size:12px;color:var(--muted);font-weight:650}
+.wc-stat strong{font-size:clamp(21px,2.5vw,29px);line-height:1.2;overflow-wrap:anywhere;letter-spacing:-.04em}
+.wc-stat small{font-size:11px;color:var(--muted)}
+.wc-stat-primary{border-color:rgba(104,155,239,.45);background:linear-gradient(145deg,rgba(84,137,226,.16),var(--surface))}
+.wc-stat-primary strong{color:#83adf4;font-size:34px}
+.wc-subpanel{margin-top:20px;padding:20px;border:1px solid var(--line);border-radius:17px;background:var(--surface)}
+.wc-subpanel h3{margin:0 0 6px;font-size:18px}
+.wc-control-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.wc-control-grid .field{margin:0}
+.wc-control-grid input{width:100%}
+.wc-control-grid.wc-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.wc-progress-track{height:11px;margin-top:18px;overflow:hidden;border-radius:99px;background:var(--line)}
+.wc-progress-track span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#4e8de8,#8eb9ff);transition:width .25s ease}
+#wc-goal-status,#wc-compare-result{margin:10px 0 0;font-size:13px;color:var(--muted);line-height:1.6}
+.wc-readability{margin-top:14px;padding:15px;border:1px solid var(--line);border-radius:13px}
+.wc-readability>span{display:block;color:var(--muted);font-size:12px}
+.wc-readability strong{display:block;font-size:25px;margin-top:4px}
+.wc-readability p{margin:6px 0;color:var(--text)}
+.wc-readability small,.wc-note{color:var(--muted);font-size:12px;line-height:1.6}
+.wc-keyword-search{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,1fr);gap:16px;align-items:end}
+#wc-keyword-result{padding:13px;border:1px solid var(--line);border-radius:12px;font-size:13px;line-height:1.6;min-height:48px;margin:0}
+.wc-table-wrap{overflow-x:auto;margin-top:15px}
+.wc-table{width:100%;border-collapse:collapse;text-align:left;font-size:13px}
+.wc-table th,.wc-table td{padding:10px 12px;border-bottom:1px solid var(--line)}
+.wc-table th{color:var(--muted);font-weight:700}
+.wc-options-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.wc-options-grid label{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.5}
+.wc-options-grid input{accent-color:#568de7;margin-top:3px}
+.wc-note{margin:13px 0 0}
+.wc-compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.wc-compare-grid .field{margin:0}
+.wc-compare-grid textarea{width:100%;min-height:130px}
+.wc-compare-grid small{display:block;margin-top:7px;color:var(--muted);font-size:12px}
+.wc-export-row{align-items:center;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.wc-export-row>div:first-child{display:flex;flex-direction:column;gap:4px}
+.wc-export-row>div:first-child small{font-size:12px;color:var(--muted)}
+.wc-export-row .actions{justify-content:flex-end;flex-wrap:wrap}
+.wc-export-row button{font-size:12px;padding:9px 12px;min-height:38px}
+.wc-status{margin:12px 0 0;color:var(--muted);font-size:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){.wc-stats-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.wc-export-row{align-items:flex-start;flex-direction:column}.wc-export-row .actions{justify-content:flex-start}}
+@media(max-width:620px){.wc-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wc-control-grid,.wc-control-grid.wc-two,.wc-options-grid{grid-template-columns:1fr}.wc-keyword-search,.wc-compare-grid{grid-template-columns:1fr}.wc-panel-heading{flex-direction:column}.wc-subpanel{padding:15px}.wc-stat{padding:13px}}
+@media(prefers-reduced-motion:reduce){.wc-progress-track span{transition:none}}
+:root[data-theme="light"] .wc-stat,:root[data-theme="light"] .wc-subpanel,:root[data-theme="light"] .wc-editor-wrap{background:rgba(255,255,255,.82);border-color:#dce7f7}
+:root[data-theme="light"] .wc-stat-primary{background:linear-gradient(145deg,#eaf2ff,#fff)}
+:root[data-theme="light"] .wc-stat-primary strong,:root[data-theme="light"] .wc-eyebrow{color:#245db8}
+:root[data-theme="light"] .wc-editor-wrap textarea{color:#243b5d}
+:root[data-theme="light"] #wc-keyword-result,:root[data-theme="light"] .wc-readability{border-color:#dce7f7;background:#f8fbff}
