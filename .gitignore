@@ -18,7 +18,6 @@ service-account*.json
 # Cloudflare local development state
 .wrangler/
 .wrangler
-.dev.vars*
 
 # Dependencies and generated build output
 node_modules/
