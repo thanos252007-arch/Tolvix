@@ -1214,3 +1214,17 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Preserved the QR generator's existing JavaScript behaviour, GA4 Measurement ID, canonical URL and structured application data.
 
 **Off-site work still required:** genuine editorial mentions and relevant backlinks must be earned through useful partnerships, resource-page outreach and community participation. No backlinks, directory submissions, guest posts or external outreach are claimed as completed by this repository update. Search engines choose rankings independently; monitor impressions and queries in Search Console and assess changes over several weeks rather than expecting an immediate position change.
+
+
+## Homepage SEO and content expansion — 12 November 2026
+
+- Updated the homepage title to target **Free Online Tools Without Signup** while retaining a concise description of the site's PDF, image, text, calculator and developer utilities.
+- Updated the meta description, Open Graph title/description and WebSite structured-data description consistently. Preserved the homepage canonical URL, Google Search Console verification tag and GA4 Measurement ID `G-WH86KPZW58`.
+- Replaced the short introductory paragraph with original, task-focused homepage content explaining the site's purpose, supported tool categories, how to use a tool, intended audiences, privacy distinctions and where to find help.
+- Added contextual links from the homepage overview to representative tools and practical guides across text, PDF, image, calculator, developer/data and productivity categories.
+- Kept privacy wording accurate: many tools process locally, but processing varies by tool; the QR Code Generator sends entered text or URLs to its disclosed third-party QR service. The homepage does not claim that every tool is fully local or that every upload stays on-device.
+- Competitor review (12 November 2026) observed common patterns on currently surfaced tool directories: prominent category navigation, quick-start links, clear no-signup positioning, process explanations, privacy notes, FAQs and guide links. Tolvix's update adopts useful patterns without copying competitor text or making unsupported claims about user counts, limits or privacy.
+- No changes were made to individual tool functionality, tool inventory, guide inventory, sitemap, robots.txt, analytics implementation or canonical URL.
+- Source validation checked the newly added internal link targets against the existing sitemap; verify the live Cloudflare deployment and review the homepage visually on desktop and mobile after deployment.
+
+**SEO limitation:** These changes improve page clarity, topical coverage and internal discovery; they do not guarantee first position for a competitive query such as “Free Online Tools.” Track Search Console impressions, clicks, queries and page performance over time.
