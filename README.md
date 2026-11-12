@@ -1245,3 +1245,13 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Page count is an estimate at 500 words per page; reading/speaking times depend on the selected words-per-minute settings. Sentence detection is punctuation-based and not a full linguistic parser.
 
 **SEO note:** This upgrade adds task utility and descriptive content but does not guarantee rankings or a particular Search Console position. Verify Cloudflare deployment and test the live tool before requesting indexing.
+
+
+## Word Counter search-visibility improvements — 12 November 2026
+
+- Strengthened the Word Counter page with a clear explanation of its counting conventions, practical examples for hyphenated terms, contractions and number-only tokens, and use cases for students, writers, SEO teams and professionals.
+- Added relevant FAQs for character counting and mobile use while preserving the existing live counter, advanced analysis features, page title, canonical URL, analytics and WebApplication structured data.
+- Increased contextual discovery from the homepage: the Word Counter is now the first quick-link tool, the first item in the popular-tools links, and is linked directly from the Text Tools category introduction.
+- Refined the essay word-count guide's anchor text to describe the destination more clearly.
+- Preserved the homepage's broad “free online tools” positioning to avoid making the homepage compete with the dedicated Word Counter page for the same primary query.
+- Source-level changes only. Google ranking is not guaranteed; request recrawling in Search Console after confirming the Cloudflare deployment, then monitor impressions, clicks and average position for queries such as “word counter”, “word counter online” and “free word counter”.
