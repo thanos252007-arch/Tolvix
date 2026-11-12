@@ -1149,3 +1149,13 @@ No page URLs, canonical tags, analytics IDs, tool controls or sitemap entries we
 - Preserved the existing HTML content, URLs, canonical tags, SEO metadata, sitemap, GA4 measurement ID, Search Console verification, theme persistence script and tool JavaScript behavior.
 - Added responsive spacing and component sizing for mobile layouts and respected reduced-motion preferences.
 - Source-level change only; check the live homepage and representative tool pages in both themes after Cloudflare deployment. No claim of visual browser QA is made.
+
+
+## Aurora Glass UI polish — 12 November 2026
+
+- Added a further CSS-only visual refinement layer across the homepage, tool pages and guide directory.
+- Introduced a subtle grid atmosphere, glass navigation, refined hero lighting and typography, richer preview panel, more dimensional popular-tool links, category navigation, and tool cards.
+- Refined tool-page headings, panels, form controls, result areas, related-tool links, guide cards and footer details.
+- Added matching light-mode surfaces and contrast overrides, responsive adjustments and reduced-motion handling.
+- No HTML, JavaScript, tool calculations, analytics, canonical URLs, metadata, sitemap or Search Console verification changes.
+- Source-level commit only; verify the live site in both themes and at mobile/desktop widths after Cloudflare deployment.
