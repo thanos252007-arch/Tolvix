@@ -1199,3 +1199,18 @@ This is a source/configuration review of the files and searches described above,
 - Workflow run: https://github.com/thanos252007-arch/Tolvix/actions/runs/43218445382
 - The workflow runs on pushes to `main`, can be started manually, and is scheduled weekly.
 - Scope note: this result covers Git history reachable from the repository's fetched refs at scan time and Gitleaks' built-in detection rules. It does not prove that every possible credential format is absent, inspect external accounts/Cloudflare settings, or replace GitHub Secret Scanning. If a real credential is ever found, revoke/rotate it immediately; deleting it from a later commit is not enough.
+
+
+## QR Code Generator SEO focus — 12 November 2026
+
+The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/qr.html), targeting relevant searches such as “free QR code generator online” and “QR code generator without signup”. This work improves the page for users; it does not guarantee a first-place search ranking.
+
+- Reworked the page title and meta/social descriptions around the actual free online QR creation task and no-signup use case.
+- Expanded the page with clear creation steps, practical examples, static-versus-dynamic QR behaviour, scan/print guidance, service limitations and task-specific FAQs.
+- Kept the privacy disclosure explicit: QR input is sent to the external image service `api.qrserver.com`; users must not submit confidential information.
+- Strengthened contextual links to the QR guide, UTM Link Builder and URL Encoder & Decoder.
+- Promoted the QR tool to the first quick link and first item in the homepage popular-tools section.
+- Added a featured QR tool entry to `llms.txt`; the existing canonical URL and sitemap entry remain unchanged.
+- Preserved the QR generator's existing JavaScript behaviour, GA4 Measurement ID, canonical URL and structured application data.
+
+**Off-site work still required:** genuine editorial mentions and relevant backlinks must be earned through useful partnerships, resource-page outreach and community participation. No backlinks, directory submissions, guest posts or external outreach are claimed as completed by this repository update. Search engines choose rankings independently; monitor impressions and queries in Search Console and assess changes over several weeks rather than expecting an immediate position change.
