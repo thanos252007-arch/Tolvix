@@ -1272,3 +1272,13 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Included a small example with a verifiable six-word result and clarified character totals with and without whitespace.
 - Retained the existing title, description, canonical URL, analytics, structured data and related internal links. No extra controls or analysis features were added.
 - This is a focused content clarification, not a ranking guarantee. Review Search Console query/page performance after Google recrawls the URL.
+
+
+## Physics calculators — 12 November 2026
+
+- Added 20 standalone physics calculator pages under `/tools/physics/`, with a shared calculation engine, responsive form UI, visible equations, and explicit assumptions/limitations.
+- Topics: projectile motion, constant-acceleration kinematics, free fall, 2D vectors, inclined planes with kinetic friction, circular motion, Newton's second law, work/energy/power, perfectly inelastic momentum collision, spring SHM, simple pendulum, waves, approaching-source Doppler effect, Ohm's law, resistor networks, thin lens/mirror, Snell's law, uncertainty propagation, significant figures, and common unit conversion.
+- Added homepage Physics directory and sitemap entries; preserved existing tool URLs, canonicals, GA4 ID and Search Console verification.
+- Added a Node test script with 20 known-answer benchmarks and five validation/edge-case checks: `node scripts/test-physics-tools.cjs`.
+- Model limitations are displayed on each calculator. This initial version still requires execution of the benchmark suite and live browser/mobile testing before being described as fully verified.
+- Formula references: OpenStax University Physics / College Physics: https://openstax.org/books/university-physics-volume-1/pages/preface and https://openstax.org/books/physics/pages/5-key-equations.
