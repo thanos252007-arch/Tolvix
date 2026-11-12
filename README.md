@@ -1139,3 +1139,13 @@ Reviewed the four example URLs reported as “Crawled – currently not indexed�
 - **Privacy Policy:** reviewed the existing statements without adding keyword-focused filler. Updated the review date, clarified the saved theme preference in browser local storage, and corrected an overly broad library/CDN description to the confirmed pdf-lib/jsDelivr dependency. Kept the existing analytics, QR third-party service, hosting, future advertising and contact disclosures.
 
 No page URLs, canonical tags, analytics IDs, tool controls or sitemap entries were changed. These edits improve clarity and accuracy but cannot guarantee indexing or rankings. After deployment, inspect the live pages and use Search Console URL Inspection to request recrawling of the three materially updated tool pages; the Privacy Policy can be recrawled after its accuracy update if needed.
+
+
+## UI refinement — 12 November 2026
+
+- Added a cohesive Midnight Sapphire visual refinement layer across the homepage and shared tool-page components.
+- Refined navigation and theme toggle styling, hero typography, search field, primary actions, popular-tool links, category navigation, uniform tool cards, tool panels, form controls, results and footer details.
+- Kept dark mode premium black/blue and light mode clean blue/white, with separate readable contrast and matching component treatments.
+- Preserved the existing HTML content, URLs, canonical tags, SEO metadata, sitemap, GA4 measurement ID, Search Console verification, theme persistence script and tool JavaScript behavior.
+- Added responsive spacing and component sizing for mobile layouts and respected reduced-motion preferences.
+- Source-level change only; check the live homepage and representative tool pages in both themes after Cloudflare deployment. No claim of visual browser QA is made.
