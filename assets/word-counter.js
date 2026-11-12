@@ -5,8 +5,17 @@ let last={words:[],wordCount:0,frequency:new Map()};
 const chars=s=>Array.from(s||"");
 function tokenize(text){
  let raw=[];
- if(typeof Intl!=="undefined"&&Intl.Segmenter){for(const p of new Intl.Segmenter(undefined,{granularity:"word"}).segment(text))if(p.isWordLike)raw.push(p.segment)}
- else raw=text.match(/[\p{L}\p{M}]+(?:['’][\p{L}\p{M}]+)*(?:[-‐‑‒–—][\p{L}\p{M}]+(?:['’][\p{L}\p{M}]+)*)*|[\p{N}]+(?:[.,][\p{N}]+)*/gu)||[];
+ if(typeof Intl!=="undefined"&&Intl.Segmenter){
+  const parts=Array.from(new Intl.Segmenter(undefined,{granularity:"word"}).segment(text));
+  for(let i=0;i<parts.length;i++){
+   if(!parts[i].isWordLike)continue;
+   let token=parts[i].segment;
+   while(i+2<parts.length&&!parts[i+1].isWordLike&&/^[-‐‑‒–—'’]$/u.test(parts[i+1].segment)&&parts[i+2].isWordLike){
+    token+=parts[i+1].segment+parts[i+2].segment;i+=2;
+   }
+   raw.push(token);
+  }
+ }else raw=text.match(/[\p{L}\p{M}]+(?:['’][\p{L}\p{M}]+)*(?:[-‐‑‒–—][\p{L}\p{M}]+(?:['’][\p{L}\p{M}]+)*)*|[\p{N}]+(?:[.,][\p{N}]+)*/gu)||[];
  const hy=$("wc-hyphen-split").checked,con=$("wc-contraction-split").checked,nums=$("wc-ignore-numbers").checked,words=[];
  raw.forEach(token=>{let parts=hy?token.split(/[-‐‑‒–—]/u):[token];if(con)parts=parts.flatMap(p=>p.split(/['’]/u));parts.forEach(p=>{if(p&&!(nums&&!/[\p{L}\p{M}]/u.test(p)))words.push(p)})});
  return words;
