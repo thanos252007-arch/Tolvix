@@ -8,6 +8,10 @@ Canonical website: https://tolvix.in/
 
 Tolvix brings commonly used online utilities together in one website. Visitors can open a tool, enter or upload the relevant input, and use the available controls. Tool capabilities and supported formats vary by tool; consult each tool page for its exact behaviour and limitations.
 
+## Featured tool
+
+- [Free QR Code Generator Online (no signup)](https://tolvix.in/tools/qr.html) — create a QR code from a public website URL or plain text, preview it and download a PNG. The generator sends entered content to the third-party service api.qrserver.com; do not enter confidential information. It creates a fixed/static QR image and does not provide managed dynamic redirects.
+
 ## Main pages
 
 - [Homepage and tool directory](https://tolvix.in/)
