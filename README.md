@@ -1255,3 +1255,12 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Refined the essay word-count guide's anchor text to describe the destination more clearly.
 - Preserved the homepage's broad “free online tools” positioning to avoid making the homepage compete with the dedicated Word Counter page for the same primary query.
 - Source-level changes only. Google ranking is not guaranteed; request recrawling in Search Console after confirming the Cloudflare deployment, then monitor impressions, clicks and average position for queries such as “word counter”, “word counter online” and “free word counter”.
+
+## Word Counter simplification — 12 November 2026
+
+- Simplified the Word Counter into a focused live-counting tool with a single text box and six results: words, characters, characters without spaces, sentences, paragraphs and estimated reading time.
+- Kept only two straightforward actions: copy the word count and clear the text.
+- Removed the goal tracker, keyword-density and frequent-word analysis, readability score, adjustable speeds, counting-option controls, text comparison, TXT upload and report exports from the user interface and script.
+- Replaced the previous advanced analysis script with a small live counter. The tool still updates as the user types and retains the existing canonical URL, GA4 integration, shared theme, structured data and relevant SEO content.
+- Updated the page copy and FAQs to match the simpler feature set; removed claims about features no longer offered.
+- Source changes committed. Validate the deployed page on desktop/mobile and test copy/clear actions after Cloudflare publishes the changes.
