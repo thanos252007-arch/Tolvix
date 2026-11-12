@@ -1231,3 +1231,17 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 
 - Follow-up presentation pass: added responsive, theme-aware styling for the new homepage category guide cards in `assets/style.css`; two columns on wider screens and one column on narrow screens.
 - Post-change source verification: homepage title/description/canonical, single H1, GA4 ID, Search Console verification tag, 57 tool cards, 37 guide links, new category styling and internal route references checked. All linked tool/guide destinations are present in the existing sitemap. This is source-level verification, not a live visual/browser or Lighthouse test.
+
+## Advanced Word Counter upgrade — 12 November 2026
+
+- Rebuilt `tools/word.html` as a live writing-analysis workspace while preserving its canonical URL, GA4 integration, shared theme system, WebApplication structured data and related internal links.
+- Added live word, character, no-whitespace character, sentence, paragraph, line, unique-word, average word/sentence length, longest-word, estimated-page, reading-time and speaking-time statistics.
+- Added configurable counting conventions for hyphenated terms, contractions and number-only tokens.
+- Added minimum/target/maximum word goals with progress feedback; adjustable reading and speaking speeds; approximate English Flesch Reading Ease with an explicit heuristic limitation.
+- Added case-insensitive keyword/phrase frequency and density, a top-10 frequent-words table, two-version word-count comparison, local TXT import (2 MB maximum), copy actions, TXT report and CSV export.
+- Text analysis, comparisons, TXT reading and exports run in the browser. The TXT input is not sent to a Tolvix text-processing endpoint. Normal website analytics and hosting disclosures remain applicable.
+- Added responsive styling that follows the existing Tolvix dark/light theme.
+- Validation checklist: empty input, Unicode/emoji, punctuation, hyphenation, contractions, numeric tokens, multi-line paragraphs, goal boundaries, invalid speeds, keyword phrases, TXT size rejection, copy fallback, TXT/CSV export, comparison, reset, mobile layout and both themes.
+- Page count is an estimate at 500 words per page; reading/speaking times depend on the selected words-per-minute settings. Sentence detection is punctuation-based and not a full linguistic parser.
+
+**SEO note:** This upgrade adds task utility and descriptive content but does not guarantee rankings or a particular Search Console position. Verify Cloudflare deployment and test the live tool before requesting indexing.
