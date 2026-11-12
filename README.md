@@ -1288,3 +1288,10 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Each card includes a linked calculator title, a concise task description, and an Open calculator action.
 - The cards are included in the existing searchable tool directory through their `data-search` terms.
 - Updated homepage commit: `a376557794bc8cc9e93ce3bafff8c04ec64b302e`.
+
+### Physics section placement correction — 12 November 2026
+
+- Moved the Physics calculators category to appear immediately after **SEO, Writing & Productivity Tools** in the homepage tool directory.
+- Preserved all 20 individual calculator cards, links, descriptions, search keywords, styling and standalone calculator pages.
+- The homepage overview, guides and FAQ remain after the tool directory. No calculator functionality, metadata, canonical URLs, analytics or sitemap entries were changed.
+- Source order verified: SEO tools → Physics tools → homepage overview → guides. This is source-level verification; confirm the live Cloudflare deployment after publishing.
