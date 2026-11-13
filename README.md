@@ -1301,3 +1301,11 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Removed the manually embedded northeast-arrow icon from each of the 20 Physics card action labels.
 - Kept the shared card-button CSS arrow, so each Physics card now displays a single consistent arrow like the rest of the tool directory.
 - Verified all 20 Physics action labels contain only “Open calculator” in the HTML; the shared CSS supplies the one arrow. No tool links or calculator behaviour changed.
+
+## Homepage visual refinement and directory consistency — 13 November 2026
+
+- Refined the homepage tool directory with more consistent card spacing, typography, contrast, border treatment, hover/focus feedback and responsive layouts in dark and light themes.
+- Kept the existing tool-card DOM order and all category boundaries intact. The desktop directory remains three columns, tablet two columns and narrow mobile one column; Physics remains immediately after SEO, Writing & Productivity Tools.
+- Reserved space in card headings for the favorite control, improved card action sizing, and retained the shared single-arrow button treatment.
+- Corrected homepage tool-count copy from 57/57+ to 77/77+ to match the 77 tool cards currently listed.
+- No tool URLs, calculator code, search behaviour, analytics, canonical metadata or sitemap entries were changed. Source-level checks were run; live visual verification across browsers and devices remains necessary after deployment.
