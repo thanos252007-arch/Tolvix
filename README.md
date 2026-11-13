@@ -1327,3 +1327,12 @@ Expanded all 20 Physics calculator pages with calculator-specific explanatory co
 ## Tool-page SEO audit (13 November 2026)
 
 Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators). All 57 non-Physics pages checked have a unique page title, meta description, canonical URL, Open Graph title and one H1. Improved the short Word Counter and Text-to-PDF meta descriptions and kept their Open Graph descriptions aligned. The 20 Physics pages now include individual topic explanations, equations, worked examples, model limitations, related links and three FAQs each. This is a source-level HTML audit; browser-based functionality, visual rendering and Search Console indexing still require separate checks.
+
+
+## PDF Merge usability upgrade — 13 November 2026
+
+- Reworked the PDF Merge workspace with a clear file list, file-size and page-count details, and simple move-up/move-down controls to set merge order.
+- Added individual file removal, a custom output filename, and clearer progress/success/error status messages.
+- Kept processing in the browser with the existing pinned `pdf-lib` library and retained the existing 50 MB per-file limit.
+- Preserved the PDF Merge page URL, canonical metadata, analytics, structured data and existing educational content.
+- Source-level implementation only. Verify actual merging, reordered page sequence, malformed/large PDFs, mobile layout and CDN fallback in a real browser after deployment.

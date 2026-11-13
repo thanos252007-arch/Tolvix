@@ -2298,3 +2298,20 @@ button:hover{transform:translateY(-1px)}
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
+
+/* Focused PDF merge workspace */
+.pdf-merge-workspace{margin:22px 0;padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}
+.pdf-merge-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.pdf-merge-heading h2{margin:0;font-size:18px;font-weight:550}
+.pdf-merge-heading p{margin:3px 0 0;color:var(--muted);font-size:13px}
+#pdf-file-count{white-space:nowrap;color:var(--accent);font-size:13px}
+.pdf-merge-list{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.pdf-merge-empty{padding:18px;border:1px dashed var(--line-strong);border-radius:10px;color:var(--muted);text-align:center;font-size:14px}
+.pdf-merge-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised)}
+.pdf-merge-file-info{display:grid;gap:3px;min-width:0}
+.pdf-merge-file-info strong{overflow-wrap:anywhere;font-size:13px;font-weight:550}
+.pdf-merge-file-info span{color:var(--muted);font-size:12px}
+.pdf-merge-controls{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.pdf-merge-controls button{min-width:36px;min-height:36px;padding:5px 9px;font-size:13px}
+.pdf-merge-invalid{border-color:var(--negative)}
+@media(max-width:520px){.pdf-merge-item{align-items:flex-start;flex-direction:column}.pdf-merge-controls{width:100%}.pdf-merge-controls button:last-child{margin-left:auto}.pdf-merge-heading{align-items:flex-start}}
