@@ -1,5 +1,17 @@
 # Tolvix — Free Online Tools
 
+## Current traffic and discovery audit — 13 November 2026
+
+- Current user-reported traffic baseline: approximately 50–60 daily views. This is not independently verified in GA4 during this audit.
+- Sitemap source audit: 121 URLs total, including 77 tool pages and 39 guide pages; no duplicate URLs found.
+- `robots.txt` allows crawling and references the canonical sitemap.
+- Homepage source links to priority tools and the Physics category; its displayed inventory is 77 tools.
+- Found that `llms.txt` omitted the 20 Physics calculator URLs and two recently added study guides. Updated it to include those pages so the machine-readable discovery file matches the current site inventory.
+- This is a discovery-file completeness fix, not a guaranteed Google ranking or traffic fix. `llms.txt` is not a substitute for Google Search Console, a sitemap, crawlable internal links, or useful pages.
+- No Search Console performance export or GA4 acquisition report was available during this audit, so the causes of the current traffic level cannot yet be attributed to impressions, rankings, click-through rate, or traffic sources.
+- SEO change policy: avoid repeatedly editing titles, descriptions, canonical URLs, and page copy without query/page performance evidence. Prioritize technical defects and measured opportunities; compare performance over consistent date ranges.
+
+
 Tolvix is a free online tools website built to make everyday text, calculation, developer and productivity tasks simple and accessible.
 
 - **Live website:** https://tolvix.in/
