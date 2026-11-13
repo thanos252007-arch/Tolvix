@@ -1350,3 +1350,14 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 
 - Suppressed the shared advanced-tool Reset button on the PDF Merge page only. Other advanced tools continue to receive their Reset button.
 - Kept PDF Merge's Clear action and individual file removal available; drag-and-drop ordering and merge behaviour are unchanged.
+
+
+## Search-question guide improvement — 13 November 2026
+
+- Rebuilt six existing guides around specific reader questions: GST calculation, loan EMI, percentage calculations, JPG compression, PDF merging and JSON-to-CSV conversion.
+- Added two new guides: SPPU SGPA calculation and exam negative-marking calculation. Each has a canonical URL, unique title and description, Article structured data, worked examples, FAQs and a direct link to its matching calculator.
+- Added both new guides to the homepage Calculators guide directory and `sitemap.xml`; the guide directory count is now 39 (previously 37).
+- The SPPU guide explains the credit-weighted SGPA formula and directs students to the rules for their own programme and pattern instead of assuming one universal grade table. It links to the official SPPU Examination Section.
+- Updated the PDF Merge guide to match the current interface: add files in multiple selections, drag to reorder, remove individual files, set an output name and respect the 50 MB per-file limit. It does not describe the removed Reset button.
+- Preserved the existing URLs for all six updated guides and retained tool URLs and analytics configuration.
+- Source-level checks only; browser rendering, live Cloudflare deployment and Search Console indexing remain to be checked. These changes do not guarantee rankings or traffic.
