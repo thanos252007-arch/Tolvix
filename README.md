@@ -1373,3 +1373,13 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - Updated the PDF Merge guide to match the current interface: add files in multiple selections, drag to reorder, remove individual files, set an output name and respect the 50 MB per-file limit. It does not describe the removed Reset button.
 - Preserved the existing URLs for all six updated guides and retained tool URLs and analytics configuration.
 - Source-level checks only; browser rendering, live Cloudflare deployment and Search Console indexing remain to be checked. These changes do not guarantee rankings or traffic.
+
+
+## Search Console query-led CSV-to-JSON guide update — 13 November 2026
+
+- Evidence supplied from the last-28-days Search Console report: the queries “how to convert csv to json” and “connect csv to json” each recorded one impression; the CSV-to-JSON guide appeared with three page impressions overall.
+- Audit finding: the existing guide was approximately 322 words and lacked a concrete CSV input-to-JSON output example. The matching converter already existed at `/tools/csv-to-json.html`.
+- Expanded only `guides/convert-csv-to-json.html` with a worked example, explicit conversion steps, CSV formatting checks, output validation guidance and task-specific FAQs. Added contextual links to the converter, JSON Formatter and CSV Viewer.
+- Kept the guide URL, canonical URL, and existing converter implementation unchanged. Updated the guide's description, Open Graph description and Article `dateModified` to reflect the expanded content.
+- Objective: make the existing guide a more complete answer for CSV-to-JSON informational searches and help readers reach the working converter. This is a relevance and usefulness improvement, not a ranking guarantee.
+- Verification: source-level structure and links checked after editing; browser rendering, live Cloudflare deployment and future Search Console performance have not yet been verified.
