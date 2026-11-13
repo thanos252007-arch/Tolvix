@@ -33,11 +33,11 @@ async function renderPDFMergeList(){
   const name=document.createElement("strong");name.textContent=f.name;
   const meta=document.createElement("span");meta.textContent=formatBytes(f.size)+" · Reading page count…";
   info.append(name,meta);
+  li.draggable=true;li.dataset.pdfIndex=i;
   const controls=document.createElement("div");controls.className="pdf-merge-controls";
-  const up=document.createElement("button");up.type="button";up.className="secondary";up.textContent="↑";up.setAttribute("aria-label","Move "+f.name+" up");up.disabled=i===0;up.dataset.pdfMove="up";up.dataset.pdfIndex=i;
-  const down=document.createElement("button");down.type="button";down.className="secondary";down.textContent="↓";down.setAttribute("aria-label","Move "+f.name+" down");down.disabled=i===selectedPDFs.length-1;down.dataset.pdfMove="down";down.dataset.pdfIndex=i;
+  const handle=document.createElement("span");handle.className="pdf-merge-drag-handle";handle.textContent="⠿";handle.title="Drag to change merge order";handle.setAttribute("aria-label","Drag to reorder "+f.name);handle.setAttribute("role","img");
   const remove=document.createElement("button");remove.type="button";remove.className="secondary";remove.textContent="Remove";remove.setAttribute("aria-label","Remove "+f.name);remove.dataset.pdfRemove=i;
-  controls.append(up,down,remove);li.append(info,controls);list.append(li);
+  controls.append(handle,remove);li.append(info,controls);list.append(li);
   try{await ensurePDFLib();const d=await load(f);meta.textContent=formatBytes(f.size)+" · "+d.getPageCount()+" page"+(d.getPageCount()===1?"":"s");}
   catch(e){meta.textContent=formatBytes(f.size)+" · Could not read PDF";li.classList.add("pdf-merge-invalid");}
  }
@@ -60,11 +60,48 @@ r.addEventListener("click",async e=>{if(e.target.id==="run"){e.preventDefault();
   const zone=$("#files")?.closest(".file-drop-zone");if(zone?.firstChild)zone.firstChild.textContent="Add more PDFs — select files again to add them";
   status("Added "+incoming.length+" PDF"+(incoming.length===1?"":"s")+". "+selectedPDFs.length+" selected in total.");
  });
- $("#pdf-merge-list").addEventListener("click",async e=>{
-  const remove=e.target.closest("[data-pdf-remove]"),move=e.target.closest("[data-pdf-move]");
+ const list=$("#pdf-merge-list");
+ list.addEventListener("click",async e=>{
+  const remove=e.target.closest("[data-pdf-remove]");
   if(remove){selectedPDFs.splice(+remove.dataset.pdfRemove,1);await renderPDFMergeList();status("File removed.");}
-  if(move){const i=+move.dataset.pdfIndex,j=i+(move.dataset.pdfMove==="up"?-1:1);if(j>=0&&j<selectedPDFs.length){[selectedPDFs[i],selectedPDFs[j]]=[selectedPDFs[j],selectedPDFs[i]];await renderPDFMergeList();status("Merge order updated.");}}
  });
+ let dragIndex=null,pointerDrag=null;
+ list.addEventListener("dragstart",e=>{
+  const item=e.target.closest(".pdf-merge-item");if(!item)return;
+  dragIndex=+item.dataset.pdfIndex;item.classList.add("pdf-merge-dragging");
+  e.dataTransfer.effectAllowed="move";e.dataTransfer.setData("text/plain",String(dragIndex));
+ });
+ list.addEventListener("dragover",e=>{
+  if(dragIndex===null)return;e.preventDefault();e.dataTransfer.dropEffect="move";
+  const target=e.target.closest(".pdf-merge-item");if(!target)return;
+  const to=+target.dataset.pdfIndex;if(to===dragIndex)return;
+  const fromItem=list.children[dragIndex],targetItem=list.children[to];
+  if(!fromItem||!targetItem)return;
+  if(to>dragIndex)list.insertBefore(fromItem,targetItem.nextSibling);else list.insertBefore(fromItem,targetItem);
+  [selectedPDFs[dragIndex],selectedPDFs[to]]=[selectedPDFs[to],selectedPDFs[dragIndex]];
+  [...list.children].forEach((item,index)=>item.dataset.pdfIndex=index);dragIndex=to;
+ });
+ list.addEventListener("drop",e=>{if(dragIndex!==null)e.preventDefault();});
+ list.addEventListener("dragend",async()=>{dragIndex=null;list.querySelectorAll(".pdf-merge-dragging").forEach(x=>x.classList.remove("pdf-merge-dragging"));await renderPDFMergeList();status("Merge order updated.");});
+ list.addEventListener("pointerdown",e=>{
+  const handle=e.target.closest(".pdf-merge-drag-handle");if(!handle||e.pointerType==="mouse")return;
+  const item=handle.closest(".pdf-merge-item");if(!item)return;
+  pointerDrag={pointerId:e.pointerId,index:+item.dataset.pdfIndex};handle.setPointerCapture(e.pointerId);item.classList.add("pdf-merge-dragging");e.preventDefault();
+ });
+ list.addEventListener("pointermove",e=>{
+  if(!pointerDrag||pointerDrag.pointerId!==e.pointerId)return;
+  const over=document.elementFromPoint(e.clientX,e.clientY)?.closest(".pdf-merge-item");if(!over)return;
+  const to=+over.dataset.pdfIndex,from=pointerDrag.index;if(to===from)return;
+  const moving=list.children[from],target=list.children[to];if(!moving||!target)return;
+  if(to>from)list.insertBefore(moving,target.nextSibling);else list.insertBefore(moving,target);
+  [selectedPDFs[from],selectedPDFs[to]]=[selectedPDFs[to],selectedPDFs[from]];
+  [...list.children].forEach((item,index)=>item.dataset.pdfIndex=index);pointerDrag.index=to;
+ });
+ const finishPointerDrag=async e=>{
+  if(!pointerDrag||pointerDrag.pointerId!==e.pointerId)return;
+  pointerDrag=null;list.querySelectorAll(".pdf-merge-dragging").forEach(x=>x.classList.remove("pdf-merge-dragging"));await renderPDFMergeList();status("Merge order updated.");
+ };
+ list.addEventListener("pointerup",finishPointerDrag);list.addEventListener("pointercancel",finishPointerDrag);
 }
 if(id==="pdf-metadata")$("#files").addEventListener("change",async()=>{try{let f=files()?.[0];if(!f)return;let d=await load(f);["title","author","subject","creator","producer"].forEach(k=>$("#"+k).value=d[{"title":"getTitle","author":"getAuthor","subject":"getSubject","creator":"getCreator","producer":"getProducer"}[k]]()||"");$("#keywords").value=d.getKeywords()||"";status("Loaded metadata. Edit fields and save.");}catch(e){status(e.message);}});
 })();

@@ -1336,3 +1336,11 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - Kept processing in the browser with the existing pinned `pdf-lib` library and retained the existing 50 MB per-file limit.
 - Preserved the PDF Merge page URL, canonical metadata, analytics, structured data and existing educational content.
 - Source-level implementation only. Verify actual merging, reordered page sequence, malformed/large PDFs, mobile layout and CDN fallback in a real browser after deployment.
+
+
+### PDF Merge drag-and-drop ordering — 13 November 2026
+
+- Replaced the move-up and move-down arrow buttons with a visible drag handle on each selected PDF.
+- Users can drag a file to change the merge sequence; pointer-based dragging is also supported for touch input, while native drag-and-drop supports desktop browsers.
+- Individual Remove, Clear and Reset actions remain available. File selection, page-count reading, output naming and merge processing are unchanged.
+- Source-level implementation only; verify drag behaviour on desktop and touch devices after Cloudflare deployment.

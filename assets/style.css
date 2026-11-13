@@ -2311,7 +2311,10 @@ button:hover{transform:translateY(-1px)}
 .pdf-merge-file-info{display:grid;gap:3px;min-width:0}
 .pdf-merge-file-info strong{overflow-wrap:anywhere;font-size:13px;font-weight:550}
 .pdf-merge-file-info span{color:var(--muted);font-size:12px}
-.pdf-merge-controls{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.pdf-merge-controls{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .pdf-merge-controls button{min-width:36px;min-height:36px;padding:5px 9px;font-size:13px}
+.pdf-merge-drag-handle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--muted);font-size:24px;line-height:1;cursor:grab;touch-action:none;user-select:none}
+.pdf-merge-item[draggable="true"]{cursor:grab}
+.pdf-merge-dragging{opacity:.55;border-style:dashed}
 .pdf-merge-invalid{border-color:var(--negative)}
 @media(max-width:520px){.pdf-merge-item{align-items:flex-start;flex-direction:column}.pdf-merge-controls{width:100%}.pdf-merge-controls button:last-child{margin-left:auto}.pdf-merge-heading{align-items:flex-start}}
