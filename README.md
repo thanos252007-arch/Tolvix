@@ -1322,3 +1322,8 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 ## Physics calculator SEO content update (13 November 2026)
 
 Expanded all 20 Physics calculator pages with calculator-specific explanatory content below the working calculator: topic introductions, equations and variable definitions, worked numerical examples, model assumptions/limitations, related physics links, and FAQs. Existing calculator forms, scripts, input identifiers, formulas, canonical URLs, analytics tags, and structured-data blocks were left intact. These are educational explanations of the calculator models, not independent scientific certification. Source-level checks should be followed by browser testing of all calculator inputs and outputs.
+
+
+## Tool-page SEO audit (13 November 2026)
+
+Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators). All 57 non-Physics pages checked have a unique page title, meta description, canonical URL, Open Graph title and one H1. Improved the short Word Counter and Text-to-PDF meta descriptions and kept their Open Graph descriptions aligned. The 20 Physics pages now include individual topic explanations, equations, worked examples, model limitations, related links and three FAQs each. This is a source-level HTML audit; browser-based functionality, visual rendering and Search Console indexing still require separate checks.
