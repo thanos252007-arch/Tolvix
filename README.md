@@ -1317,3 +1317,8 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Preserved the existing homepage category DOM order and all tool-card links. Physics remains immediately after SEO & Writing; no card nodes were moved or regenerated.
 - Removed a duplicate homepage theme-toggle initializer. The shared `assets/theme.js` remains the single source of theme-toggle creation and preference persistence.
 - Preserved the tool search, favourites/recent-tools logic, analytics ID, canonical metadata, tool URLs, sitemap and calculator logic. This is a source-level design update; browser/device visual QA and live deployment confirmation remain outstanding.
+
+
+## Physics calculator SEO content update (13 November 2026)
+
+Expanded all 20 Physics calculator pages with calculator-specific explanatory content below the working calculator: topic introductions, equations and variable definitions, worked numerical examples, model assumptions/limitations, related physics links, and FAQs. Existing calculator forms, scripts, input identifiers, formulas, canonical URLs, analytics tags, and structured-data blocks were left intact. These are educational explanations of the calculator models, not independent scientific certification. Source-level checks should be followed by browser testing of all calculator inputs and outputs.
