@@ -78,7 +78,7 @@ r.addEventListener("click",async e=>{if(e.target.id==="run"){e.preventDefault();
   const fromItem=list.children[dragIndex],targetItem=list.children[to];
   if(!fromItem||!targetItem)return;
   if(to>dragIndex)list.insertBefore(fromItem,targetItem.nextSibling);else list.insertBefore(fromItem,targetItem);
-  [selectedPDFs[dragIndex],selectedPDFs[to]]=[selectedPDFs[to],selectedPDFs[dragIndex]];
+  const [moved]=selectedPDFs.splice(dragIndex,1);selectedPDFs.splice(to,0,moved);
   [...list.children].forEach((item,index)=>item.dataset.pdfIndex=index);dragIndex=to;
  });
  list.addEventListener("drop",e=>{if(dragIndex!==null)e.preventDefault();});
@@ -94,7 +94,7 @@ r.addEventListener("click",async e=>{if(e.target.id==="run"){e.preventDefault();
   const to=+over.dataset.pdfIndex,from=pointerDrag.index;if(to===from)return;
   const moving=list.children[from],target=list.children[to];if(!moving||!target)return;
   if(to>from)list.insertBefore(moving,target.nextSibling);else list.insertBefore(moving,target);
-  [selectedPDFs[from],selectedPDFs[to]]=[selectedPDFs[to],selectedPDFs[from]];
+  const [moved]=selectedPDFs.splice(from,1);selectedPDFs.splice(to,0,moved);
   [...list.children].forEach((item,index)=>item.dataset.pdfIndex=index);pointerDrag.index=to;
  });
  const finishPointerDrag=async e=>{
