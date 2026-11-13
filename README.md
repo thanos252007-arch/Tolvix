@@ -1309,3 +1309,11 @@ The current SEO focus is the Tolvix QR Code Generator at [tools/qr.html](tools/q
 - Reserved space in card headings for the favorite control, improved card action sizing, and retained the shared single-arrow button treatment.
 - Corrected homepage tool-count copy from 57/57+ to 77/77+ to match the 77 tool cards currently listed.
 - No tool URLs, calculator code, search behaviour, analytics, canonical metadata or sitemap entries were changed. Source-level checks were run; live visual verification across browsers and devices remains necessary after deployment.
+
+## Premium site-wide experience pass — 13 November 2026
+
+- Added a shared premium visual layer for the homepage, standard tool pages and Physics calculators: deeper obsidian/blue surfaces, improved typography, spacing, controls, result panels, focus states and restrained motion.
+- Refined the homepage hero, search field, quick links, trust strip, category navigation and tool cards. Desktop uses three columns, tablet two and mobile one; featured links and saved-tool lists adapt to smaller screens.
+- Preserved the existing homepage category DOM order and all tool-card links. Physics remains immediately after SEO & Writing; no card nodes were moved or regenerated.
+- Removed a duplicate homepage theme-toggle initializer. The shared `assets/theme.js` remains the single source of theme-toggle creation and preference persistence.
+- Preserved the tool search, favourites/recent-tools logic, analytics ID, canonical metadata, tool URLs, sitemap and calculator logic. This is a source-level design update; browser/device visual QA and live deployment confirmation remain outstanding.
