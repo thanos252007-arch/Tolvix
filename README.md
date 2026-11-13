@@ -1344,3 +1344,9 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - Users can drag a file to change the merge sequence; pointer-based dragging is also supported for touch input, while native drag-and-drop supports desktop browsers.
 - Individual Remove, Clear and Reset actions remain available. File selection, page-count reading, output naming and merge processing are unchanged.
 - Source-level implementation only; verify drag behaviour on desktop and touch devices after Cloudflare deployment.
+
+
+### PDF Merge reset-button removal — 13 November 2026
+
+- Suppressed the shared advanced-tool Reset button on the PDF Merge page only. Other advanced tools continue to receive their Reset button.
+- Kept PDF Merge's Clear action and individual file removal available; drag-and-drop ordering and merge behaviour are unchanged.
