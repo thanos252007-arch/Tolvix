@@ -142,6 +142,32 @@ Tolvix brings commonly used online utilities together in one website. Visitors c
 - [Edit PDF Metadata](https://tolvix.in/guides/edit-pdf-metadata.html)
 - [Add a Watermark to PDF](https://tolvix.in/guides/add-watermark-to-pdf.html)
 
+## Physics calculators
+- [Projectile Motion Calculator](https://tolvix.in/tools/physics/projectile-motion.html)
+- [Kinematics Calculator](https://tolvix.in/tools/physics/kinematics.html)
+- [Free Fall Calculator](https://tolvix.in/tools/physics/free-fall.html)
+- [Vector Calculator](https://tolvix.in/tools/physics/vector.html)
+- [Inclined Plane Calculator](https://tolvix.in/tools/physics/inclined-plane.html)
+- [Circular Motion Calculator](https://tolvix.in/tools/physics/circular-motion.html)
+- [Newton's Second Law Calculator](https://tolvix.in/tools/physics/newtons-second-law.html)
+- [Work, Energy and Power Calculator](https://tolvix.in/tools/physics/work-energy-power.html)
+- [Momentum and Collision Calculator](https://tolvix.in/tools/physics/momentum-collision.html)
+- [Spring and SHM Calculator](https://tolvix.in/tools/physics/spring-shm.html)
+- [Pendulum Calculator](https://tolvix.in/tools/physics/pendulum.html)
+- [Wave Calculator](https://tolvix.in/tools/physics/wave.html)
+- [Doppler Effect Calculator](https://tolvix.in/tools/physics/doppler.html)
+- [Ohm's Law Calculator](https://tolvix.in/tools/physics/ohms-law.html)
+- [Resistor Calculator](https://tolvix.in/tools/physics/resistors.html)
+- [Lens and Mirror Calculator](https://tolvix.in/tools/physics/lens-mirror.html)
+- [Snell's Law Calculator](https://tolvix.in/tools/physics/snells-law.html)
+- [Measurement Uncertainty Calculator](https://tolvix.in/tools/physics/uncertainty.html)
+- [Significant Figures Calculator](https://tolvix.in/tools/physics/significant-figures.html)
+- [Physics Unit Converter](https://tolvix.in/tools/physics/unit-converter.html)
+
+## Additional study guides
+- [How to Calculate SGPA for SPPU Students](https://tolvix.in/guides/sgpa-calculation-sppu.html)
+- [How to Calculate Negative Marking](https://tolvix.in/guides/negative-marking-calculation.html)
+
 ## Guidance for automated systems
 
 - Treat each linked tool page as the source of truth for that tool's current features, supported inputs, output formats, and limitations.
