@@ -20,7 +20,7 @@ Tolvix is a free online tools website built to make everyday text, calculation, 
 - **Budget approach:** ₹0 / free-tier services
 - **Primary goal:** Build useful tools, grow genuine organic traffic, and prepare the site for responsible monetization.
 
-> **Project log last updated:** 12 November 2026 (QR Code Generator SEO focus)
+> **Project log last updated:** 14 November 2026 (website integrity audit; no SEO metadata or canonical changes)
 > This README is the project’s central progress log. Update it whenever a project change is made: code, tools, SEO, content, deployment, analytics, or monetization preparation.
 
 ---
@@ -1383,3 +1383,13 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - Kept the guide URL, canonical URL, and existing converter implementation unchanged. Updated the guide's description, Open Graph description and Article `dateModified` to reflect the expanded content.
 - Objective: make the existing guide a more complete answer for CSV-to-JSON informational searches and help readers reach the working converter. This is a relevance and usefulness improvement, not a ranking guarantee.
 - Verification: source-level structure and links checked after editing; browser rendering, live Cloudflare deployment and future Search Console performance have not yet been verified.
+
+
+## Website integrity audit — 14 November 2026
+
+- Rechecked the current `main` branch source for the homepage, sitemap, robots.txt, PDF Splitter, PDF Page Extractor, shared tool scripts, and policy/contact pages.
+- Confirmed the sitemap contains 121 URL entries and includes the PDF Page Extractor; `robots.txt` allows crawling and points to the sitemap.
+- Confirmed the homepage source retains the GA4 measurement ID `G-WH86KPZW58`, the Search Console verification meta tag, the canonical homepage URL, and the expected category order with Physics immediately after SEO & Writing.
+- Confirmed the PDF Page Extractor is implemented in `assets/new-tools.js`; it validates page selections and has a 50 MB input limit. It is a distinct URL but overlaps with PDF Splitter's page-extraction capability. Do not delete or redirect either URL without reviewing Search Console and traffic evidence; consider clarifying the user-facing difference in a future, measured content update.
+- The README's prior project-log date was stale; updated it to this audit date. No website page, SEO title, description, canonical, URL, sitemap entry, analytics tag, or tool code was changed in this audit.
+- Source inspection is not a substitute for live browser testing. Cloudflare deployment status, mobile rendering, and end-to-end file processing still require live verification.
