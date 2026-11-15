@@ -94,8 +94,10 @@ These pages already show a more complete baseline of explanatory content signals
 
 - `/tools/word.html`
 - `/tools/json.html`
+- `/tools/slug.html`
 - `/tools/replace.html`
 - `/tools/percentage.html`
+- `/tools/emi-calculator.html`
 - `/tools/age.html`
 - `/tools/gst.html`
 - `/tools/bmi.html`
