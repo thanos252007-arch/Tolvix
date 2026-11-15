@@ -1393,3 +1393,14 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - Confirmed the PDF Page Extractor is implemented in `assets/new-tools.js`; it validates page selections and has a 50 MB input limit. It is a distinct URL but overlaps with PDF Splitter's page-extraction capability. Do not delete or redirect either URL without reviewing Search Console and traffic evidence; consider clarifying the user-facing difference in a future, measured content update.
 - The README's prior project-log date was stale; updated it to this audit date. No website page, SEO title, description, canonical, URL, sitemap entry, analytics tag, or tool code was changed in this audit.
 - Source inspection is not a substitute for live browser testing. Cloudflare deployment status, mobile rendering, and end-to-end file processing still require live verification.
+
+
+## Global / US search-intent content update — 15 November 2026
+
+- Expanded five existing guides with practical, globally relevant workflows aligned with common searches: merging PDFs, compressing JPG/images, extracting selected PDF pages, formatting JSON for API debugging, and converting PNG to JPG.
+- Added task-specific examples and checks for application document packets, upload requirements, PDF page-number verification, API syntax versus schema validation, and transparent-image background handling.
+- Strengthened contextual links from guides to matching Tolvix tools, including the dedicated PDF Page Extractor.
+- Reused existing guide URLs; no duplicate guide pages, URL changes, canonical changes, sitemap edits, homepage restructuring, or analytics changes were made.
+- This is content alignment, not proof of US search demand or a guarantee of US rankings. Review Search Console's Country and Queries reports over time to measure impressions and clicks from the United States.
+- Source files updated: `guides/merge-pdf-files-online.html`, `guides/compress-images-online.html`, `guides/split-pdf-pages-online.html`, `guides/format-json-online.html`, `guides/convert-png-to-jpg.html`.
+- Verify the live pages after Cloudflare deployment before requesting indexing.
