@@ -1404,3 +1404,13 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - This is content alignment, not proof of US search demand or a guarantee of US rankings. Review Search Console's Country and Queries reports over time to measure impressions and clicks from the United States.
 - Source files updated: `guides/merge-pdf-files-online.html`, `guides/compress-images-online.html`, `guides/split-pdf-pages-online.html`, `guides/format-json-online.html`, `guides/convert-png-to-jpg.html`.
 - Verify the live pages after Cloudflare deployment before requesting indexing.
+
+
+## US keyword coverage inventory — 15 November 2026
+
+- Audited the repository tree and confirmed 77 individual tool HTML pages across PDF, image, text, SEO, developer, calculator, QR, and Physics categories.
+- Added `seo/us-keyword-map.csv` with one primary US-oriented search phrase and related phrase variants for every one of the 77 tools, plus target-market notes.
+- Kept India-specific tools such as GST and SGPA marked India-first rather than forcing irrelevant US targeting. General-purpose tools and Physics utilities are mapped for US/global discovery.
+- Keyword volume and competition fields are deliberately marked as not yet verified in Google Keyword Planner. Do not treat suggested phrases as measured search volumes. Official US figures must be collected with United States location, English language, Google Search network, and a consistent 12-month period.
+- No tool page titles, descriptions, URLs, canonicals, sitemap entries, homepage layout, analytics tags, or tool code were changed in this inventory step.
+- Next SEO work: validate keyword demand in batches, compare the map with Google Search Console queries/country data, then improve pages based on actual gaps rather than bulk rewriting.
