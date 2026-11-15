@@ -1453,3 +1453,13 @@ Completed source-only improvements to three pages identified in the 77-page audi
 - Tool JavaScript, URLs, sitemap, robots.txt, homepage, analytics configuration and category order were not changed.
 
 **Deployment status:** source commits are on `main`; Cloudflare live deployment and real browser/mobile tool tests remain pending. Do not start Batch 2 until this batch is confirmed live and the three tools pass functional checks.
+
+### AEO/GEO implementation batches 2–3 (15 November 2026)
+
+- Completed source edits across all **20 Physics calculator pages**: replaced repeated generic/occasionally self-referential related-calculator links with three relevant companion links per page plus the Physics directory. Existing formulas, worked examples, assumptions, tool UI, URLs and canonicals were not changed.
+- Completed source edits across all **12 older utility pages**: replaced generic “enter information / choose options” steps with instructions matching each tool's visible controls and task.
+- Combined with Batch 1, **35 pages received source improvements**; the remaining 42 pages were deliberately left stable because the audit found no clear reason for broad rewrites.
+- Re-fetched all 35 edited files from GitHub and checked H1 count, canonical URLs and GA4 ID. Confirmed valid JSON-LD on the three Batch 1 pages, specific steps on the 15 instruction-updated pages, and relevant related-link blocks/no self-links on all 20 Physics pages.
+- No JavaScript/tool logic, page URLs, canonical tags, title/meta tags, sitemap, robots.txt, homepage, analytics configuration or category order were changed.
+- The live site could not be verified with the available page checker during this run. Confirm Cloudflare's deployment of the latest `main` commit and manually test representative tools on desktop/mobile before making further SEO changes. These source commits must not be described as a verified live deployment.
+- Full audit and page-by-page scope: `seo/aeo-geo-readiness-audit-2026-11-15.md`.
