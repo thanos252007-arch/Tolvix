@@ -202,12 +202,12 @@ Do not invent user testing, expert credentials, performance claims, statistics, 
 - Run a representative manual test of each tool family before content changes.
 - Resolve the schema currency and generic-instruction questions with source evidence.
 
-### Batch 1 — Three schema-gap pages
-- `text-diff-checker.html`
-- `image-color-picker.html`
-- `word-to-pdf.html`
+### Batch 1 — Three schema-gap pages (source changes committed; live verification pending)
+- `tools/text-diff-checker.html` — replaced generic instructions with exact line-comparison steps, example and 200,000-character limit; clarified position-based comparison limitations; added a WebApplication JSON-LD block.
+- `tools/image-color-picker.html` — added exact image loading/pixel-sampling steps, file/megapixel limits and colour-profile caveat; added a WebApplication JSON-LD block.
+- `tools/word-to-pdf.html` — clarified the plain-text-only workflow, browser print steps, 100,000-character limit and DOCX limitation; added a WebApplication JSON-LD block.
 
-Improve only the factual answer and missing/appropriate structured data, if justified. Verify tool behavior and privacy statements. Keep URLs and canonicals untouched.
+Source verification after the commits confirmed one H1, unchanged canonical URL, existing title/description, valid JSON-LD, retained GA4 ID, specific ordered instructions, and removal of the generic instruction sentence on all three pages. The tool JavaScript was not changed. Cloudflare live deployment, visual rendering and real browser tool behavior still need a post-deployment check before Batch 2.
 
 ### Batch 2 — Five Physics pages
 Start with the Physics pages that have the strongest Search Console impressions or relevant queries. Improve units, formulas, assumptions, worked examples and related links. Then measure before moving to the next five.
