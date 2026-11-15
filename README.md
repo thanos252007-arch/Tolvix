@@ -1423,3 +1423,20 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - Third-party US keyword reports surfaced some useful PDF and QR demand figures, but these are not a complete, verified 77-keyword Keyword Planner export. Numeric volume status remains unverified for the full inventory.
 - No live tool-page content or metadata was changed in this audit. URLs, canonicals, analytics, sitemap, robots.txt, homepage layout and tool functionality remain untouched.
 - Next required evidence: export the 77-keyword Google Ads Keyword Planner data and Search Console query/page/country performance data. Only then proceed with small, evidence-backed page batches (up to five pages).
+
+## Official organic-growth strategy — SEO + AEO + GEO (15 November 2026)
+
+Tolvix's official organic-growth strategy is **SEO as the foundation, with AEO and GEO as content-quality and discoverability lenses**. The goal is to make every tool genuinely useful to people and easy for search/answer systems to understand—not to chase AI-specific hacks.
+
+- Completed a read-only source audit of all **77 tool pages** for AEO/GEO readiness. No live website files or deployments were changed during the audit.
+- Audit report: `seo/aeo-geo-readiness-audit-2026-11-15.md`.
+- Audit findings: all 77 pages have a title, meta description, one H1, and a matching canonical in source; 74 pages have JSON-LD, while 3 do not. Content depth, examples, FAQs, and internal-link depth vary.
+- Priority order: (1) validate/add appropriate schema on the 3 pages missing JSON-LD, (2) improve the 20 Physics calculators with clearer variables, units, assumptions, worked examples and relevant links, (3) add useful examples/answers to 12 older utility pages that lack FAQ signals, then (4) keep the remaining 42 pages stable unless Search Console or functional evidence justifies an edit.
+- Improvements will be delivered in controlled batches of **no more than five pages**, with a written change list, tool regression checks, canonical/analytics/sitemap checks, and deployment verification between batches.
+- Preserve all existing URLs, canonicals, sitemap entries, robots rules, GA4 ID, Search Console verification, and homepage category order. No bulk metadata rewrites or mass schema/FAQ insertion.
+- AEO content standard: direct answer, precise tool-specific steps, real input/output examples, accurate limitations and privacy details, and concise answers to genuine user questions.
+- GEO content standard: distinctive tested examples, formulas/assumptions, supported formats and limits, transparent data handling, accurate sources for factual claims, and useful links between related tools and guides.
+- Do not invent statistics, testing claims, expertise, citations, ratings, reviews or performance promises. No AI citation or ranking is guaranteed.
+- Do not create AI-only files, artificial text chunking, or FAQ/schema markup solely as ranking hacks. Structured data must match visible page content.
+
+The audit is repository-source inspection, not a live browser/mobile/Lighthouse test or proof of Google indexing. Confirm Cloudflare deployment and page behavior before publishing any later batch.
