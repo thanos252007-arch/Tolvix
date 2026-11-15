@@ -137,9 +137,7 @@ These pages already show a more complete baseline of explanatory content signals
 - `/tools/physics/` is excluded from this group and audited above.
 - `/tools/text-diff-checker.html`, `/tools/image-color-picker.html`, and `/tools/word-to-pdf.html` are excluded and audited above.
 
-The list above contains 40 explicit paths plus the three exclusions described; the remaining baseline entries are:
-- `/tools/physics/` pages are already fully listed in Priority 2 and are not part of this group.
-- **Correction to group arithmetic:** the 42-page baseline group is the remaining sitemap set after the 3 schema gaps, 20 Physics pages, and 12 no-FAQ pages. The explicit path list above should be used as the stable-page review set; confirm the full sitemap membership before batch edits.
+The baseline group contains 42 pages. The three additional exclusion paths shown at the end of the list belong to Priority 1 and are repeated only to make the exclusions explicit; they are not counted in the 42-page baseline group.
 
 ## Cross-page findings
 
@@ -209,14 +207,17 @@ Do not invent user testing, expert credentials, performance claims, statistics, 
 
 Source verification after the commits confirmed one H1, unchanged canonical URL, existing title/description, valid JSON-LD, retained GA4 ID, specific ordered instructions, and removal of the generic instruction sentence on all three pages. The tool JavaScript was not changed. Cloudflare live deployment, visual rendering and real browser tool behavior still need a post-deployment check before Batch 2.
 
-### Batch 2 — Five Physics pages
-Start with the Physics pages that have the strongest Search Console impressions or relevant queries. Improve units, formulas, assumptions, worked examples and related links. Then measure before moving to the next five.
+### Batch 2 — Physics calculators (20 pages; source edits completed)
+All 20 Physics pages now use topic-specific related-calculator links instead of repeated generic links, including irrelevant self-links. Each page links to three relevant companion calculators plus the Physics directory. Existing formulas, variables, worked examples, assumptions, limitations, FAQs, calculator interfaces, URLs and canonicals were left unchanged. This is an internal-discovery and topical-context improvement; it is not a claim that the formulas were independently revalidated.
 
-### Batch 3 — Five older utility pages
-Prioritize by Search Console evidence. Add examples or FAQs only where they address genuine user questions. Replace generic instructions with precise steps.
+### Batch 3 — Older utility pages (12 pages; source edits completed)
+Replaced generic instructions with task-specific steps on: Text Case Converter, Remove Duplicate Lines, Discount Calculator, Remove Extra Spaces, Sort Lines, Reverse Text, Base64 Encoder/Decoder, CSV to JSON, JSON to CSV, Tip Calculator, Password Generator and Word Frequency Counter. Instructions reflect the visible controls and explain relevant checks or limitations. No tool JavaScript was changed.
 
-### Later batches
-Continue in groups of no more than five pages. Each batch must have a written change list, source review, functional regression check, canonical/analytics/sitemap check, and deployment verification before the next batch.
+### Source verification after batches 1–3
+Repository source was re-fetched for all 35 edited pages. Checks confirmed one H1, unchanged self-canonical, retained GA4 Measurement ID, and specific steps on the 15 pages where instructions were replaced. The three pages in Batch 1 have one valid JSON-LD block each. All 20 Physics pages have the new topic-specific related-links block and no related self-link. Tool JavaScript, sitemap, robots.txt, homepage, title/meta tags, and category order were not changed.
+
+### Deployment and functional verification still required
+The public site could not be fetched with the available live-page checker during this run. These are GitHub source commits, not a verified Cloudflare release. Before treating the changes as live, confirm Cloudflare's deployment for the latest `main` commit and manually test representative tools from each family (text, calculators, Base64/CSV, password generation, image sampling and text-to-PDF printing) on desktop and mobile. Do not make further copy/schema changes until that check is complete.
 
 ## Official Tolvix organic-growth principle
 
