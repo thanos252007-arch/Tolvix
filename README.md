@@ -1414,3 +1414,12 @@ Audited all 77 tool HTML pages (57 non-Physics tools and 20 Physics calculators)
 - Keyword volume and competition fields are deliberately marked as not yet verified in Google Keyword Planner. Do not treat suggested phrases as measured search volumes. Official US figures must be collected with United States location, English language, Google Search network, and a consistent 12-month period.
 - No tool page titles, descriptions, URLs, canonicals, sitemap entries, homepage layout, analytics tags, or tool code were changed in this inventory step.
 - Next SEO work: validate keyword demand in batches, compare the map with Google Search Console queries/country data, then improve pages based on actual gaps rather than bulk rewriting.
+
+
+## US keyword and Search Console opportunity audit — 15 November 2026
+
+- Added `seo/us-keyword-opportunity-audit-2026-11-15.md` with directional US demand signals, the partial Search Console query sample previously supplied, category-level keyword gaps, and a controlled page-improvement workflow.
+- Confirmed that the current available Search Console query sample is incomplete: it lacks full page/query/country/position metrics. No false page-to-query matches were made.
+- Third-party US keyword reports surfaced some useful PDF and QR demand figures, but these are not a complete, verified 77-keyword Keyword Planner export. Numeric volume status remains unverified for the full inventory.
+- No live tool-page content or metadata was changed in this audit. URLs, canonicals, analytics, sitemap, robots.txt, homepage layout and tool functionality remain untouched.
+- Next required evidence: export the 77-keyword Google Ads Keyword Planner data and Search Console query/page/country performance data. Only then proceed with small, evidence-backed page batches (up to five pages).
