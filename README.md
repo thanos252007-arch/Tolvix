@@ -1440,3 +1440,16 @@ Tolvix's official organic-growth strategy is **SEO as the foundation, with AEO a
 - Do not create AI-only files, artificial text chunking, or FAQ/schema markup solely as ranking hacks. Structured data must match visible page content.
 
 The audit is repository-source inspection, not a live browser/mobile/Lighthouse test or proof of Google indexing. Confirm Cloudflare deployment and page behavior before publishing any later batch.
+
+### AEO/GEO controlled improvement — Batch 1 (15 November 2026)
+
+Completed source-only improvements to three pages identified in the 77-page audit:
+
+- `tools/text-diff-checker.html`: tool-specific steps, an example, the 200,000-character limit, and the line-based comparison limitation.
+- `tools/image-color-picker.html`: exact pixel-sampling steps, supported formats/limits, and colour-profile caveat.
+- `tools/word-to-pdf.html`: plain-text workflow, browser print steps, 100,000-character limit, and explicit DOCX limitation.
+- Added valid, page-specific `WebApplication` JSON-LD to these three pages. No Offer/price data was invented.
+- Verified in repository source: one H1 per page, existing titles/descriptions, unchanged self-canonicals, valid JSON-LD, retained GA4 Measurement ID, and no remaining generic how-to instruction on these pages.
+- Tool JavaScript, URLs, sitemap, robots.txt, homepage, analytics configuration and category order were not changed.
+
+**Deployment status:** source commits are on `main`; Cloudflare live deployment and real browser/mobile tool tests remain pending. Do not start Batch 2 until this batch is confirmed live and the three tools pass functional checks.
