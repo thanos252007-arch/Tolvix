@@ -1463,3 +1463,12 @@ Completed source-only improvements to three pages identified in the 77-page audi
 - No JavaScript/tool logic, page URLs, canonical tags, title/meta tags, sitemap, robots.txt, homepage, analytics configuration or category order were changed.
 - The live site could not be verified with the available page checker during this run. Confirm Cloudflare's deployment of the latest `main` commit and manually test representative tools on desktop/mobile before making further SEO changes. These source commits must not be described as a verified live deployment.
 - Full audit and page-by-page scope: `seo/aeo-geo-readiness-audit-2026-11-15.md`.
+
+
+## Search Console 404 review — 16 November 2026
+
+- Reviewed the two reported URLs against the current repository and sitemap.
+- `/tools/url-encoder.html` is a legacy path. The current tool page is `/tools/url-encoder-decoder.html`, which is already listed in the sitemap. Added a permanent HTTP 301 redirect in `worker.js` from the old path to the current canonical path; query strings are preserved.
+- `/tools/ai-detector.html` does not exist in the current repository and is not listed in the sitemap. No equivalent AI-detector page was found to redirect to. It should remain a genuine 404 if the tool was intentionally retired; do not redirect it to an unrelated page just to clear Search Console.
+- Source commit for the redirect: `01de83b1f423dc66c41a9636a63871c7bcf72ce1`.
+- **Deployment/live verification pending:** this GitHub commit must reach the Cloudflare Worker before the 301 takes effect. Then test the old URL for a 301 to the canonical URL and confirm the canonical page returns 200. The retired AI-detector URL should return 404. Search Console may take time to refresh after Google recrawls.
