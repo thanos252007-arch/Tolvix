@@ -1472,3 +1472,17 @@ Completed source-only improvements to three pages identified in the 77-page audi
 - `/tools/ai-detector.html` does not exist in the current repository and is not listed in the sitemap. No equivalent AI-detector page was found to redirect to. It should remain a genuine 404 if the tool was intentionally retired; do not redirect it to an unrelated page just to clear Search Console.
 - Source commit for the redirect: `01de83b1f423dc66c41a9636a63871c7bcf72ce1`.
 - **Deployment/live verification pending:** this GitHub commit must reach the Cloudflare Worker before the 301 takes effect. Then test the old URL for a 301 to the canonical URL and confirm the canonical page returns 200. The retired AI-detector URL should return 404. Search Console may take time to refresh after Google recrawls.
+
+
+## Homepage SEO audit fixes — 16 November 2026
+
+A targeted source-level update was made to the homepage after reviewing a third-party SiteAutopilot report. The report's 76/100 score is a vendor-specific diagnostic, not a Google score, and a 100/100 result is not guaranteed.
+
+- Shortened the homepage title from 74 characters to 53: `77+ Free Online Tools for PDF, Images & Text | Tolvix`.
+- Added a static `rel="icon"` reference to the existing root `/favicon.svg` (the homepage previously injected the favicon with JavaScript only).
+- Added Open Graph image metadata using the existing Tolvix brand mark; social-platform preview rendering still needs external validation.
+- Expanded the homepage JSON-LD graph with accurate `Organization` data, linking the existing WebSite entity to the publisher. No physical address, phone number, email, reviews or ratings were invented.
+- Added `FAQPage` structured data matching the four questions and answers already visible on the homepage; visible FAQ copy was not changed.
+- Preserved the homepage canonical URL, existing Google Analytics measurement ID, Search Console verification, robots directives, sitemap, tool URLs, guide URLs and existing page content.
+
+**Source validation:** the updated homepage was re-fetched from GitHub; title length, static favicon link, Open Graph image tag, parseable JSON-LD, Organization and FAQPage entities, visible FAQ section, canonical URL and GA4 ID were checked. This is not a live Cloudflare deployment check, a Google Rich Results eligibility guarantee, or a full browser/performance/accessibility audit. Do not chase a third-party 100/100 score by adding irrelevant schema or changing content solely to satisfy its proprietary rubric.
