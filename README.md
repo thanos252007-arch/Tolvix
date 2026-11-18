@@ -1491,3 +1491,8 @@ A targeted source-level update was made to the homepage after reviewing a third-
 ## Social preview logo correction — 18 November 2026
 
 The homepage Open Graph and Twitter image references now point to the high-resolution official Tolvix mark at `/assets/tolvix-mark.svg?v=2` rather than the 64×64 favicon. The image metadata identifies the 1028×1028 SVG mark and uses a versioned URL to help social crawlers fetch the updated artwork instead of a previously cached thumbnail. Twitter card metadata now requests a large image preview. The actual preview still depends on Cloudflare deployment and each platform refreshing its cache; the live social preview has not yet been verified.
+
+
+## Homepage PDF discovery links — 18 November 2026
+
+Added contextual links in the homepage PDF category introduction to four existing, sitemap-listed guides: merge PDF files, split PDF pages, convert PDF to images, and add page numbers to a PDF. This improves the path between the tool directory and relevant instructional content without changing tool URLs, guide URLs, canonicals, sitemap entries, analytics, or the homepage category order. Source edit committed to `main`; Cloudflare deployment and live rendering remain unverified. This is a discovery/usability improvement, not a promise of immediate ranking or traffic gains.
