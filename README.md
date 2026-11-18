@@ -1541,3 +1541,13 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Homepage stylesheet only. No page copy, SEO metadata, URLs, canonicals, structured data, analytics, sitemap, category order or tool behavior changed.
 - Commit: 2eb81f76ed0ca63c1b225feccd75c72040fab720.
 - Source-level change only. Cloudflare deployment and visual verification on desktop/mobile are still outstanding.
+
+
+## Chemistry tools expansion — 18 November 2026
+
+- Added a dedicated Chemistry category with 20 tool pages under `/tools/chemistry/`, using shared client-side calculation logic and responsive styling.
+- Tools: Periodic Table Explorer, Molar Mass, Mole, Molarity, Dilution, pH, pOH, Density, Ideal Gas Law, Combined Gas Law, Stoichiometry, Limiting Reactant, Theoretical Yield, Percent Yield, Percent Composition, Empirical Formula, Molecular Formula, Concentration Converter, Oxidation Number Helper and Electron Configuration.
+- Preserved existing tool paths, canonical URLs, GA4 measurement ID, Search Console verification and the Physics category position. Chemistry is inserted immediately before Physics.
+- Added all 20 canonical chemistry tool URLs to the sitemap.
+- The calculators disclose their assumptions. Formula parsing supports element symbols, nested parentheses/square brackets and hydrate separators. Electron configuration is explicitly limited to neutral atoms Z=1–54; pH/pOH use ideal dilute-solution approximations; ppm conversion uses the dilute aqueous mg/L approximation.
+- This feature is on a review branch and is not deployed. Complete formula and regression checks before merging. Do not describe these educational calculators as laboratory-grade or independently validated.
