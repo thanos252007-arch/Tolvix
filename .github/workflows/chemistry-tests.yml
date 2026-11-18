@@ -1,0 +1,22 @@
+name: Chemistry calculator tests
+
+on:
+  push:
+    branches:
+      - feature/20-chemistry-tools
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  chemistry-formula-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run chemistry formula regression tests
+        run: node --test tests/chemistry-tools.test.js
