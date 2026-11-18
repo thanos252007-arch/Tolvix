@@ -1503,3 +1503,14 @@ Added contextual links in the homepage PDF category introduction to four existin
 Added FAQPage JSON-LD to four existing high-impression pages: PDF Split, Add Page Numbers to a PDF, GST calculation guide, and Robots.txt Generator. Each structured-data question and answer matches Q&A content already visible on that page; no new FAQ claims or unsupported facts were introduced. The homepage already contains Organization and FAQPage JSON-LD, so no duplicate homepage schema was added. The homepage title is already within the commonly used 70-character audit threshold; no title, URL, canonical, sitemap, analytics, tool logic, or page copy was changed in this update. Source checks confirmed valid JSON-LD, existing self-canonicals and GA4 measurement ID on all four edited pages. FAQ rich-result display and ranking gains are not guaranteed; Google limits FAQ rich results in many site categories. Source changes are committed to `main`; live Cloudflare deployment still needs confirmation.
 
 SEO freeze begins after this release: no further SEO/content/schema changes for 7 days (through 25 November 2026), unless a critical technical defect is found.
+
+
+## Homepage visual refinement — 18 November 2026
+
+- Added a dedicated homepage-only stylesheet at `assets/home-polish.css` to refine the Midnight Sapphire / Aurora Glass visual direction.
+- Improved the hero hierarchy, blue-lit background, search field, primary actions, quick-tool preview, trust strip, popular-tool tiles, category navigation, tool cards, guide cards and FAQ panel.
+- Added responsive layouts for tablet and mobile, plus matching light-theme surfaces and reduced-motion handling.
+- Kept tool-page styling isolated from the new homepage stylesheet; no tool JavaScript or tool-page files were changed.
+- Preserved homepage text, tool links, guide links, category order, title/description, canonical URL, structured data, GA4 Measurement ID and sitemap source.
+- Source commits: `97c57e8f548a8e4dd800ce4eef37aa18b6d3496a` (stylesheet), `a37bf88540be592d07b7223566ffa15d08918160` (homepage stylesheet link).
+- This is a source-level visual update. Cloudflare deployment and real desktop/mobile visual testing still need confirmation; do not mark the live site as verified until checked after deployment.
