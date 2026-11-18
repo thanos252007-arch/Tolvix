@@ -51,3 +51,14 @@ for (const invalid of ["Xx2", "Ca()2", "Mg(OH", "2H2O", "H0", "H2O+"]) {
     assert.throws(() => chemistry.parseFormula(invalid));
   });
 }
+
+test("select defaults match the supported options for gas and concentration tools", () => {
+  const configStart = source.indexOf("const defaults=");
+  const configEnd = source.indexOf('root.querySelector("[data-chem-formula]")');
+  const setup = source.slice(configStart, configEnd) + "return { defaults, options, cfg };";
+  for (const [tool, expected] of [["ideal-gas", "p"], ["concentration-converter", "molarity"]]) {
+    const config = new Function("id", setup)(tool);
+    assert.equal(config.defaults.mode, expected);
+    assert.ok(config.options.mode[tool].includes(config.defaults.mode));
+  }
+});
