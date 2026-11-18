@@ -1558,6 +1558,6 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Static source checks confirm all 20 pages have matching tool IDs, one H1, their canonical URL, the existing GA4 measurement ID and the shared calculator script.
 - Hardened formula validation against empty groups, oversized hydrate multipliers and repeated element entries; corrected the molecular-formula mass input label and reset behavior for unknown-variable calculators.
 - Added a GitHub Actions workflow to run the formula-parser regression tests on pushes to this feature branch and pull requests targeting main.
-- Formula parser smoke tests run in this review: 6 reference molar masses passed and unknown element symbols were rejected. JavaScript syntax check passed.
+- GitHub Actions regression suite passed: 36 Node.js tests covering six reference molar masses, nested/hydrate formula parsing, invalid formulas, all 19 calculator known-answer scenarios, select defaults and rendering all 118 periodic-table elements. JavaScript syntax check passed.
 - Still required before merge: the GitHub Actions run must pass, and every calculator needs interactive browser testing (including mobile layout, reset behavior, invalid inputs and known-answer calculations). No browser-level test has been claimed yet.
 - The feature remains on `feature/20-chemistry-tools`; no merge to `main` and no Cloudflare production deployment have been performed.
