@@ -1496,3 +1496,10 @@ The homepage Open Graph and Twitter image references now point to the high-resol
 ## Homepage PDF discovery links — 18 November 2026
 
 Added contextual links in the homepage PDF category introduction to four existing, sitemap-listed guides: merge PDF files, split PDF pages, convert PDF to images, and add page numbers to a PDF. This improves the path between the tool directory and relevant instructional content without changing tool URLs, guide URLs, canonicals, sitemap entries, analytics, or the homepage category order. Source edit committed to `main`; Cloudflare deployment and live rendering remain unverified. This is a discovery/usability improvement, not a promise of immediate ranking or traffic gains.
+
+
+## Focused SEO update — 18 November 2026
+
+Added FAQPage JSON-LD to four existing high-impression pages: PDF Split, Add Page Numbers to a PDF, GST calculation guide, and Robots.txt Generator. Each structured-data question and answer matches Q&A content already visible on that page; no new FAQ claims or unsupported facts were introduced. The homepage already contains Organization and FAQPage JSON-LD, so no duplicate homepage schema was added. The homepage title is already within the commonly used 70-character audit threshold; no title, URL, canonical, sitemap, analytics, tool logic, or page copy was changed in this update. Source checks confirmed valid JSON-LD, existing self-canonicals and GA4 measurement ID on all four edited pages. FAQ rich-result display and ranking gains are not guaranteed; Google limits FAQ rich results in many site categories. Source changes are committed to `main`; live Cloudflare deployment still needs confirmation.
+
+SEO freeze begins after this release: no further SEO/content/schema changes for 7 days (through 25 November 2026), unless a critical technical defect is found.
