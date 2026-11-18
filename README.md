@@ -1550,4 +1550,14 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Preserved existing tool paths, canonical URLs, GA4 measurement ID, Search Console verification and the Physics category position. Chemistry is inserted immediately before Physics.
 - Added all 20 canonical chemistry tool URLs to the sitemap.
 - The calculators disclose their assumptions. Formula parsing supports element symbols, nested parentheses/square brackets and hydrate separators. Electron configuration is explicitly limited to neutral atoms Z=1–54; pH/pOH use ideal dilute-solution approximations; ppm conversion uses the dilute aqueous mg/L approximation.
-- This feature is on a review branch and is not deployed. Complete formula and regression checks before merging. Do not describe these educational calculators as laboratory-grade or independently validated.
+- This feature is on a review branch and is not deployed. Do not describe these educational calculators as laboratory-grade or independently validated.
+
+### Chemistry QA follow-up — 18 November 2026
+
+- Added Node.js regression tests for the production formula parser, including H2O, Ca(OH)2, CuSO4·5H2O, Al2(SO4)3, K4[Fe(CN)6], C6H12O6, nested groups, hydrates and invalid formula rejection.
+- Static source checks confirm all 20 pages have matching tool IDs, one H1, their canonical URL, the existing GA4 measurement ID and the shared calculator script.
+- Hardened formula validation against empty groups, oversized hydrate multipliers and repeated element entries; corrected the molecular-formula mass input label and reset behavior for unknown-variable calculators.
+- Added a GitHub Actions workflow to run the formula-parser regression tests on pushes to this feature branch and pull requests targeting main.
+- Formula parser smoke tests run in this review: 6 reference molar masses passed and unknown element symbols were rejected. JavaScript syntax check passed.
+- Still required before merge: the GitHub Actions run must pass, and every calculator needs interactive browser testing (including mobile layout, reset behavior, invalid inputs and known-answer calculations). No browser-level test has been claimed yet.
+- The feature remains on `feature/20-chemistry-tools`; no merge to `main` and no Cloudflare production deployment have been performed.
