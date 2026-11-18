@@ -1532,3 +1532,12 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - CSS-only homepage update. No page copy, URLs, canonicals, structured data, analytics, sitemap, category order, or tool behavior changed.
 - Commit: 93ade3c6fedb3cb93f593eeadee1460d9f3df3a7.
 - Source update only; Cloudflare deployment and live desktop/mobile rendering still require verification.
+
+
+### Atelier visual direction — 18 November 2026
+
+- Added a more deliberate premium editorial treatment to the homepage: stronger typography and whitespace, restrained monochrome surfaces, crisp navigation, refined tool cards and a calmer high-contrast CTA system.
+- Kept the established black/white identity with a cool blue accent; retained responsive layouts and light-theme overrides.
+- Homepage stylesheet only. No page copy, SEO metadata, URLs, canonicals, structured data, analytics, sitemap, category order or tool behavior changed.
+- Commit: 2eb81f76ed0ca63c1b225feccd75c72040fab720.
+- Source-level change only. Cloudflare deployment and visual verification on desktop/mobile are still outstanding.
