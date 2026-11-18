@@ -1514,3 +1514,12 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Preserved homepage text, tool links, guide links, category order, title/description, canonical URL, structured data, GA4 Measurement ID and sitemap source.
 - Source commits: `97c57e8f548a8e4dd800ce4eef37aa18b6d3496a` (stylesheet), `a37bf88540be592d07b7223566ffa15d08918160` (homepage stylesheet link).
 - This is a source-level visual update. Cloudflare deployment and real desktop/mobile visual testing still need confirmation; do not mark the live site as verified until checked after deployment.
+
+
+### Ultra-premium homepage finishing pass — 18 November 2026
+
+- Added a restrained orbital halo behind the hero, refined hero spacing and typography, polished the quick-tool preview, and introduced subtle surface depth and interaction details.
+- Improved focus-visible states and reduced-motion behavior; the animated sheen is disabled for reduced-motion preferences and on small screens.
+- Kept the update in the homepage-only stylesheet. No tool functionality, page content, URLs, canonicals, analytics, sitemap, or category order changed.
+- Commit: `17bb3f470e3e67c094550eddbffe3bbcdb089928`.
+- Source update only; verify Cloudflare deployment and inspect the live desktop/mobile layout before considering it complete.
