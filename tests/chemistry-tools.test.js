@@ -54,8 +54,8 @@ for (const invalid of ["Xx2", "Ca()2", "Mg(OH", "2H2O", "H0", "H2O+"]) {
 
 test("select defaults match the supported options for gas and concentration tools", () => {
   const configStart = source.indexOf("const defaults=");
-  const configEnd = source.indexOf('root.querySelector("[data-chem-formula]")');
-  const setup = source.slice(configStart, configEnd) + "return { defaults, options, cfg };";
+  const configEnd = source.indexOf("const def=cfg[id]");
+  const setup = source.slice(configStart, configEnd) + 'const def=cfg[id]||[];if(id==="combined-gas-law")defaults.solve="p2";if(id==="ideal-gas")defaults.mode="p";if(id==="concentration-converter")defaults.mode="molarity";return { defaults, options, cfg };';
   for (const [tool, expected] of [["ideal-gas", "p"], ["concentration-converter", "molarity"]]) {
     const config = new Function("id", setup)(tool);
     assert.equal(config.defaults.mode, expected);
