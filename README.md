@@ -1561,3 +1561,14 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - GitHub Actions regression suite passed: 36 Node.js tests covering six reference molar masses, nested/hydrate formula parsing, invalid formulas, all 19 calculator known-answer scenarios, select defaults and rendering all 118 periodic-table elements. JavaScript syntax check passed.
 - Still required before merge: the GitHub Actions run must pass, and every calculator needs interactive browser testing (including mobile layout, reset behavior, invalid inputs and known-answer calculations). No browser-level test has been claimed yet.
 - The feature remains on `feature/20-chemistry-tools`; no merge to `main` and no Cloudflare production deployment have been performed.
+
+
+## 100-tool milestone — 18 November 2026
+
+- Added three new tools, taking the homepage directory from 97 to **100 tools**: AI Background Remover, Currency Converter and Text to Speech.
+- Added the three tool cards to the existing Image, Everyday & Security, and Text categories; added all three canonical tool URLs to `sitemap.xml`.
+- AI Background Remover uses Transformers.js with the Apache-2.0 ORMBG ONNX model. Model/runtime downloads happen in the browser; the selected image is processed on-device. The first model download is large. Review model/runtime notices before redistribution.
+- Currency Converter retrieves a public USD-based reference rate table from open.er-api.com. Rates are informational, not guaranteed transaction quotes; provider availability and update timing can vary.
+- Text to Speech uses the browser Web Speech API and voices exposed by the user's device. It provides playback controls; the browser API does not provide a reliable MP3 export.
+- Preserved existing tool URLs, canonical URLs, GA4 Measurement ID `G-WH86KPZW58`, existing categories, and the Physics category position. Homepage SEO title/description metadata were left unchanged during the current SEO freeze.
+- QA status: source-level link/count/sitemap checks are included in this change. Real-browser tests are still required for AI model loading and segmentation, live currency API/CORS, and device-specific speech voices. Do not mark these three tools as fully browser-tested until those checks pass.
