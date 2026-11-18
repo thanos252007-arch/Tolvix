@@ -1486,3 +1486,8 @@ A targeted source-level update was made to the homepage after reviewing a third-
 - Preserved the homepage canonical URL, existing Google Analytics measurement ID, Search Console verification, robots directives, sitemap, tool URLs, guide URLs and existing page content.
 
 **Source validation:** the updated homepage was re-fetched from GitHub; title length, static favicon link, Open Graph image tag, parseable JSON-LD, Organization and FAQPage entities, visible FAQ section, canonical URL and GA4 ID were checked. This is not a live Cloudflare deployment check, a Google Rich Results eligibility guarantee, or a full browser/performance/accessibility audit. Do not chase a third-party 100/100 score by adding irrelevant schema or changing content solely to satisfy its proprietary rubric.
+
+
+## Social preview logo correction — 18 November 2026
+
+The homepage Open Graph and Twitter image references now point to the high-resolution official Tolvix mark at `/assets/tolvix-mark.svg?v=2` rather than the 64×64 favicon. The image metadata identifies the 1028×1028 SVG mark and uses a versioned URL to help social crawlers fetch the updated artwork instead of a previously cached thumbnail. Twitter card metadata now requests a large image preview. The actual preview still depends on Cloudflare deployment and each platform refreshing its cache; the live social preview has not yet been verified.
