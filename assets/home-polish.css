@@ -167,3 +167,37 @@ body:has(>.skip-link) :focus-visible{outline:2px solid #9fc2ff;outline-offset:3p
 @media(prefers-reduced-motion:reduce){
  body:has(>.skip-link) .tool-preview:before{animation:none}
 }
+
+
+/* Signature layer — a quieter, more crafted product-interface finish. */
+body:has(>.skip-link) .hero-copy{max-width:760px}
+body:has(>.skip-link) .hero-kicker{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:750;text-transform:uppercase}
+body:has(>.skip-link) .hero-kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:#8eb8ff;box-shadow:0 0 0 4px rgba(142,184,255,.12),0 0 16px rgba(142,184,255,.7)}
+body:has(>.skip-link) .searchbox{position:relative;max-width:590px}
+body:has(>.skip-link) .searchbox:focus-within .search{border-color:rgba(151,190,255,.68);box-shadow:0 0 0 4px rgba(103,153,237,.12),0 16px 42px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.06)}
+body:has(>.skip-link) .hero-visual{perspective:1100px}
+body:has(>.skip-link) .tool-preview{transform:rotateY(-2deg) rotateX(1deg);transition:transform .35s ease,box-shadow .35s ease}
+body:has(>.skip-link) .tool-preview:hover{transform:rotateY(0) rotateX(0) translateY(-3px);box-shadow:0 34px 90px rgba(0,0,0,.46),0 0 62px rgba(68,121,217,.13),inset 0 1px rgba(255,255,255,.1)}
+body:has(>.skip-link) .preview-link{position:relative}
+body:has(>.skip-link) .preview-link:after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(150,190,255,.25),transparent);opacity:0;transition:opacity .2s ease}
+body:has(>.skip-link) .preview-link:hover:after{opacity:1}
+body:has(>.skip-link) .category-nav{box-shadow:0 12px 34px rgba(0,0,0,.13),inset 0 1px rgba(255,255,255,.035)}
+body:has(>.skip-link) .category-nav a{transition:background .2s ease,border-color .2s ease,color .2s ease,transform .2s ease}
+body:has(>.skip-link) .category-nav a:hover{transform:translateY(-1px)}
+body:has(>.skip-link) #grid .grid>.card{overflow:hidden}
+body:has(>.skip-link) #grid .grid>.card:before{content:"";position:absolute;left:20px;right:20px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(159,195,255,.42),transparent);opacity:.6}
+body:has(>.skip-link) #grid .grid>.card:hover:before{opacity:1}
+body:has(>.skip-link) #grid .grid>.card .btn{transition:background .2s ease,border-color .2s ease,transform .2s ease}
+body:has(>.skip-link) #grid .grid>.card .btn:hover{transform:translateY(-1px)}
+body:has(>.skip-link) #guides .guide-category{position:relative;overflow:hidden}
+body:has(>.skip-link) #guides .guide-category:before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:2px;border-radius:2px;background:linear-gradient(transparent,#8bb7ff,transparent);opacity:.6}
+body:has(>.skip-link) .homepage-faq{box-shadow:0 18px 48px rgba(0,0,0,.16),inset 0 1px rgba(255,255,255,.04)}
+:root[data-theme="light"] body:has(>.skip-link) .tool-preview{transform:none}
+:root[data-theme="light"] body:has(>.skip-link) .homepage-faq{box-shadow:0 18px 48px rgba(43,78,132,.08),inset 0 1px rgba(255,255,255,.8)}
+@media(max-width:680px){
+ body:has(>.skip-link) .tool-preview{transform:none}
+ body:has(>.skip-link) .tool-preview:hover{transform:translateY(-2px)}
+}
+@media(prefers-reduced-motion:reduce){
+ body:has(>.skip-link) .tool-preview{transform:none}
+}
