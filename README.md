@@ -1523,3 +1523,12 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Kept the update in the homepage-only stylesheet. No tool functionality, page content, URLs, canonicals, analytics, sitemap, or category order changed.
 - Commit: `17bb3f470e3e67c094550eddbffe3bbcdb089928`.
 - Source update only; verify Cloudflare deployment and inspect the live desktop/mobile layout before considering it complete.
+
+
+### Signature homepage polish — 18 November 2026
+
+- Added a final restrained interaction layer to the homepage: refined hero/search focus treatment, subtle perspective on the quick-tool preview, delicate card-edge highlights, and more tactile category navigation.
+- Kept the treatment responsive and disabled perspective effects where reduced motion or small screens call for a calmer experience.
+- CSS-only homepage update. No page copy, URLs, canonicals, structured data, analytics, sitemap, category order, or tool behavior changed.
+- Commit: 93ade3c6fedb3cb93f593eeadee1460d9f3df3a7.
+- Source update only; Cloudflare deployment and live desktop/mobile rendering still require verification.
