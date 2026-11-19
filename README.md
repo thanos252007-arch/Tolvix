@@ -1589,3 +1589,10 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Fixed a browser runtime error caused by passing an `ImageBitmap` object directly to the Transformers.js v3 image-segmentation pipeline. The documented input types include `RawImage`, Blob, URL/string and canvas, not ImageBitmap.
 - The selected image is now drawn to a temporary canvas and converted with `RawImage.fromCanvas()` before inference. This is a targeted input-adapter correction; it does not change the model, SEO metadata, canonical URL, analytics, sitemap or other tools.
 - **Verification status:** source patch prepared on branch `fix/background-remover-rawimage-input`; JavaScript syntax and actual browser inference/export still need validation. Do not describe the live tool as fixed until a real PNG output is produced.
+
+
+### Background remover RawImage scope correction — 19 November 2026
+
+- Fixed a JavaScript scope error in the prior input-adapter patch: `RawImage` had been declared inside `getSegmenter()` but referenced by the separate button-click handler, causing `RawImage is not defined` at runtime.
+- The imported class is now assigned to a module-level `RawImageClass` variable and used by the click handler to create the model input with `RawImageClass.fromCanvas(inputCanvas)`.
+- This corrects the undefined-variable error only. Actual model download, inference, transparent PNG output and live Cloudflare deployment remain unverified until tested in a browser.
