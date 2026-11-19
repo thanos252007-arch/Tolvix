@@ -1569,7 +1569,7 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Added the three tool cards to the existing Image, Everyday & Security, and Text categories; added all three canonical tool URLs to `sitemap.xml`.
 - AI Background Remover uses Transformers.js with the Apache-2.0 ORMBG ONNX model. Model/runtime downloads happen in the browser; the selected image is processed on-device. The first model download is large. Review model/runtime notices before redistribution.
 - Currency Converter retrieves a public USD-based reference rate table from open.er-api.com. Rates are informational, not guaranteed transaction quotes; provider availability and update timing can vary.
-- Text to Speech uses the browser Web Speech API and voices exposed by the user's device. It provides playback controls; the browser API does not provide a reliable MP3 export.
+- Text to Speech retains browser-native playback and adds a local AI MP3 generator using Kokoro-82M and lamejs, with American and British English female/male voices. The generated audio is encoded as an actual MP3 in the browser; text is not sent to a Tolvix TTS server. First use downloads an approximately 90 MB model. Browser-level verification is required.
 - Preserved existing tool URLs, canonical URLs, GA4 Measurement ID `G-WH86KPZW58`, existing categories, and the Physics category position. Homepage SEO title/description metadata were left unchanged during the current SEO freeze.
 - QA status: source-level link/count/sitemap checks are included in this change. Real-browser tests are still required for AI model loading and segmentation, live currency API/CORS, and device-specific speech voices. Do not mark these three tools as fully browser-tested until those checks pass.
 
@@ -1604,3 +1604,13 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Added only the exchange-rate API origin to `connect-src` in `_headers`. The converter's API URL, conversion logic, page URL, canonical URL, SEO metadata, sitemap and GA4 Measurement ID remain unchanged.
 - The endpoint is a public USD-based reference-rate feed and provides browser CORS access; it updates periodically rather than being a real-time trading feed. Attribution remains required by the provider.
 - Verification still required after deployment: open the live converter in a normal browser, confirm the rate timestamp appears, convert USD to INR, and check the browser console/network panel. This repository change alone does not prove Cloudflare has deployed it or that a user's network can reach the provider.
+
+
+## Text to Speech MP3 generator — 19 November 2026
+
+- Added a separate Generate MP3 section while retaining browser-native Speak/Pause/Resume/Stop controls.
+- Added 12 AI English voice choices: American and British accents, female and male character voices.
+- Uses Kokoro-82M through browser-based `kokoro-js` (q8/WASM), then encodes PCM audio into a real MP3 with lamejs.
+- Synthesis runs locally after model download; text is not sent to a Tolvix TTS server. First model download is approximately 90 MB and may be cached by the browser.
+- Preserved tool URL, canonical URL, SEO title/description, GA4 Measurement ID, sitemap and original device voice selector.
+- QA is pending real-browser checks for CDN loading, model inference, voice playback, MP3 file decoding and desktop/mobile behavior.
