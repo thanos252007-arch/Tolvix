@@ -1614,3 +1614,10 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Synthesis runs locally after model download; text is not sent to a Tolvix TTS server. First model download is approximately 90 MB and may be cached by the browser.
 - Preserved tool URL, canonical URL, SEO title/description, GA4 Measurement ID, sitemap and original device voice selector.
 - QA is pending real-browser checks for CDN loading, model inference, voice playback, MP3 file decoding and desktop/mobile behavior.
+
+
+## Text to Speech controls update — 19 November 2026
+
+- MP3 generation no longer starts a file download automatically. It creates the audio, displays an in-page preview, and reveals a separate **Download MP3** button for an explicit user action.
+- Added Slow (0.7×), Normal (1.0×) and Fast (1.5×) speaking-speed presets. Presets update the shared speed control used by browser playback and AI MP3 generation; the slider remains available for fine adjustment.
+- Existing tool URL, metadata, analytics and voice choices remain unchanged.
