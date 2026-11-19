@@ -1596,3 +1596,11 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Fixed a JavaScript scope error in the prior input-adapter patch: `RawImage` had been declared inside `getSegmenter()` but referenced by the separate button-click handler, causing `RawImage is not defined` at runtime.
 - The imported class is now assigned to a module-level `RawImageClass` variable and used by the click handler to create the model input with `RawImageClass.fromCanvas(inputCanvas)`.
 - This corrects the undefined-variable error only. Actual model download, inference, transparent PNG output and live Cloudflare deployment remain unverified until tested in a browser.
+
+
+## Currency converter connectivity fix — 19 November 2026
+
+- Diagnosed the live converter's `Failed to fetch` symptom against the production source: its request targets `https://open.er-api.com/v6/latest/USD`, but the site's global Content-Security-Policy `connect-src` allowlist did not include `https://open.er-api.com`. Browsers block the request, and JavaScript reports a generic fetch failure.
+- Added only the exchange-rate API origin to `connect-src` in `_headers`. The converter's API URL, conversion logic, page URL, canonical URL, SEO metadata, sitemap and GA4 Measurement ID remain unchanged.
+- The endpoint is a public USD-based reference-rate feed and provides browser CORS access; it updates periodically rather than being a real-time trading feed. Attribution remains required by the provider.
+- Verification still required after deployment: open the live converter in a normal browser, confirm the rate timestamp appears, convert USD to INR, and check the browser console/network panel. This repository change alone does not prove Cloudflare has deployed it or that a user's network can reach the provider.
