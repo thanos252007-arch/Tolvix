@@ -1572,3 +1572,13 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Text to Speech uses the browser Web Speech API and voices exposed by the user's device. It provides playback controls; the browser API does not provide a reliable MP3 export.
 - Preserved existing tool URLs, canonical URLs, GA4 Measurement ID `G-WH86KPZW58`, existing categories, and the Physics category position. Homepage SEO title/description metadata were left unchanged during the current SEO freeze.
 - QA status: source-level link/count/sitemap checks are included in this change. Real-browser tests are still required for AI model loading and segmentation, live currency API/CORS, and device-specific speech voices. Do not mark these three tools as fully browser-tested until those checks pass.
+
+
+## Background remover compatibility fix — 19 November 2026
+
+- Replaced the incompatible Orangebot ORMBG export, whose ONNX graph triggered the browser runtime's unsupported `ceil_mode` MaxPool error, with the browser-compatible `d30social/ormbg-ortweb` export.
+- Switched to the documented Transformers.js `image-segmentation` pipeline and now composites the returned grayscale foreground matte as the alpha channel of the original image before exporting PNG. This corrects the previous assumption that the model returned an RGBA cutout.
+- Uses the WASM CPU backend with fp32 for compatibility on browsers where WebGPU is unavailable. The model download is approximately 168 MB; first use can be slow and memory-intensive. Subsequent visits may use the browser cache.
+- Updated visible model attribution to the Apache-2.0 browser-compatible export and disclosed the larger first-download size.
+- Preserved the tool URL, canonical URL, title, description, structured data, analytics ID, sitemap and all unrelated pages. No SEO metadata was changed.
+- **Verification status:** source code updated on branch `fix/background-remover-ormbg-web-compat`. This is not yet merged or deployed, and real-browser inference/export testing is still required. Do not call the tool fixed until the live page successfully removes a background and downloads a transparent PNG.
