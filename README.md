@@ -1682,7 +1682,17 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 
 - The first complete 100-tool browser run reached all 100 sitemap entries and completed 400 page checks (100 per desktop browser plus 100 Chromium mobile checks).
 - It found a real uncaught JavaScript error on the 18 advanced image/PDF/minifier/converter pages: the shared quality layer referenced the private `id` variable from another IIFE. The fix uses the current app's `data-tool` identifier instead, preserving tool behavior and page URLs.
-- The corrected source is in this QA branch and the full browser suite is being rerun. Do not treat the fix as verified until the rerun passes.
+- **Final result:** the corrected source passed the full browser suite before merge: 400 visits across 100 tool pages (Chromium, Firefox, WebKit desktop and Chromium mobile), with zero smoke-test failures. The complete semantic suite passed **84/84 tests**, including all 20 physics calculators, all 19 chemistry calculators, invalid-input cases and the configured image/PDF processing fixtures and downloads.
 
 - Browser QA now serves the proposed repository version locally for pull-request tests, so code fixes are tested before merge instead of accidentally testing only the old production deployment. After merge or manual dispatch, the workflow also runs the page-level browser suite against `https://tolvix.in` to verify the deployed site.
 - Future QA runs trigger when any file under `tools/**` or `assets/**` changes, as well as when the QA scripts or workflow change.
+
+
+## Final browser QA and merge — 20 November 2026
+
+- Pull request [#19](https://github.com/thanos252007-arch/Tolvix/pull/19) was squash-merged to `main` (merge commit: `2c013e1205c7bb6616e5fb1e4174a590d426f667`).
+- The pre-merge source verification completed successfully: **400/400 browser page visits**, covering all 100 sitemap tool pages in Chromium, Firefox and WebKit desktop plus Chromium mobile; **0 smoke-test failures**.
+- The functional browser suite completed successfully: **84 passed, 0 failed**. Coverage included representative text tools/calculators, all 20 physics calculators, all 19 chemistry calculators, invalid-input handling, URL/base conversion, minifiers, image/PDF fixtures and download checks, malformed file rejection, AI voice control validation and oversized background-remover upload rejection.
+- The shared advanced-tool JavaScript exception was fixed in `assets/advanced-tools.js`; the final pre-merge browser suite detected no uncaught page errors in the tested matrix.
+- Scope limitation: this is a strong automated regression suite, not exhaustive proof of every possible input, maximum supported file size, every file format, every mobile device/browser, or full AI model inference. Those remain candidates for dedicated testing.
+- Post-merge GitHub Actions workflows were triggered for production browser verification, live link audit and historical secret scan. Their live/deployment results must be read from their run summaries; a successful pre-merge source test alone does not establish Cloudflare deployment completion.
