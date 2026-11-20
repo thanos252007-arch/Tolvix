@@ -14,9 +14,11 @@ async function getToolUrls() {
   const response = await fetch(BASE + '/sitemap.xml');
   if (!response.ok) throw new Error('Sitemap HTTP ' + response.status);
   const xml = await response.text();
+  const base = new URL(BASE);
   return [...xml.matchAll(/<loc>\s*([^<]+)\s*<\/loc>/g)]
-    .map(m => m[1].trim())
-    .filter(url => new URL(url).pathname.startsWith('/tools/'));
+    .map(m => new URL(m[1].trim(), BASE))
+    .filter(url => url.pathname.startsWith('/tools/'))
+    .map(url => base.origin + url.pathname + url.search);
 }
 
 async function inspectPage(browser, engine, url, viewport, mobile = false) {
