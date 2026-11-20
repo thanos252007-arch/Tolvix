@@ -52,11 +52,20 @@ async function main() {
   ['json-invalid','json',{inputText:'{"broken":',jsonMode:'minify'},/Invalid JSON/],
   ['discount-invalid','discount',{price:'1500',discountPct:'101'},/Enter a valid/],
   ['percentage-zero-denominator','percentage',{pctA:'10',pctB:'0',pctMode:'is'},/must not be zero/],
-  ['gst-invalid','gst',{gstAmount:'1000',gstRate:'101',gstMode:'exclusive'},/valid non-negative/],
   ['bmi-invalid','bmi',{weight:'0',height:'175'},/valid positive/],
   ['negative-marking-invalid','negative-marking-calculator',{totalQuestions:'100',correctAnswers:'90',wrongAnswers:'20',marksCorrect:'4',penaltyWrong:'1'},/Enter valid whole-number/],
  ];
  for(const [label,slug,vals,expect] of cases) await run('standard:'+label,()=>basic(browser,slug,vals,expect));
+ await run('standard:gst-invalid',async()=>{
+  const {p}=await pageFor(browser,'/tools/gst.html');
+  await p.locator('#gstAmount').fill('1000');
+  await p.locator('#gstRate').evaluate(el=>{const option=document.createElement('option');option.value='101';option.textContent='101% (invalid test)';el.appendChild(option);});
+  await p.locator('#gstRate').selectOption('101');
+  await p.locator('[data-run="gst"]').click();
+  const result=await p.locator('#result').innerText();
+  if(!/GST rate from 0 to 100%/.test(result)) throw Error('Expected invalid GST rate validation, received: '+result);
+  await p.close(); return result;
+ });
  await run('word-counter:unicode-and-empty',async()=>{
   const {p}=await pageFor(browser,'/tools/word.html');
   await p.locator('#inputText').fill('Hello 🌍 Tolvix\nSecond line.');
