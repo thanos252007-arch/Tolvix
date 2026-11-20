@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/playwright-tool-smoke.cjs'
       - 'scripts/playwright-tool-functional.cjs'
+      - 'assets/advanced-tools.js'
       - '.github/workflows/playwright-tool-smoke.yml'
 
 permissions:
