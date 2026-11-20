@@ -1666,3 +1666,23 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Sitemap inventory: 145 URLs, including all 100 tool pages and all 39 guide pages; no tool or guide HTML files were omitted from the sitemap.
 - Found and corrected a CI audit defect: `scripts/live-link-audit.py` still hard-coded the old totals (57 tools, 37 guides, 94 combined), so the audit failed after the site expanded. The check now validates non-empty sitemap sections and compares homepage-linked paths against sitemap paths instead of fixed counts.
 - Post-merge live verification passed: 145 sitemap URLs (100 tool pages and 39 guides), all 139 tool/guide pages returned HTTP 200, and 3,053 internal link/resource references across 157 unique destinations passed. The www host also resolved to the canonical apex domain. The historical secret scan and chemistry regression workflow also passed.
+
+
+## Automated browser QA — 20 November 2026
+
+- Added `scripts/playwright-tool-smoke.cjs`, `scripts/playwright-tool-functional.cjs` and the `Tolvix functional browser smoke tests` GitHub Actions workflow.
+- The runner discovers every `/tools/` URL directly from the live sitemap, then checks each discovered page in Chromium, Firefox and WebKit at desktop width; Chromium also checks a 390px mobile viewport.
+- Checks include HTTP response, page title, visible H1/body content, horizontal overflow, uncaught JavaScript exceptions, and a record of visible form controls, file inputs and download links.
+- Detailed per-page results are uploaded as a GitHub Actions artifact, including browser console errors.
+- Added real interaction tests for representative text tools and calculators, all 20 physics calculators and all 19 chemistry calculators. The suite includes invalid JSON/calculator inputs, invalid chemistry formulas, zero-current rejection, malformed image/PDF inputs, oversized background-removal file rejection, AI voice speed/empty-input controls, valid image/PDF fixtures and non-empty image/PDF downloads. It also exercises HTML/CSS/JS minifiers, number-base conversion and URL encoding.
+- **Important scope:** the semantic suite covers the named test cases and categories; it does not yet prove every possible input, maximum-size file, all file formats, or the AI model's full generation path. Large-file limits and AI voice/background-removal model workflows still need dedicated realistic tests. The report must be reviewed for each failure; a page opening successfully is not proof of a correct result.
+
+
+### Browser QA finding and fix — 20 November 2026
+
+- The first complete 100-tool browser run reached all 100 sitemap entries and completed 400 page checks (100 per desktop browser plus 100 Chromium mobile checks).
+- It found a real uncaught JavaScript error on the 18 advanced image/PDF/minifier/converter pages: the shared quality layer referenced the private `id` variable from another IIFE. The fix uses the current app's `data-tool` identifier instead, preserving tool behavior and page URLs.
+- The corrected source is in this QA branch and the full browser suite is being rerun. Do not treat the fix as verified until the rerun passes.
+
+- Browser QA now serves the proposed repository version locally for pull-request tests, so code fixes are tested before merge instead of accidentally testing only the old production deployment. After merge or manual dispatch, the workflow also runs the page-level browser suite against `https://tolvix.in` to verify the deployed site.
+- Future QA runs trigger when any file under `tools/**` or `assets/**` changes, as well as when the QA scripts or workflow change.
