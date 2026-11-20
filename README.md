@@ -1640,3 +1640,11 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Loading indicators appear only while work is in progress and are hidden on success, error or clear. Status messages remain available to assistive technology, and animations respect `prefers-reduced-motion`.
 - Preserved both tool URLs, canonical URLs, SEO metadata, structured data, GA4 Measurement ID, existing model/runtime choices and tool workflows. No sitemap or homepage changes.
 - Source changes are on branch `polish-ai-tool-loading-states`; real-browser testing and Cloudflare deployment verification are still required. Do not claim the live experience is verified until both tools are tested in a browser.
+
+
+## Photo-themed background remover loading animation — 20 November 2026
+
+- Replaced the generic spinner/equalizer artwork on the Background Remover only with a photo-frame illustration: a miniature landscape and subject silhouette, animated scanning beam, transparency-style checkerboard frame and subtle sparkle.
+- Kept the existing stage-specific loading messages, indeterminate progress indicator, reduced-motion support, accessibility status text and success/error behavior.
+- The AI Voice Generator loading animation is unchanged. Preserved the Background Remover URL, canonical, SEO metadata, structured data, GA4 ID and image-processing workflow.
+- Source update is isolated to `tools/background-remover.html` plus this README entry. Real-browser visual QA and Cloudflare deployment verification remain pending.
