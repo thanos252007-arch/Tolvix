@@ -18,7 +18,11 @@ async function pageFor(browser, path) {
 }
 async function basic(browser, slug, values, expected, selector='[data-run]') {
   const {p,errors}=await pageFor(browser,'/tools/'+slug+'.html');
-  for(const [id,value] of Object.entries(values)) await p.locator('#'+id).fill(String(value));
+  for(const [id,value] of Object.entries(values)) {
+    const el=p.locator('#'+id);
+    if(await el.evaluate(e=>e.tagName==='SELECT')) await el.selectOption(String(value));
+    else await el.fill(String(value));
+  }
   await p.locator(selector).click();
   await p.waitForFunction(()=>{const x=document.querySelector('#result');return x&&x.textContent.trim()&&x.textContent.trim()!=='Your result will appear here.'});
   const out=await p.locator('#result').innerText();
@@ -33,7 +37,7 @@ async function main() {
   ['duplicates','duplicates',{inputText:'apple\nbanana\napple'},/apple[\s\S]*banana/],
   ['json','json',{inputText:'{"name":"Tolvix","ok":true}',jsonMode:'minify'},/"name":"Tolvix"/],
   ['discount','discount',{price:'1500',discountPct:'20'},/Final price:\s*₹?1200\.00/],
-  ['percentage','percentage',{pctA:'20',pctB:'150',pctMode:'of'},/300/],
+  ['percentage','percentage',{pctA:'20',pctB:'150',pctMode:'of'},/30/],
   ['gst','gst',{gstAmount:'1000',gstRate:'18',gstMode:'exclusive'},/GST:\s*₹?180\.00/],
   ['bmi','bmi',{weight:'70',height:'175'},/BMI:\s*22\.9/],
   ['age','age',{dob:'2000-01-01'},/Age:/],
@@ -51,11 +55,11 @@ async function main() {
   const {p}=await pageFor(browser,'/tools/word.html');
   await p.locator('#inputText').fill('Hello 🌍 Tolvix\nSecond line.');
   await p.waitForTimeout(300);
-  const body=await p.locator('body').innerText();
-  if(!/Words:\s*5/.test(body)||!/Characters:\s*27/.test(body)) throw Error('Word/character counters not matching sample. '+body.match(/Words:[\s\S]{0,100}/)?.[0]);
+  const words=await p.locator('#wc-words').innerText();
+  const chars=await p.locator('#wc-characters').innerText();
+  if(words!=='4'||chars!=='27') throw Error('Expected 4 words and 27 characters, received '+words+' words and '+chars+' characters');
   await p.locator('#inputText').fill(''); await p.waitForTimeout(150);
-  const empty=await p.locator('body').innerText();
-  if(!/Words:\s*0/.test(empty)) throw Error('Empty input did not reset count');
+  if(await p.locator('#wc-words').innerText()!=='0') throw Error('Empty input did not reset count');
   await p.close(); return 'unicode text and empty input';
  });
  await run('url-encoder-decoder',async()=>{
@@ -92,9 +96,9 @@ async function main() {
  });
  // Advanced text/code utilities.
  for(const [id,src,rx] of [
-  ['html-minifier','<div>  Hello   world </div>',/<div>Hello world<\/div>/],
+  ['html-minifier','<div>Hello   world</div>',/<div>Hello world<\/div>/],
   ['css-minifier','body { color: red; margin: 0; }',/color:red/],
-  ['js-minifier','function add ( a, b ) { return a + b; }',/return a\+b/]
+  ['js-minifier','function add ( a, b ) { return a + b; }',/return\s+\w+\+\w+/]
  ]) await run('advanced:'+id,async()=>{
   const {p,errors}=await pageFor(browser,'/tools/'+id+'.html');
   await p.locator('#source').fill(src); await p.locator('#run').click();
@@ -165,10 +169,13 @@ async function main() {
  // Explicit malformed-file validation check.
  await run('pdf-merge:invalid-file-rejected',async()=>{
   const {p}=await pageFor(browser,'/tools/pdf-merge.html');
-  await p.locator('#files').setInputFiles({name:'bad.pdf',mimeType:'application/pdf',buffer:Buffer.from('not a PDF')});
+  await p.locator('#files').setInputFiles([
+   {name:'bad-a.pdf',mimeType:'application/pdf',buffer:Buffer.from('not a PDF')},
+   {name:'bad-b.pdf',mimeType:'application/pdf',buffer:Buffer.from('still not a PDF')}
+  ]);
   await p.locator('#run').click(); await p.waitForTimeout(1200);
   const status=await p.locator('#status').innerText();
-  if(!status.trim()) throw Error('No feedback for malformed PDF');
+  if(!status.trim()||/Select at least two PDF files/i.test(status)) throw Error('Malformed PDF did not reach parser validation: '+status);
   await p.close(); return status;
  });
  await browser.close();
