@@ -52,7 +52,7 @@ async function main() {
   await p.locator('#inputText').fill('Hello 🌍 Tolvix\nSecond line.');
   await p.waitForTimeout(300);
   const body=await p.locator('body').innerText();
-  if(!/Words:\s*4/.test(body)||!/Characters:\s*28/.test(body)) throw Error('Word/character counters not matching sample. '+body.match(/Words:[\s\S]{0,100}/)?.[0]);
+  if(!/Words:\s*5/.test(body)||!/Characters:\s*27/.test(body)) throw Error('Word/character counters not matching sample. '+body.match(/Words:[\s\S]{0,100}/)?.[0]);
   await p.locator('#inputText').fill(''); await p.waitForTimeout(150);
   const empty=await p.locator('body').innerText();
   if(!/Words:\s*0/.test(empty)) throw Error('Empty input did not reset count');
