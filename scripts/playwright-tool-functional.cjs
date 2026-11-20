@@ -48,7 +48,13 @@ async function main() {
   ['sort','sort',{inputText:'pear\napple\nbanana',sortOrder:'asc',sortRemove:'no'},/apple[\s\S]*banana[\s\S]*pear/],
   ['base64','base64',{inputText:'Tolvix',base64Mode:'encode'},/VG9sdml4/],
   ['tip','tip-calculator',{billAmount:'1000',tipPercent:'10',peopleCount:'2'},/50/],
-  ['negative-marking','negative-marking-calculator',{},/.+/],
+  ['negative-marking','negative-marking-calculator',{},/Final score:\s*235\.00/],
+  ['json-invalid','json',{inputText:'{"broken":',jsonMode:'minify'},/Invalid JSON/],
+  ['discount-invalid','discount',{price:'1500',discountPct:'101'},/Enter a valid/],
+  ['percentage-zero-denominator','percentage',{pctA:'10',pctB:'0',pctMode:'is'},/must not be zero/],
+  ['gst-invalid','gst',{gstAmount:'1000',gstRate:'101',gstMode:'exclusive'},/valid non-negative/],
+  ['bmi-invalid','bmi',{weight:'0',height:'175'},/valid positive/],
+  ['negative-marking-invalid','negative-marking-calculator',{totalQuestions:'100',correctAnswers:'90',wrongAnswers:'20',marksCorrect:'4',penaltyWrong:'1'},/Enter valid whole-number/],
  ];
  for(const [label,slug,vals,expect] of cases) await run('standard:'+label,()=>basic(browser,slug,vals,expect));
  await run('word-counter:unicode-and-empty',async()=>{
@@ -94,6 +100,14 @@ async function main() {
   if(errors.length) throw Error(errors.join('; '));
   await p.close(); return out.slice(0,120);
  });
+ await run('chemistry:molar-mass-invalid-formula-rejected',async()=>{
+  const {p}=await pageFor(browser,'/tools/chemistry/molar-mass.html');
+  await p.locator('[name="formula"]').fill('Xx2');
+  await p.locator('form button[type=submit]').click();
+  const out=await p.locator('.chem-results').innerText();
+  if(!/Unknown element symbol/.test(out)) throw Error('Unknown element was not rejected: '+out);
+  await p.close(); return out;
+ });
  // Advanced text/code utilities.
  for(const [id,src,rx] of [
   ['html-minifier','<div>Hello   world</div>',/<div>Hello world<\/div>/],
@@ -115,6 +129,25 @@ async function main() {
   if(!out.includes('11111111')) throw Error('Unexpected conversion: '+out);
   await p.close(); return out;
  });
+ await run('ai-voice:empty-input-and-speed-controls',async()=>{
+  const {p}=await pageFor(browser,'/tools/text-to-speech.html');
+  await p.locator('[data-speed="0.7"]').click();
+  if(await p.locator('[data-speed="0.7"]').getAttribute('aria-pressed')!=='true') throw Error('Slow speed preset did not become active');
+  await p.locator('[data-speed="1.5"]').click();
+  if(await p.locator('[data-speed="1.5"]').getAttribute('aria-pressed')!=='true') throw Error('Fast speed preset did not become active');
+  await p.locator('#download-mp3').click();
+  const status=await p.locator('#mp3-status').innerText();
+  if(!/Please enter some text first/.test(status)) throw Error('Empty voice input was not rejected: '+status);
+  await p.close(); return status;
+ });
+ await run('background-remover:oversized-image-rejected',async()=>{
+  const {p}=await pageFor(browser,'/tools/background-remover.html');
+  const huge=Buffer.alloc(15*1024*1024+1);
+  await p.locator('#bg-file').setInputFiles({name:'too-large.png',mimeType:'image/png',buffer:huge});
+  const status=await p.locator('#bg-status').innerText();
+  if(!/no larger than 15 MB/i.test(status)||!(await p.locator('#bg-run').isDisabled())) throw Error('Oversized image was not rejected: '+status);
+  await p.close(); return status;
+ });
  // Image and PDF fixture tests: create tiny real files in the browser, then validate downloads.
  const imagePage=await pageFor(browser,'/tools/image-compressor.html');
  const png64=await imagePage.p.evaluate(()=>{const c=document.createElement('canvas');c.width=4;c.height=4;const x=c.getContext('2d');x.fillStyle='#336699';x.fillRect(0,0,4,4);return c.toDataURL('image/png').split(',')[1]});
@@ -132,6 +165,14 @@ async function main() {
   if(errors.length) throw Error(errors.join('; '));
   await p.close(); return download.suggestedFilename()+' ('+stat.size+' bytes)';
  }
+ await run('image-compressor:invalid-image-rejected',async()=>{
+  const {p}=await pageFor(browser,'/tools/image-compressor.html');
+  await p.locator('#files').setInputFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('not an image')});
+  await p.locator('#run').click(); await p.waitForTimeout(500);
+  const status=await p.locator('#status').innerText();
+  if(!/could not decode/i.test(status)) throw Error('Malformed image was not rejected: '+status);
+  await p.close(); return status;
+ });
  await run('image-compressor:valid-png-download',()=>imageDownload('image-compressor',{name:'fixture.png',type:'image/png',buffer:png},{quality:'75',format:'image/webp'}));
  await run('image-converter:valid-png-download',()=>imageDownload('image-converter',{name:'fixture.png',type:'image/png',buffer:png},{format:'image/jpeg'}));
  await run('image-cropper:valid-png-download',()=>imageDownload('image-cropper',{name:'fixture.png',type:'image/png',buffer:png},{x:'0',y:'0',w:'2',h:'2'}));
