@@ -21,6 +21,7 @@ class PageParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.links = []
+        self.anchor_links = []
         self.ids = set()
         self.title = False
         self.title_text = []
@@ -31,6 +32,7 @@ class PageParser(HTMLParser):
         if a.get("id"): self.ids.add(a["id"])
         if tag == "a" and a.get("name"): self.ids.add(a["name"])
         if tag in ("a", "link") and a.get("href"): self.links.append(a["href"])
+        if tag == "a" and a.get("href"): self.anchor_links.append(a["href"])
         if tag in ("script", "img", "source", "iframe") and a.get("src"): self.links.append(a["src"])
         if tag == "link" and "canonical" in a.get("rel", "").lower().split():
             self.canonical = a.get("href")
@@ -74,11 +76,33 @@ def main():
     tool_urls = [u for u in urls if urllib.parse.urlparse(u).path.startswith("/tools/")]
     guide_urls = [u for u in urls if urllib.parse.urlparse(u).path.startswith("/guides/")]
     print(f"Sitemap: {len(urls)} URLs; {len(tool_urls)} tool pages; {len(guide_urls)} guide pages")
-    if len(tool_urls) != 57: fail(f"expected 57 tool pages, found {len(tool_urls)}")
-    if len(guide_urls) != 37: fail(f"expected 37 guide pages, found {len(guide_urls)}")
-    if len(tool_urls) + len(guide_urls) != 94: fail("sitemap does not contain exactly 94 tool and guide pages")
+    if not tool_urls: fail("sitemap contains no tool pages")
+    if not guide_urls: fail("sitemap contains no guide pages")
 
-    # Fetch all sitemap URLs and inspect the 94 tool/guide documents.
+    # Compare homepage directory coverage with the sitemap; avoid stale fixed counts.
+    home_status, home_final, _, home_body, home_err = get(BASE + "/")
+    if home_status != 200:
+        fail(f"homepage returned HTTP {home_status}: {home_err or home_final}")
+    else:
+        home_parser = PageParser()
+        try:
+            home_parser.feed(home_body.decode("utf-8", errors="replace"))
+            home_paths = {
+                urllib.parse.urlsplit(urllib.parse.urljoin(BASE + "/", raw)).path
+                for raw in home_parser.anchor_links
+            }
+            sitemap_tool_paths = {urllib.parse.urlsplit(u).path for u in tool_urls}
+            sitemap_guide_paths = {urllib.parse.urlsplit(u).path for u in guide_urls}
+            missing_tools = sorted(sitemap_tool_paths - home_paths)
+            missing_guides = sorted(sitemap_guide_paths - home_paths)
+            if missing_tools:
+                fail(f"{len(missing_tools)} sitemap tool page(s) are not linked from the homepage: {', '.join(missing_tools[:10])}")
+            if missing_guides:
+                fail(f"{len(missing_guides)} sitemap guide page(s) are not linked from the homepage: {', '.join(missing_guides[:10])}")
+        except Exception as e:
+            fail(f"homepage HTML could not be parsed for directory coverage: {e}")
+
+    # Fetch every sitemap URL and inspect all tool/guide documents.
     results = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
         futs = {pool.submit(get, u): u for u in urls}

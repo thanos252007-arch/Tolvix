@@ -1658,3 +1658,11 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Kept the existing privacy section's explicit disclosure that the QR Code Generator sends entered text or URLs to its third-party QR service.
 - Preserved all tool and guide URLs, canonical URL, structured data, GA4 Measurement ID, sitemap, directory contents and tool behavior. No tool page or SEO URL was changed.
 - Source verification: counted 100 homepage tool cards and 39 unique guide links after the edit; confirmed the inconsistent 77+ and 37 references are gone. Live Cloudflare deployment and browser rendering still require verification.
+
+
+## Full-site audit follow-up — 20 November 2026
+
+- Repository inventory: 180 tracked files, including 147 HTML documents, 100 tool pages and 39 guides.
+- Sitemap inventory: 145 URLs, including all 100 tool pages and all 39 guide pages; no tool or guide HTML files were omitted from the sitemap.
+- Found and corrected a CI audit defect: `scripts/live-link-audit.py` still hard-coded the old totals (57 tools, 37 guides, 94 combined), so the audit failed after the site expanded. The check now validates non-empty sitemap sections and compares homepage-linked paths against sitemap paths instead of fixed counts.
+- Other static checks and live URL checks are still in progress; the CI job must run against the live site after this correction before its result can be reported.
