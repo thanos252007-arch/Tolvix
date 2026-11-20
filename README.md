@@ -1670,8 +1670,9 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 
 ## Automated browser QA — 20 November 2026
 
-- Added `scripts/playwright-tool-smoke.cjs` and the `Tolvix functional browser smoke tests` GitHub Actions workflow.
+- Added `scripts/playwright-tool-smoke.cjs`, `scripts/playwright-tool-functional.cjs` and the `Tolvix functional browser smoke tests` GitHub Actions workflow.
 - The runner discovers every `/tools/` URL directly from the live sitemap, then checks each discovered page in Chromium, Firefox and WebKit at desktop width; Chromium also checks a 390px mobile viewport.
 - Checks include HTTP response, page title, visible H1/body content, horizontal overflow, uncaught JavaScript exceptions, and a record of visible form controls, file inputs and download links.
 - Detailed per-page results are uploaded as a GitHub Actions artifact, including browser console errors.
-- **Important scope:** this is a cross-browser page/runtime/layout smoke suite, not yet a full semantic test of each tool's calculations, invalid-input rules, large-file limits, generated output, or actual download contents. Those require tool-specific test cases and safe input fixtures. The runner records file/download affordances but does not pretend to validate their behavior by merely finding them.
+- Added real interaction tests for representative text tools and calculators, all 20 physics calculators and all 19 chemistry calculators. The suite includes valid/invalid chemistry and PDF inputs, valid image/PDF fixtures, and checks that image/PDF processing produces non-empty downloads. It also exercises HTML/CSS/JS minifiers, number-base conversion and URL encoding.
+- **Important scope:** the semantic suite covers the named test cases and categories; it does not yet prove every possible input, maximum-size file, all file formats, or the AI model's full generation path. Large-file limits and AI voice/background-removal model workflows still need dedicated realistic tests. The report must be reviewed for each failure; a page opening successfully is not proof of a correct result.
