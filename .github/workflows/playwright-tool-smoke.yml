@@ -2,6 +2,13 @@ name: Tolvix functional browser smoke tests
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/playwright-tool-smoke.cjs'
+      - 'scripts/playwright-tool-functional.cjs'
+      - 'assets/advanced-tools.js'
+      - '.github/workflows/playwright-tool-smoke.yml'
   pull_request:
     paths:
       - 'scripts/playwright-tool-smoke.cjs'
@@ -29,10 +36,28 @@ jobs:
         run: |
           npm install --no-save playwright
           npx playwright install --with-deps chromium firefox webkit
-      - name: Test all live tool pages
+      - name: Start local preview server
+        run: |
+          python3 -m http.server 4173 --directory . > /tmp/tolvix-preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/sitemap.xml >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/tolvix-preview.log
+          exit 1
+      - name: Test all tool pages in the proposed source
+        env:
+          TOLVIX_BASE_URL: http://127.0.0.1:4173
         run: node scripts/playwright-tool-smoke.cjs
       - name: Test real calculations, chemistry, physics and file outputs
+        env:
+          TOLVIX_BASE_URL: http://127.0.0.1:4173
         run: node scripts/playwright-tool-functional.cjs
+      - name: Verify deployed production pages after merge
+        if: github.event_name != 'pull_request'
+        env:
+          TOLVIX_BASE_URL: https://tolvix.in
+        run: node scripts/playwright-tool-smoke.cjs
       - name: Upload detailed results
         if: always()
         uses: actions/upload-artifact@v4
