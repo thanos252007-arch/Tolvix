@@ -1621,3 +1621,13 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - MP3 generation no longer starts a file download automatically. It creates the audio, displays an in-page preview, and reveals a separate **Download MP3** button for an explicit user action.
 - Added Slow (0.7×), Normal (1.0×) and Fast (1.5×) speaking-speed presets. Presets update the shared speed control used by browser playback and AI MP3 generation; the slider remains available for fine adjustment.
 - Existing tool URL, metadata, analytics and voice choices remain unchanged.
+
+
+## AI Voice Generator simplification — 20 November 2026
+
+- Replaced the previous combined Text to Speech page with a focused **AI Voice Generator** experience. The browser/operating-system Text-to-Speech converter and its Speak/Pause/Resume/Stop controls have been removed.
+- Kept the browser-based Kokoro AI voice engine and the available American/British English female and male voices.
+- Added three AI speaking-speed presets: Slow (0.7×), Normal (1.0×) and Fast (1.5×).
+- The user now generates the audio first, previews it in the audio player, and clicks a separate **Download MP3** button to save it. Generation does not auto-download.
+- Preserved the existing page path and canonical URL (`/tools/text-to-speech.html`) and GA4 Measurement ID (`G-WH86KPZW58`). Updated the page title, description and structured-data name to describe the AI Voice Generator accurately.
+- Fixed the page script as part of the simplification. The source is committed on a feature branch; real-browser generation, preview and download QA is still required after deployment. Do not mark the feature as live-tested until that check is completed.
