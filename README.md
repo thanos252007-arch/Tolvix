@@ -1665,4 +1665,4 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Repository inventory: 180 tracked files, including 147 HTML documents, 100 tool pages and 39 guides.
 - Sitemap inventory: 145 URLs, including all 100 tool pages and all 39 guide pages; no tool or guide HTML files were omitted from the sitemap.
 - Found and corrected a CI audit defect: `scripts/live-link-audit.py` still hard-coded the old totals (57 tools, 37 guides, 94 combined), so the audit failed after the site expanded. The check now validates non-empty sitemap sections and compares homepage-linked paths against sitemap paths instead of fixed counts.
-- Other static checks and live URL checks are still in progress; the CI job must run against the live site after this correction before its result can be reported.
+- Post-merge live verification passed: 145 sitemap URLs (100 tool pages and 39 guides), all 139 tool/guide pages returned HTTP 200, and 3,053 internal link/resource references across 157 unique destinations passed. The www host also resolved to the canonical apex domain. The historical secret scan and chemistry regression workflow also passed.
