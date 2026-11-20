@@ -102,7 +102,7 @@ def main():
         except Exception as e:
             fail(f"homepage HTML could not be parsed for directory coverage: {e}")
 
-    # Fetch all sitemap URLs and inspect the 94 tool/guide documents.
+    # Fetch every sitemap URL and inspect all tool/guide documents.
     results = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
         futs = {pool.submit(get, u): u for u in urls}
