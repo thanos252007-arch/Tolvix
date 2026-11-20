@@ -1,7 +1,7 @@
 const { chromium, firefox, webkit } = require('playwright');
 const fs = require('node:fs');
 
-const BASE = 'https://tolvix.in';
+const BASE = process.env.TOLVIX_BASE_URL || 'https://tolvix.in';
 const errors = [];
 const results = [];
 const engines = [
