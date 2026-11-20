@@ -1631,3 +1631,12 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - The user now generates the audio first, previews it in the audio player, and clicks a separate **Download MP3** button to save it. Generation does not auto-download.
 - Preserved the existing page path and canonical URL (`/tools/text-to-speech.html`) and GA4 Measurement ID (`G-WH86KPZW58`). Updated the page title, description and structured-data name to describe the AI Voice Generator accurately.
 - Fixed the page script as part of the simplification. The source is committed on a feature branch; real-browser generation, preview and download QA is still required after deployment. Do not mark the feature as live-tested until that check is completed.
+
+
+## AI tool loading experience — 20 November 2026
+
+- Added matching premium, animated loading panels to the AI Voice Generator and AI Background Remover so users receive clear visual feedback during long-running browser AI tasks.
+- The panels use a rotating orbit, animated audio/equalizer bars and an indeterminate progress sweep, with stage-specific messages for model setup, generation/inference and MP3/PNG preparation. No fake percentage progress is shown.
+- Loading indicators appear only while work is in progress and are hidden on success, error or clear. Status messages remain available to assistive technology, and animations respect `prefers-reduced-motion`.
+- Preserved both tool URLs, canonical URLs, SEO metadata, structured data, GA4 Measurement ID, existing model/runtime choices and tool workflows. No sitemap or homepage changes.
+- Source changes are on branch `polish-ai-tool-loading-states`; real-browser testing and Cloudflare deployment verification are still required. Do not claim the live experience is verified until both tools are tested in a browser.
