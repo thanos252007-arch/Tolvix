@@ -5,6 +5,7 @@ on:
   pull_request:
     paths:
       - 'scripts/playwright-tool-smoke.cjs'
+      - 'scripts/playwright-tool-functional.cjs'
       - '.github/workflows/playwright-tool-smoke.yml'
 
 permissions:
