@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 const fs = require('node:fs');
-const BASE = 'https://tolvix.in';
+const BASE = process.env.TOLVIX_BASE_URL || 'https://tolvix.in';
 const results = [];
 const failures = [];
 async function run(name, fn) {
