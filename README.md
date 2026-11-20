@@ -1648,3 +1648,13 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Kept the existing stage-specific loading messages, indeterminate progress indicator, reduced-motion support, accessibility status text and success/error behavior.
 - The AI Voice Generator loading animation is unchanged. Preserved the Background Remover URL, canonical, SEO metadata, structured data, GA4 ID and image-processing workflow.
 - Source update is isolated to `tools/background-remover.html` plus this README entry. Real-browser visual QA and Cloudflare deployment verification remain pending.
+
+
+## Homepage accuracy correction — 20 November 2026
+
+- Standardized the homepage title, meta description, Open Graph title/description and visible directory references on the verified count of **100 tool cards**.
+- Corrected the introductory guide reference to **39 guides**, matching the 39 unique guide URLs listed in the homepage guide directory.
+- Reworded the hero preview privacy note so it does not imply that every tool processes data locally. It now explains that many tools run in the browser, while some use disclosed third-party services, and directs visitors to each tool's privacy details.
+- Kept the existing privacy section's explicit disclosure that the QR Code Generator sends entered text or URLs to its third-party QR service.
+- Preserved all tool and guide URLs, canonical URL, structured data, GA4 Measurement ID, sitemap, directory contents and tool behavior. No tool page or SEO URL was changed.
+- Source verification: counted 100 homepage tool cards and 39 unique guide links after the edit; confirmed the inconsistent 77+ and 37 references are gone. Live Cloudflare deployment and browser rendering still require verification.
