@@ -14,7 +14,7 @@ async function getToolUrls() {
   const response = await fetch(BASE + '/sitemap.xml');
   if (!response.ok) throw new Error('Sitemap HTTP ' + response.status);
   const xml = await response.text();
-  return [...xml.matchAll(/<loc>\\s*(https?:\\/\\/[^<]+)\\s*<\\/loc>/g)]
+  return [...xml.matchAll(/<loc>\\s*(.*?)\\s*<\\/loc>/g)]
     .map(m => m[1].trim())
     .filter(url => new URL(url).pathname.startsWith('/tools/'));
 }
