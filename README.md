@@ -1683,3 +1683,6 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - The first complete 100-tool browser run reached all 100 sitemap entries and completed 400 page checks (100 per desktop browser plus 100 Chromium mobile checks).
 - It found a real uncaught JavaScript error on the 18 advanced image/PDF/minifier/converter pages: the shared quality layer referenced the private `id` variable from another IIFE. The fix uses the current app's `data-tool` identifier instead, preserving tool behavior and page URLs.
 - The corrected source is in this QA branch and the full browser suite is being rerun. Do not treat the fix as verified until the rerun passes.
+
+- Browser QA now serves the proposed repository version locally for pull-request tests, so code fixes are tested before merge instead of accidentally testing only the old production deployment. After merge or manual dispatch, the workflow also runs the page-level browser suite against `https://tolvix.in` to verify the deployed site.
+- Future QA runs trigger when any file under `tools/**` or `assets/**` changes, as well as when the QA scripts or workflow change.
