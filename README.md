@@ -1666,3 +1666,12 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Sitemap inventory: 145 URLs, including all 100 tool pages and all 39 guide pages; no tool or guide HTML files were omitted from the sitemap.
 - Found and corrected a CI audit defect: `scripts/live-link-audit.py` still hard-coded the old totals (57 tools, 37 guides, 94 combined), so the audit failed after the site expanded. The check now validates non-empty sitemap sections and compares homepage-linked paths against sitemap paths instead of fixed counts.
 - Post-merge live verification passed: 145 sitemap URLs (100 tool pages and 39 guides), all 139 tool/guide pages returned HTTP 200, and 3,053 internal link/resource references across 157 unique destinations passed. The www host also resolved to the canonical apex domain. The historical secret scan and chemistry regression workflow also passed.
+
+
+## Automated browser QA — 20 November 2026
+
+- Added `scripts/playwright-tool-smoke.cjs` and the `Tolvix functional browser smoke tests` GitHub Actions workflow.
+- The runner discovers every `/tools/` URL directly from the live sitemap, then checks each discovered page in Chromium, Firefox and WebKit at desktop width; Chromium also checks a 390px mobile viewport.
+- Checks include HTTP response, page title, visible H1/body content, horizontal overflow, uncaught JavaScript exceptions, and a record of visible form controls, file inputs and download links.
+- Detailed per-page results are uploaded as a GitHub Actions artifact, including browser console errors.
+- **Important scope:** this is a cross-browser page/runtime/layout smoke suite, not yet a full semantic test of each tool's calculations, invalid-input rules, large-file limits, generated output, or actual download contents. Those require tool-specific test cases and safe input fixtures. The runner records file/download affordances but does not pretend to validate their behavior by merely finding them.
