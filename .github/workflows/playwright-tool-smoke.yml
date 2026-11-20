@@ -25,6 +25,8 @@ jobs:
           npx playwright install --with-deps chromium firefox webkit
       - name: Test all live tool pages
         run: node scripts/playwright-tool-smoke.cjs
+      - name: Test real calculations, chemistry, physics and file outputs
+        run: node scripts/playwright-tool-functional.cjs
       - name: Upload detailed results
         if: always()
         uses: actions/upload-artifact@v4
