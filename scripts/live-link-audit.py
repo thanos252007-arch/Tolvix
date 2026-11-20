@@ -96,9 +96,9 @@ def main():
             missing_tools = sorted(sitemap_tool_paths - home_paths)
             missing_guides = sorted(sitemap_guide_paths - home_paths)
             if missing_tools:
-                fail(f"{len(missing_tools)} sitemap tool page(s) are not linked from the homepage: {", ".join(missing_tools[:10])}")
+                fail(f"{len(missing_tools)} sitemap tool page(s) are not linked from the homepage: {', '.join(missing_tools[:10])}")
             if missing_guides:
-                fail(f"{len(missing_guides)} sitemap guide page(s) are not linked from the homepage: {", ".join(missing_guides[:10])}")
+                fail(f"{len(missing_guides)} sitemap guide page(s) are not linked from the homepage: {', '.join(missing_guides[:10])}")
         except Exception as e:
             fail(f"homepage HTML could not be parsed for directory coverage: {e}")
 
