@@ -1676,3 +1676,10 @@ SEO freeze begins after this release: no further SEO/content/schema changes for 
 - Detailed per-page results are uploaded as a GitHub Actions artifact, including browser console errors.
 - Added real interaction tests for representative text tools and calculators, all 20 physics calculators and all 19 chemistry calculators. The suite includes valid/invalid chemistry and PDF inputs, valid image/PDF fixtures, and checks that image/PDF processing produces non-empty downloads. It also exercises HTML/CSS/JS minifiers, number-base conversion and URL encoding.
 - **Important scope:** the semantic suite covers the named test cases and categories; it does not yet prove every possible input, maximum-size file, all file formats, or the AI model's full generation path. Large-file limits and AI voice/background-removal model workflows still need dedicated realistic tests. The report must be reviewed for each failure; a page opening successfully is not proof of a correct result.
+
+
+### Browser QA finding and fix — 20 November 2026
+
+- The first complete 100-tool browser run reached all 100 sitemap entries and completed 400 page checks (100 per desktop browser plus 100 Chromium mobile checks).
+- It found a real uncaught JavaScript error on the 18 advanced image/PDF/minifier/converter pages: the shared quality layer referenced the private `id` variable from another IIFE. The fix uses the current app's `data-tool` identifier instead, preserving tool behavior and page URLs.
+- The corrected source is in this QA branch and the full browser suite is being rerun. Do not treat the fix as verified until the rerun passes.
